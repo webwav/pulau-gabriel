@@ -6,6 +6,20 @@ from datetime import datetime, date, timedelta
 with open("/Users/sharonxu/gabriel-quest-map/materi_belum_selesai.json", "r", encoding="utf-8") as f:
     raw = json.load(f)
 
+with open("/Users/sharonxu/gabriel-quest-map/catalog_verified.json", "r", encoding="utf-8") as f:
+    catalog_verified = json.load(f)
+
+# Ensure known 5-char suffixed slugs are populated in catalog_verified
+for a in catalog_verified.get("waydivers-1-term-1-ay-20262027", {}).get("activities", []):
+    if a["activity_id"] == 978921:
+        a["verified_slug"] = "group-session-2-meeting-1-61y2y"
+for a in catalog_verified.get("waydivers-1-term-2-ay-20262027", {}).get("activities", []):
+    if a["activity_id"] == 1030167:
+        a["verified_slug"] = "academic-calendar-j3bow"
+for a in catalog_verified.get("year-1-pjok-semester-1-ta-20262027", {}).get("activities", []):
+    if a["activity_id"] == 980217:
+        a["verified_slug"] = "jumat-24-jul-2026-jangan-lupa-pemanasan-dan-pendinginan-gih5x"
+
 MONTH_MAP = {
     "jan": 1, "januari": 1, "january": 1,
     "feb": 2, "februari": 2, "february": 2,
@@ -32,10 +46,8 @@ CHILD_HANDOFF_QUERY = (
     "&src_parent_email=sharonpm1996@gmail.com"
 )
 
-# Verified working classroom (/c) entry URLs for each of Gabriel's 7 programs.
-# Sekolah.mu appends random 5-char backend IDs to individual activity slugs (e.g. -61y2y, -gih5x, -j3bow),
-# so unverified activity slugs fail POST /cf/program-learning/validate with Error 500.
-# These 7 real classroom URLs + child handoff query open the program's classroom player & sidebar directly without error.
+# Verified fallback classroom (/c) URLs for each of Gabriel's 7 programs
+# (used only when an activity or chapter has no closer verified sibling in catalog_verified.json).
 VERIFIED_CLASSROOM_URLS = {
     "https://smm.sekolah.mu/program/year-1-daring-rutin-semester-1-20262027": (
         f"https://smm.sekolah.mu/program/year-1-daring-rutin-semester-1-20262027/rabu-22-juli-2026-yuk-simak-bersama/c?{CHILD_HANDOFF_QUERY}"
@@ -60,14 +72,83 @@ VERIFIED_CLASSROOM_URLS = {
     ),
 }
 
+# Latest verified November classroom URLs per program (used for upcoming Nov-Dec curriculum weeks not yet uploaded by teachers)
+LATEST_NOV_CLASSROOM_URLS = {
+    "https://smm.sekolah.mu/program/year-1-daring-rutin-semester-1-20262027": (
+        f"https://smm.sekolah.mu/program/year-1-daring-rutin-semester-1-20262027/jumat-13-november-2026-unggah-lk-minggu-6/c?{CHILD_HANDOFF_QUERY}"
+    ),
+    "https://smm.sekolah.mu/program/year-1-english-semester-1-ta-20262027": (
+        f"https://smm.sekolah.mu/program/year-1-english-semester-1-ta-20262027/friday-6-november-2026-padlet-ten-apples-up-on-top/c?{CHILD_HANDOFF_QUERY}"
+    ),
+    "https://smm.sekolah.mu/program/year-1-pjok-semester-1-ta-20262027": (
+        f"https://smm.sekolah.mu/program/year-1-pjok-semester-1-ta-20262027/jumat-06-nov-2026-ayo-bergerak-bersama/c?{CHILD_HANDOFF_QUERY}"
+    ),
+    "https://smm.sekolah.mu/program/year-1-homeroom-20262027": (
+        f"https://smm.sekolah.mu/program/year-1-homeroom-20262027/jumat-13-november-2026-belajar-live-homeroom-bagaimana-perasaanku/c?{CHILD_HANDOFF_QUERY}"
+    ),
+    "https://livingenglish.sekolah.mu/program/waydivers-1-term-2-ay-20262027": (
+        f"https://livingenglish.sekolah.mu/program/waydivers-1-term-2-ay-20262027/academic-calendar-j3bow/c?{CHILD_HANDOFF_QUERY}"
+    ),
+}
+
 def get_my_learning_url(program_url, source_tab=""):
     if "livingenglish.sekolah.mu" in program_url or "Living English" in source_tab:
         return "https://livingenglish.sekolah.mu/my-learning"
     return "https://smm.sekolah.mu/my-learning"
 
-def get_direct_classroom_url(program_url):
+def resolve_activity_classroom_url(program_url, module_str, title_clean, is_upcoming_schedule=False):
     clean_url = program_url.rstrip("/")
-    return VERIFIED_CLASSROOM_URLS.get(clean_url, clean_url)
+    pslug = clean_url.split("/")[-1]
+    acts = [a for a in catalog_verified.get(pslug, {}).get("activities", []) if not a.get("is_addon")]
+    mod_norm = module_str.strip()
+    t_norm = title_clean.strip()
+
+    # 1. Exact activity match (by chapter + activity title, or activity title)
+    matched_act = None
+    for a in acts:
+        if a["activity_name"].strip() == t_norm and a["chapter_name"].strip() == mod_norm:
+            matched_act = a
+            break
+    if not matched_act:
+        for a in acts:
+            if a["activity_name"].strip() == t_norm:
+                matched_act = a
+                break
+    if matched_act and matched_act.get("verified_slug"):
+        slug = matched_act["verified_slug"]
+        return (f"{clean_url}/{slug}/c?{CHILD_HANDOFF_QUERY}", "exact_activity", matched_act["activity_id"])
+
+    # 2. Same chapter + same date prefix (e.g. "Selasa, 10 November 2026")
+    date_prefix = t_norm.split("|")[0].strip().lower() if "|" in t_norm else ""
+    chap_verified = [a for a in acts if a["chapter_name"].strip() == mod_norm and a.get("verified_slug")]
+    if date_prefix and chap_verified:
+        for a in chap_verified:
+            if a["activity_name"].strip().lower().startswith(date_prefix):
+                slug = a["verified_slug"]
+                return (f"{clean_url}/{slug}/c?{CHILD_HANDOFF_QUERY}", "same_date", a["activity_id"])
+
+    # 3. Nearest verified activity in the SAME chapter/week (so the classroom sidebar opens at that exact week)
+    if chap_verified:
+        target_order = matched_act.get("activity_order", 1) if matched_act else 1
+        nearest = min(chap_verified, key=lambda a: abs(a.get("activity_order", 1) - target_order))
+        slug = nearest["verified_slug"]
+        return (f"{clean_url}/{slug}/c?{CHILD_HANDOFF_QUERY}", "same_week", nearest["activity_id"])
+
+    # 4. If it's an upcoming Nov-Dec curriculum item (or End of Semester Reflection), open the latest verified November week
+    if is_upcoming_schedule or "refleksi" in mod_norm.lower() or "december" in mod_norm.lower() or "desember" in mod_norm.lower():
+        if clean_url in LATEST_NOV_CLASSROOM_URLS:
+            return (LATEST_NOV_CLASSROOM_URLS[clean_url], "latest_nov_week", None)
+
+    # 5. Nearest verified activity in adjacent chapter (e.g. PJOK Triwulan 2 Week 1 -> Week 2)
+    if matched_act:
+        all_verified = [a for a in acts if a.get("verified_slug")]
+        if all_verified:
+            target_id = matched_act["activity_id"]
+            nearest = min(all_verified, key=lambda a: abs(a["activity_id"] - target_id))
+            slug = nearest["verified_slug"]
+            return (f"{clean_url}/{slug}/c?{CHILD_HANDOFF_QUERY}", "nearest_chapter", nearest["activity_id"])
+
+    return (VERIFIED_CLASSROOM_URLS.get(clean_url, clean_url), "program_entry", None)
 
 def extract_date(module_str, title_str, program_str, act_num):
     m_low = module_str.lower()
@@ -320,11 +401,19 @@ def classify_quest(program_str, module_str, title_clean, jenis, iso_date, is_upc
 
 # Upcoming Semester 1 Curriculum items (Weeks 6 - 11: 9 November - 18 December 2026)
 UPCOMING_SEM1_ITEMS = [
-    # ================= DARING RUTIN (Minggu 6 - Minggu 11: 9 Nov - 17 Des 2026) =================
-    ("SMM", "Year 1 | Daring Rutin | Semester 1 | 2026/2027", "Tema 2 Minggu 6 (9-13 Nov 2026) | Eksplorasi & Checkpoint 2 Sumatif", "201. Senin, 9 November 2026 | Pertemuan Belajar Live 1 & Materi: Menjelajah Dunia & Lingkungan", "Materi", "https://smm.sekolah.mu/program/year-1-daring-rutin-semester-1-20262027", "2026-11-09"),
-    ("SMM", "Year 1 | Daring Rutin | Semester 1 | 2026/2027", "Tema 2 Minggu 6 (9-13 Nov 2026) | Eksplorasi & Checkpoint 2 Sumatif", "202. Selasa, 10 November 2026 | Checkpoint Sumatif 2: Koper Aku dan Keluargaku", "Tugas dan Asesment", "https://smm.sekolah.mu/program/year-1-daring-rutin-semester-1-20262027", "2026-11-10"),
-    ("SMM", "Year 1 | Daring Rutin | Semester 1 | 2026/2027", "Tema 2 Minggu 6 (9-13 Nov 2026) | Eksplorasi & Checkpoint 2 Sumatif", "203. Rabu, 11 November 2026 | Pertemuan Belajar Live 2: Pecahan & Pengolahan Data Sederhana", "Diskusi & Pertemuan", "https://smm.sekolah.mu/program/year-1-daring-rutin-semester-1-20262027", "2026-11-11"),
-    ("SMM", "Year 1 | Daring Rutin | Semester 1 | 2026/2027", "Tema 2 Minggu 6 (9-13 Nov 2026) | Eksplorasi & Checkpoint 2 Sumatif", "204. Kamis, 12 November 2026 | Aktivitas Mandiri & Unggah LK Minggu 6", "Tugas dan Asesment", "https://smm.sekolah.mu/program/year-1-daring-rutin-semester-1-20262027", "2026-11-12"),
+    # ================= DARING RUTIN (Minggu 6 Resmi di Portal: 9-13 Nov 2026 + Minggu 7-11: 16 Nov - 17 Des 2026) =================
+    ("SMM", "Year 1 | Daring Rutin | Semester 1 | 2026/2027", "Tema 2 Minggu 6 (9-13 Nov 2026) | Aku dan Sumatifku", "199. Daftar Kebutuhan Belajar Minggu 6", "Materi", "https://smm.sekolah.mu/program/year-1-daring-rutin-semester-1-20262027", "2026-11-09"),
+    ("SMM", "Year 1 | Daring Rutin | Semester 1 | 2026/2027", "Tema 2 Minggu 6 (9-13 Nov 2026) | Aku dan Sumatifku", "200. Pertemuan Belajar Live 1: Sudah Sampai Mana, ya?", "Diskusi & Pertemuan", "https://smm.sekolah.mu/program/year-1-daring-rutin-semester-1-20262027", "2026-11-09"),
+    ("SMM", "Year 1 | Daring Rutin | Semester 1 | 2026/2027", "Tema 2 Minggu 6 (9-13 Nov 2026) | Aku dan Sumatifku", "201. Senin, 9 November 2026 | Checkpoint Sumatif", "Tugas dan Asesment", "https://smm.sekolah.mu/program/year-1-daring-rutin-semester-1-20262027", "2026-11-09"),
+    ("SMM", "Year 1 | Daring Rutin | Semester 1 | 2026/2027", "Tema 2 Minggu 6 (9-13 Nov 2026) | Aku dan Sumatifku", "202. Selasa, 10 November 2026 | Mengenang Jasa Pahlawan", "Materi", "https://smm.sekolah.mu/program/year-1-daring-rutin-semester-1-20262027", "2026-11-10"),
+    ("SMM", "Year 1 | Daring Rutin | Semester 1 | 2026/2027", "Tema 2 Minggu 6 (9-13 Nov 2026) | Aku dan Sumatifku", "203. Selasa, 10 November 2026 | Menulis Kosakata Baru", "Tugas dan Asesment", "https://smm.sekolah.mu/program/year-1-daring-rutin-semester-1-20262027", "2026-11-10"),
+    ("SMM", "Year 1 | Daring Rutin | Semester 1 | 2026/2027", "Tema 2 Minggu 6 (9-13 Nov 2026) | Aku dan Sumatifku", "204. Selasa, 10 November 2026 | Kreasi Bunga Pahlawanku", "Tugas dan Asesment", "https://smm.sekolah.mu/program/year-1-daring-rutin-semester-1-20262027", "2026-11-10"),
+    ("SMM", "Year 1 | Daring Rutin | Semester 1 | 2026/2027", "Tema 2 Minggu 6 (9-13 Nov 2026) | Aku dan Sumatifku", "205. Pertemuan Belajar Live 2: Berbagi dengan Temanku", "Diskusi & Pertemuan", "https://smm.sekolah.mu/program/year-1-daring-rutin-semester-1-20262027", "2026-11-11"),
+    ("SMM", "Year 1 | Daring Rutin | Semester 1 | 2026/2027", "Tema 2 Minggu 6 (9-13 Nov 2026) | Aku dan Sumatifku", "206. Rabu, 11 November 2026 | Berapa Bagian yang Aku Miliki, ya?", "Materi", "https://smm.sekolah.mu/program/year-1-daring-rutin-semester-1-20262027", "2026-11-11"),
+    ("SMM", "Year 1 | Daring Rutin | Semester 1 | 2026/2027", "Tema 2 Minggu 6 (9-13 Nov 2026) | Aku dan Sumatifku", "207. Kamis, 12 November 2026 | Bantuan yang Kuberikan", "Materi", "https://smm.sekolah.mu/program/year-1-daring-rutin-semester-1-20262027", "2026-11-12"),
+    ("SMM", "Year 1 | Daring Rutin | Semester 1 | 2026/2027", "Tema 2 Minggu 6 (9-13 Nov 2026) | Aku dan Sumatifku", "208. Kamis, 12 November 2026 | Waktu Membaca: Riri dan Cuaca", "Materi", "https://smm.sekolah.mu/program/year-1-daring-rutin-semester-1-20262027", "2026-11-12"),
+    ("SMM", "Year 1 | Daring Rutin | Semester 1 | 2026/2027", "Tema 2 Minggu 6 (9-13 Nov 2026) | Aku dan Sumatifku", "209. Kamis, 12 November 2026 | Padlet Bercerita: Riri dan Cuaca", "Tugas dan Asesment", "https://smm.sekolah.mu/program/year-1-daring-rutin-semester-1-20262027", "2026-11-12"),
+    ("SMM", "Year 1 | Daring Rutin | Semester 1 | 2026/2027", "Tema 2 Minggu 6 (9-13 Nov 2026) | Aku dan Sumatifku", "210. Jumat, 13 November 2026 | Unggah LK Minggu 6", "Tugas dan Asesment", "https://smm.sekolah.mu/program/year-1-daring-rutin-semester-1-20262027", "2026-11-13"),
     ("SMM", "Year 1 | Daring Rutin | Semester 1 | 2026/2027", "Tema 2 Minggu 7 (16-20 Nov 2026) | Pengerjaan Koper Keluargaku", "205. Senin, 16 November 2026 | Pertemuan Belajar Live 1: Pengerjaan Koper Aku dan Keluargaku", "Diskusi & Pertemuan", "https://smm.sekolah.mu/program/year-1-daring-rutin-semester-1-20262027", "2026-11-16"),
     ("SMM", "Year 1 | Daring Rutin | Semester 1 | 2026/2027", "Tema 2 Minggu 7 (16-20 Nov 2026) | Pengerjaan Koper Keluargaku", "206. Rabu, 18 November 2026 | Pertemuan Belajar Live 2 & Eksplorasi Cerita Tema 2", "Materi", "https://smm.sekolah.mu/program/year-1-daring-rutin-semester-1-20262027", "2026-11-18"),
     ("SMM", "Year 1 | Daring Rutin | Semester 1 | 2026/2027", "Tema 2 Minggu 7 (16-20 Nov 2026) | Pengerjaan Koper Keluargaku", "207. Kamis, 19 November 2026 | Galeri Karya & Unggah LK Minggu 7", "Tugas dan Asesment", "https://smm.sekolah.mu/program/year-1-daring-rutin-semester-1-20262027", "2026-11-19"),
@@ -417,8 +506,10 @@ for source_tab, rows in [("SMM", raw["smmItems"]), ("Living English", raw["leIte
             title_clean = raw_title
 
         my_learning_url = get_my_learning_url(program_url, source_tab)
-        direct_url = get_direct_classroom_url(program_url)
-        exact_verified = True
+        direct_url, link_match_type, matched_aid = resolve_activity_classroom_url(
+            program_url, module_str, title_clean, is_upcoming_schedule=False
+        )
+        exact_verified = (link_match_type == "exact_activity")
 
         iso_date = extract_date(module_str, title_clean, program_str, act_num)
         island_id = get_island_id(program_str)
@@ -441,6 +532,8 @@ for source_tab, rows in [("SMM", raw["smmItems"]), ("Living English", raw["leIte
             "programUrl": program_url,
             "myLearningUrl": my_learning_url,
             "directUrl": direct_url,
+            "linkMatchType": link_match_type,
+            "activityId": matched_aid,
             "exactVerified": exact_verified,
             "date": iso_date,
             **meta
@@ -459,15 +552,18 @@ for u_idx, item in enumerate(UPCOMING_SEM1_ITEMS, start=1):
         title_clean = raw_title
 
     my_learning_url = get_my_learning_url(program_url, source_tab)
-    direct_url = get_direct_classroom_url(program_url)
+    direct_url, link_match_type, matched_aid = resolve_activity_classroom_url(
+        program_url, module_str, title_clean, is_upcoming_schedule=True
+    )
+    already_in_portal = link_match_type in ("exact_activity", "same_date", "same_week")
     island_id = get_island_id(program_str)
-    meta = classify_quest(program_str, module_str, title_clean, jenis, iso_date, is_upcoming_schedule=True)
+    meta = classify_quest(program_str, module_str, title_clean, jenis, iso_date, is_upcoming_schedule=(not already_in_portal))
 
     quest_id = f"upcoming_sem1_{u_idx}"
     all_quests.append({
         "id": quest_id,
         "sheetRowIndex": 1000 + u_idx,
-        "sourceTab": f"{source_tab} (Jadwal Sem 1)",
+        "sourceTab": source_tab if already_in_portal else f"{source_tab} (Jadwal Sem 1)",
         "program": program_str,
         "islandId": island_id,
         "islandName": ISLAND_META[island_id]["name"],
@@ -480,7 +576,9 @@ for u_idx, item in enumerate(UPCOMING_SEM1_ITEMS, start=1):
         "programUrl": program_url,
         "myLearningUrl": my_learning_url,
         "directUrl": direct_url,
-        "exactVerified": True,
+        "linkMatchType": link_match_type,
+        "activityId": matched_aid,
+        "exactVerified": (link_match_type == "exact_activity"),
         "date": iso_date,
         **meta
     })

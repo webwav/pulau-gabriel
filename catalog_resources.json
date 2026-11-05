@@ -1,0 +1,5543 @@
+{
+  "year-1-daring-rutin-semester-1-20262027": {
+    "platform_id": "4",
+    "program_id": 1168,
+    "activities": [
+      {
+        "chapter_id": 386314,
+        "chapter_name": "Tema 1 Minggu 2 (20-24 Juli 2026) | Aku Anak Sehat",
+        "chapter_order": 1,
+        "activity_id": 980401,
+        "activity_name": "Daftar Kebutuhan Belajar Minggu 2",
+        "activity_order": 1,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 386314,
+        "chapter_name": "Tema 1 Minggu 2 (20-24 Juli 2026) | Aku Anak Sehat",
+        "chapter_order": 1,
+        "activity_id": 980406,
+        "activity_name": "Pertemuan Belajar Live 1 | Mengenal Aku dan Sekitarku ",
+        "activity_order": 2,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 386314,
+        "chapter_name": "Tema 1 Minggu 2 (20-24 Juli 2026) | Aku Anak Sehat",
+        "chapter_order": 1,
+        "activity_id": 980408,
+        "activity_name": "Senin, 20 Juli 2026 | Membuat Toples Harapan",
+        "activity_order": 3,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 386314,
+        "chapter_name": "Tema 1 Minggu 2 (20-24 Juli 2026) | Aku Anak Sehat",
+        "chapter_order": 1,
+        "activity_id": 980409,
+        "activity_name": "Senin, 20 Juli 2026 | Mari Melihat Sekitarmu! ",
+        "activity_order": 4,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 386314,
+        "chapter_name": "Tema 1 Minggu 2 (20-24 Juli 2026) | Aku Anak Sehat",
+        "chapter_order": 1,
+        "activity_id": 977496,
+        "activity_name": "Sejauh Mana Kemampuan Literasi dan Numerasiku?",
+        "activity_order": 5,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 386314,
+        "chapter_name": "Tema 1 Minggu 2 (20-24 Juli 2026) | Aku Anak Sehat",
+        "chapter_order": 1,
+        "activity_id": 981215,
+        "activity_name": "Selasa, 21 Juli 2026 | Apa Itu Sehat dan Tidak Sehat?",
+        "activity_order": 6,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 386314,
+        "chapter_name": "Tema 1 Minggu 2 (20-24 Juli 2026) | Aku Anak Sehat",
+        "chapter_order": 1,
+        "activity_id": 980657,
+        "activity_name": "Selasa, 21 Juli 2026 | Panca Inderaku Sehat!",
+        "activity_order": 7,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 386314,
+        "chapter_name": "Tema 1 Minggu 2 (20-24 Juli 2026) | Aku Anak Sehat",
+        "chapter_order": 1,
+        "activity_id": 981473,
+        "activity_name": "Pertemuan Belajar Live 2 | Menulis dan Membaca dengan Baik",
+        "activity_order": 8,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 386314,
+        "chapter_name": "Tema 1 Minggu 2 (20-24 Juli 2026) | Aku Anak Sehat",
+        "chapter_order": 1,
+        "activity_id": 980679,
+        "activity_name": "Rabu, 22 Juli 2026 | Mana yang Cocok, ya?",
+        "activity_order": 9,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 386314,
+        "chapter_name": "Tema 1 Minggu 2 (20-24 Juli 2026) | Aku Anak Sehat",
+        "chapter_order": 1,
+        "activity_id": 980687,
+        "activity_name": "Rabu, 22 Juli 2026 | Yuk, Simak Bersama!",
+        "activity_order": 10,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 386314,
+        "chapter_name": "Tema 1 Minggu 2 (20-24 Juli 2026) | Aku Anak Sehat",
+        "chapter_order": 1,
+        "activity_id": 980896,
+        "activity_name": "Kamis, 23 Juli 2026 | Ayo Mengingat Bilangan dan Nilai Tempat!",
+        "activity_order": 11,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 386314,
+        "chapter_name": "Tema 1 Minggu 2 (20-24 Juli 2026) | Aku Anak Sehat",
+        "chapter_order": 1,
+        "activity_id": 980897,
+        "activity_name": "Kamis, 23 Juli 2026 | Berlatih Bilangan dan Nilai Tempat!",
+        "activity_order": 12,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 386314,
+        "chapter_name": "Tema 1 Minggu 2 (20-24 Juli 2026) | Aku Anak Sehat",
+        "chapter_order": 1,
+        "activity_id": 981573,
+        "activity_name": "Kamis, 23 Juli 2026 | Yuk, Berhitung Bersama!",
+        "activity_order": 13,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 386314,
+        "chapter_name": "Tema 1 Minggu 2 (20-24 Juli 2026) | Aku Anak Sehat",
+        "chapter_order": 1,
+        "activity_id": 982764,
+        "activity_name": "Kamis, 23 Juli 2026| \"Hari Anak: Main Bersama, Bahagia Bersama\"",
+        "activity_order": 14,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 386314,
+        "chapter_name": "Tema 1 Minggu 2 (20-24 Juli 2026) | Aku Anak Sehat",
+        "chapter_order": 1,
+        "activity_id": 981024,
+        "activity_name": "Jumat, 24 Juli 2026 | Langkah Kecil untuk Tubuh yang Sehat",
+        "activity_order": 15,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388700,
+        "chapter_name": "Tema 1 Minggu 3 (27-31 Juli 2026) | Kreasi Huruf Angka",
+        "chapter_order": 2,
+        "activity_id": 982223,
+        "activity_name": "Daftar Kebutuhan Belajar Minggu 3",
+        "activity_order": 16,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388700,
+        "chapter_name": "Tema 1 Minggu 3 (27-31 Juli 2026) | Kreasi Huruf Angka",
+        "chapter_order": 2,
+        "activity_id": 982225,
+        "activity_name": "Pertemuan Belajar Live 1 | Petualangan Nilai Tempat",
+        "activity_order": 17,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388700,
+        "chapter_name": "Tema 1 Minggu 3 (27-31 Juli 2026) | Kreasi Huruf Angka",
+        "chapter_order": 2,
+        "activity_id": 983026,
+        "activity_name": "Senin, 27 Juli 2026 | Mengenal Nilai Tempat",
+        "activity_order": 18,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388700,
+        "chapter_name": "Tema 1 Minggu 3 (27-31 Juli 2026) | Kreasi Huruf Angka",
+        "chapter_order": 2,
+        "activity_id": 983033,
+        "activity_name": "Senin, 27 Juli 2026 | Berapa Banyak Hewan di Peternakan?",
+        "activity_order": 19,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388700,
+        "chapter_name": "Tema 1 Minggu 3 (27-31 Juli 2026) | Kreasi Huruf Angka",
+        "chapter_order": 2,
+        "activity_id": 983038,
+        "activity_name": "Selasa, 28 Juli 2026 | Menulis Ragam Kalimat ",
+        "activity_order": 20,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388700,
+        "chapter_name": "Tema 1 Minggu 3 (27-31 Juli 2026) | Kreasi Huruf Angka",
+        "chapter_order": 2,
+        "activity_id": 983045,
+        "activity_name": "Selasa, 28 Juli 2026 | Belajar Rukun dalam Persatuan",
+        "activity_order": 21,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388700,
+        "chapter_name": "Tema 1 Minggu 3 (27-31 Juli 2026) | Kreasi Huruf Angka",
+        "chapter_order": 2,
+        "activity_id": 983058,
+        "activity_name": "Selasa, 28 Juli 2026 | Permainan Bahasa",
+        "activity_order": 22,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388700,
+        "chapter_name": "Tema 1 Minggu 3 (27-31 Juli 2026) | Kreasi Huruf Angka",
+        "chapter_order": 2,
+        "activity_id": 983065,
+        "activity_name": "Pertemuan Belajar Live 2 | Kesehatan Pancaindraku",
+        "activity_order": 23,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388700,
+        "chapter_name": "Tema 1 Minggu 3 (27-31 Juli 2026) | Kreasi Huruf Angka",
+        "chapter_order": 2,
+        "activity_id": 983080,
+        "activity_name": "Rabu, 29 Juli 2026 | Berburu Warna dan Bentuk",
+        "activity_order": 24,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388700,
+        "chapter_name": "Tema 1 Minggu 3 (27-31 Juli 2026) | Kreasi Huruf Angka",
+        "chapter_order": 2,
+        "activity_id": 983107,
+        "activity_name": "Rabu, 29 Juli 2026 | Permainan Jaga Kesehatan Pancaindraku",
+        "activity_order": 25,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388700,
+        "chapter_name": "Tema 1 Minggu 3 (27-31 Juli 2026) | Kreasi Huruf Angka",
+        "chapter_order": 2,
+        "activity_id": 983130,
+        "activity_name": "Kamis, 30 Juli 2026 | Yuk, Latih Pancaindramu!",
+        "activity_order": 26,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388700,
+        "chapter_name": "Tema 1 Minggu 3 (27-31 Juli 2026) | Kreasi Huruf Angka",
+        "chapter_order": 2,
+        "activity_id": 983204,
+        "activity_name": "Kamis, 30 Juli 2026 | Unggah LK: Yuk, Latih Pancaindramu!",
+        "activity_order": 27,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388700,
+        "chapter_name": "Tema 1 Minggu 3 (27-31 Juli 2026) | Kreasi Huruf Angka",
+        "chapter_order": 2,
+        "activity_id": 983212,
+        "activity_name": "Kamis, 30 Juli 2026 | Membaca Mandiri",
+        "activity_order": 28,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388700,
+        "chapter_name": "Tema 1 Minggu 3 (27-31 Juli 2026) | Kreasi Huruf Angka",
+        "chapter_order": 2,
+        "activity_id": 983299,
+        "activity_name": "Jumat, 31 Juli 2026 | Aku Mahir Lambang & Nama Bilangan!",
+        "activity_order": 29,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388700,
+        "chapter_name": "Tema 1 Minggu 3 (27-31 Juli 2026) | Kreasi Huruf Angka",
+        "chapter_order": 2,
+        "activity_id": 983304,
+        "activity_name": "Jumat, 31 Juli 2026 | Ada Berapa, ya?",
+        "activity_order": 30,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 390330,
+        "chapter_name": "Tema 1 Minggu 4 (4-7 Agustus 2026) | Aku Tumbuh Hebat",
+        "chapter_order": 3,
+        "activity_id": 986928,
+        "activity_name": "Daftar Kebutuhan Belajar Minggu 4",
+        "activity_order": 31,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 390330,
+        "chapter_name": "Tema 1 Minggu 4 (4-7 Agustus 2026) | Aku Tumbuh Hebat",
+        "chapter_order": 3,
+        "activity_id": 986940,
+        "activity_name": "Pertemuan Belajar Live 1 | Pancaindraku Sehat!",
+        "activity_order": 32,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 390330,
+        "chapter_name": "Tema 1 Minggu 4 (4-7 Agustus 2026) | Aku Tumbuh Hebat",
+        "chapter_order": 3,
+        "activity_id": 986967,
+        "activity_name": "Senin, 3 Agustus 2026 | Berburu Benda di Sekitar",
+        "activity_order": 33,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 390330,
+        "chapter_name": "Tema 1 Minggu 4 (4-7 Agustus 2026) | Aku Tumbuh Hebat",
+        "chapter_order": 3,
+        "activity_id": 986972,
+        "activity_name": "Senin, 3 Agustus 2026 | Yuk, Lengkapi Kata!",
+        "activity_order": 34,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 390330,
+        "chapter_name": "Tema 1 Minggu 4 (4-7 Agustus 2026) | Aku Tumbuh Hebat",
+        "chapter_order": 3,
+        "activity_id": 986984,
+        "activity_name": "Selasa, 4 Agustus 2026 | Yuk, Rawat Telinga dan Hidung Kita!",
+        "activity_order": 35,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 390330,
+        "chapter_name": "Tema 1 Minggu 4 (4-7 Agustus 2026) | Aku Tumbuh Hebat",
+        "chapter_order": 3,
+        "activity_id": 986991,
+        "activity_name": "Selasa, 4 Agustus 2026 | Rasa di Mulutku",
+        "activity_order": 36,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 390330,
+        "chapter_name": "Tema 1 Minggu 4 (4-7 Agustus 2026) | Aku Tumbuh Hebat",
+        "chapter_order": 3,
+        "activity_id": 986995,
+        "activity_name": "Selasa, 4 Agustus 2026 | Menjaga Pancaindraku",
+        "activity_order": 37,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 390330,
+        "chapter_name": "Tema 1 Minggu 4 (4-7 Agustus 2026) | Aku Tumbuh Hebat",
+        "chapter_order": 3,
+        "activity_id": 987194,
+        "activity_name": "Pertemuan Belajar Live 2 | Persahabatan Bilangan",
+        "activity_order": 38,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 390330,
+        "chapter_name": "Tema 1 Minggu 4 (4-7 Agustus 2026) | Aku Tumbuh Hebat",
+        "chapter_order": 3,
+        "activity_id": 987228,
+        "activity_name": "Rabu, 5 Agustus 2026 | Tantangan Ikatan Angka",
+        "activity_order": 39,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 390330,
+        "chapter_name": "Tema 1 Minggu 4 (4-7 Agustus 2026) | Aku Tumbuh Hebat",
+        "chapter_order": 3,
+        "activity_id": 987241,
+        "activity_name": "Kamis, 6 Agustus 2026 | Berapa Jumlahnya, ya?",
+        "activity_order": 40,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 390330,
+        "chapter_name": "Tema 1 Minggu 4 (4-7 Agustus 2026) | Aku Tumbuh Hebat",
+        "chapter_order": 3,
+        "activity_id": 987267,
+        "activity_name": "Kamis, 6 Agustus 2026 | Mengingat Pancaindra dan Cara Menjaganya",
+        "activity_order": 41,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 390330,
+        "chapter_name": "Tema 1 Minggu 4 (4-7 Agustus 2026) | Aku Tumbuh Hebat",
+        "chapter_order": 3,
+        "activity_id": 987296,
+        "activity_name": "Kamis, 6 Agustus 2026 | Unggah Lembar Kerja",
+        "activity_order": 42,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 390330,
+        "chapter_name": "Tema 1 Minggu 4 (4-7 Agustus 2026) | Aku Tumbuh Hebat",
+        "chapter_order": 3,
+        "activity_id": 990929,
+        "activity_name": "Panduan Proyek Sumatif - Buku Lipat Aku Anak Sehat",
+        "activity_order": 43,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 390330,
+        "chapter_name": "Tema 1 Minggu 4 (4-7 Agustus 2026) | Aku Tumbuh Hebat",
+        "chapter_order": 3,
+        "activity_id": 987316,
+        "activity_name": "Jumat, 7 Agustus 2026 | Panduan Asesmen Formatif 2: Ini Rompi Hurufku!",
+        "activity_order": 44,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 390330,
+        "chapter_name": "Tema 1 Minggu 4 (4-7 Agustus 2026) | Aku Tumbuh Hebat",
+        "chapter_order": 3,
+        "activity_id": 977498,
+        "activity_name": "Asesmen 1: Kotak Misteri Panca Indera",
+        "activity_order": 45,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 392279,
+        "chapter_name": "Tema 1 Minggu 5 (10-14 Agustus 2026) | Aku dan Negaraku",
+        "chapter_order": 4,
+        "activity_id": 991482,
+        "activity_name": "Daftar Kebutuhan Belajar Minggu 5",
+        "activity_order": 46,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 392279,
+        "chapter_name": "Tema 1 Minggu 5 (10-14 Agustus 2026) | Aku dan Negaraku",
+        "chapter_order": 4,
+        "activity_id": 991492,
+        "activity_name": "Pertemuan Belajar Live 1: Mengenal Pancasila dan Panduan Sumatif",
+        "activity_order": 47,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 392279,
+        "chapter_name": "Tema 1 Minggu 5 (10-14 Agustus 2026) | Aku dan Negaraku",
+        "chapter_order": 4,
+        "activity_id": 991614,
+        "activity_name": "Senin, 10 Agustus 2026 | Menonton Video Pancasila",
+        "activity_order": 48,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 392279,
+        "chapter_name": "Tema 1 Minggu 5 (10-14 Agustus 2026) | Aku dan Negaraku",
+        "chapter_order": 4,
+        "activity_id": 991636,
+        "activity_name": "Senin, 10 Agustus 2026 | Bagaimana Cara Mengurang Angka?",
+        "activity_order": 49,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 392279,
+        "chapter_name": "Tema 1 Minggu 5 (10-14 Agustus 2026) | Aku dan Negaraku",
+        "chapter_order": 4,
+        "activity_id": 991640,
+        "activity_name": "Selasa, 11 Agustus 2026 | Berapa, ya, Sisanya?",
+        "activity_order": 50,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 392279,
+        "chapter_name": "Tema 1 Minggu 5 (10-14 Agustus 2026) | Aku dan Negaraku",
+        "chapter_order": 4,
+        "activity_id": 991652,
+        "activity_name": "Selasa, 11 Agustus 2026 | Yuk, Pilih dan Susun!",
+        "activity_order": 51,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 392279,
+        "chapter_name": "Tema 1 Minggu 5 (10-14 Agustus 2026) | Aku dan Negaraku",
+        "chapter_order": 4,
+        "activity_id": 991671,
+        "activity_name": "Selasa, 11 Agustus 2026 | Aku Cinta Indonesia",
+        "activity_order": 52,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 392279,
+        "chapter_name": "Tema 1 Minggu 5 (10-14 Agustus 2026) | Aku dan Negaraku",
+        "chapter_order": 4,
+        "activity_id": 991695,
+        "activity_name": "Pertemuan Belajar Live 2: Berapa, ya, Sisanya?",
+        "activity_order": 53,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 392279,
+        "chapter_name": "Tema 1 Minggu 5 (10-14 Agustus 2026) | Aku dan Negaraku",
+        "chapter_order": 4,
+        "activity_id": 994666,
+        "activity_name": "Unggah Lembar Refleksi Anak Bersama Keluarga (Pra-Rising)",
+        "activity_order": 54,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 392279,
+        "chapter_name": "Tema 1 Minggu 5 (10-14 Agustus 2026) | Aku dan Negaraku",
+        "chapter_order": 4,
+        "activity_id": 991709,
+        "activity_name": "Rabu, 12 Agustus 2026 | Lebih atau Kurang?",
+        "activity_order": 55,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 392279,
+        "chapter_name": "Tema 1 Minggu 5 (10-14 Agustus 2026) | Aku dan Negaraku",
+        "chapter_order": 4,
+        "activity_id": 991781,
+        "activity_name": "Kamis, 13 Agustus 2026 | Berapa Jumlah Pancaindra Keluargaku?",
+        "activity_order": 56,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 392279,
+        "chapter_name": "Tema 1 Minggu 5 (10-14 Agustus 2026) | Aku dan Negaraku",
+        "chapter_order": 4,
+        "activity_id": 991788,
+        "activity_name": "Kamis, 13 Agustus 2026 | Tantangan di Kebun Sayur",
+        "activity_order": 57,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 392279,
+        "chapter_name": "Tema 1 Minggu 5 (10-14 Agustus 2026) | Aku dan Negaraku",
+        "chapter_order": 4,
+        "activity_id": 977502,
+        "activity_name": "Asesmen 2: Ini Rompi Hurufku!",
+        "activity_order": 58,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 392279,
+        "chapter_name": "Tema 1 Minggu 5 (10-14 Agustus 2026) | Aku dan Negaraku",
+        "chapter_order": 4,
+        "activity_id": 991799,
+        "activity_name": "Jumat, 14 Agustus 2026 | Berbagi Kisah Hebat Anak Indonesia",
+        "activity_order": 59,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 392279,
+        "chapter_name": "Tema 1 Minggu 5 (10-14 Agustus 2026) | Aku dan Negaraku",
+        "chapter_order": 4,
+        "activity_id": 977499,
+        "activity_name": "Asesmen 3: Aku Paham Bilangan",
+        "activity_order": 60,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 394779,
+        "chapter_name": "Tema 1 Minggu 6 (17-21 Agustus 2026) | Anak Indonesia",
+        "chapter_order": 5,
+        "activity_id": 997323,
+        "activity_name": "Daftar Kebutuhan Belajar Minggu 6",
+        "activity_order": 61,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 394779,
+        "chapter_name": "Tema 1 Minggu 6 (17-21 Agustus 2026) | Anak Indonesia",
+        "chapter_order": 5,
+        "activity_id": 997332,
+        "activity_name": "Pertemuan Belajar Live 1: Menggambar Diriku",
+        "activity_order": 62,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 394779,
+        "chapter_name": "Tema 1 Minggu 6 (17-21 Agustus 2026) | Anak Indonesia",
+        "chapter_order": 5,
+        "activity_id": 997341,
+        "activity_name": "Selasa, 18 Agustus 2026 | Checkpoint Sumatif 1",
+        "activity_order": 63,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 394779,
+        "chapter_name": "Tema 1 Minggu 6 (17-21 Agustus 2026) | Anak Indonesia",
+        "chapter_order": 5,
+        "activity_id": 997342,
+        "activity_name": "Selasa, 18 Agustus 2026 | Menonton Video Pengukuran",
+        "activity_order": 64,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 394779,
+        "chapter_name": "Tema 1 Minggu 6 (17-21 Agustus 2026) | Anak Indonesia",
+        "chapter_order": 5,
+        "activity_id": 997344,
+        "activity_name": "Pertemuan Belajar Live 2: Apa Itu Pengukuran?",
+        "activity_order": 65,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 394779,
+        "chapter_name": "Tema 1 Minggu 6 (17-21 Agustus 2026) | Anak Indonesia",
+        "chapter_order": 5,
+        "activity_id": 997345,
+        "activity_name": "Rabu, 19 Agustus 2026 | Mengukur Baju Keluargaku",
+        "activity_order": 66,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 394779,
+        "chapter_name": "Tema 1 Minggu 6 (17-21 Agustus 2026) | Anak Indonesia",
+        "chapter_order": 5,
+        "activity_id": 997346,
+        "activity_name": "Rabu, 19 Agustus 2026 | Benda Mana yang Lebih Berat?",
+        "activity_order": 67,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 394779,
+        "chapter_name": "Tema 1 Minggu 6 (17-21 Agustus 2026) | Anak Indonesia",
+        "chapter_order": 5,
+        "activity_id": 997806,
+        "activity_name": "Kamis, 20 Agustus 2026 | Memahami Identitas Negara Indonesia",
+        "activity_order": 68,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 394779,
+        "chapter_name": "Tema 1 Minggu 6 (17-21 Agustus 2026) | Anak Indonesia",
+        "chapter_order": 5,
+        "activity_id": 998228,
+        "activity_name": "Kamis, 20 Agustus 2026 | Ukur dan Urutkan!",
+        "activity_order": 69,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 394779,
+        "chapter_name": "Tema 1 Minggu 6 (17-21 Agustus 2026) | Anak Indonesia",
+        "chapter_order": 5,
+        "activity_id": 998231,
+        "activity_name": "Kamis, 20 Agustus 2026 | Checkpoint Sumatif 2",
+        "activity_order": 70,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 394779,
+        "chapter_name": "Tema 1 Minggu 6 (17-21 Agustus 2026) | Anak Indonesia",
+        "chapter_order": 5,
+        "activity_id": 998234,
+        "activity_name": "Jumat, 21 Agustus 2026 | Unggah LK Minggu 6",
+        "activity_order": 71,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 394779,
+        "chapter_name": "Tema 1 Minggu 6 (17-21 Agustus 2026) | Anak Indonesia",
+        "chapter_order": 5,
+        "activity_id": 977503,
+        "activity_name": "Asesmen 4: Lebih Dekat dengan Pancasila",
+        "activity_order": 72,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 397265,
+        "chapter_name": "RISING - Sesi Kurikulum Terpersonalisasi Semester 1 ",
+        "chapter_order": 6,
+        "activity_id": 1002485,
+        "activity_name": "RISING - Sesi Kurikulum Terpersonalisasi Semester 1 | TA 2026/2027",
+        "activity_order": 73,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 397884,
+        "chapter_name": "Tema 1 Minggu 7 (24-28 Agustus) | Pengerjaan Buku Lipat",
+        "chapter_order": 7,
+        "activity_id": 1003712,
+        "activity_name": "Daftar Kebutuhan Belajar Minggu 7",
+        "activity_order": 74,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 397884,
+        "chapter_name": "Tema 1 Minggu 7 (24-28 Agustus) | Pengerjaan Buku Lipat",
+        "chapter_order": 7,
+        "activity_id": 1003779,
+        "activity_name": "Pertemuan Belajar Live 1: Membuat Buku Lipat Bersama",
+        "activity_order": 75,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 397884,
+        "chapter_name": "Tema 1 Minggu 7 (24-28 Agustus) | Pengerjaan Buku Lipat",
+        "chapter_order": 7,
+        "activity_id": 1003859,
+        "activity_name": "Senin, 24 Agustus 2026 | Berkenalan dengan Waktu",
+        "activity_order": 76,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 397884,
+        "chapter_name": "Tema 1 Minggu 7 (24-28 Agustus) | Pengerjaan Buku Lipat",
+        "chapter_order": 7,
+        "activity_id": 1003896,
+        "activity_name": "Senin, 24 Agustus 2026 | Aktivitas Mana yang Sesuai?",
+        "activity_order": 77,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 397884,
+        "chapter_name": "Tema 1 Minggu 7 (24-28 Agustus) | Pengerjaan Buku Lipat",
+        "chapter_order": 7,
+        "activity_id": 1003917,
+        "activity_name": "Pertemuan Belajar Live 2: Detektif Pengukuran",
+        "activity_order": 78,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 397884,
+        "chapter_name": "Tema 1 Minggu 7 (24-28 Agustus) | Pengerjaan Buku Lipat",
+        "chapter_order": 7,
+        "activity_id": 1004002,
+        "activity_name": "Rabu, 26 Agustus 2026 | Membuat Timbangan Sederhana",
+        "activity_order": 79,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 397884,
+        "chapter_name": "Tema 1 Minggu 7 (24-28 Agustus) | Pengerjaan Buku Lipat",
+        "chapter_order": 7,
+        "activity_id": 1004068,
+        "activity_name": "Rabu, 26 Agustus 2026 | Mana yang Lebih Berat?",
+        "activity_order": 80,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 397884,
+        "chapter_name": "Tema 1 Minggu 7 (24-28 Agustus) | Pengerjaan Buku Lipat",
+        "chapter_order": 7,
+        "activity_id": 1004189,
+        "activity_name": "Kamis, 27 Agustus 2026 | Mengukur Panjang Benda di Sekitarku",
+        "activity_order": 81,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 397884,
+        "chapter_name": "Tema 1 Minggu 7 (24-28 Agustus) | Pengerjaan Buku Lipat",
+        "chapter_order": 7,
+        "activity_id": 1004200,
+        "activity_name": "Kamis, 27 Agustus 2026 | Tantangan Pengukuran",
+        "activity_order": 82,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 397884,
+        "chapter_name": "Tema 1 Minggu 7 (24-28 Agustus) | Pengerjaan Buku Lipat",
+        "chapter_order": 7,
+        "activity_id": 1004202,
+        "activity_name": "Kamis, 27 Agustus 2026 | Galeri Karya: Timbangan Sederhana",
+        "activity_order": 83,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 397884,
+        "chapter_name": "Tema 1 Minggu 7 (24-28 Agustus) | Pengerjaan Buku Lipat",
+        "chapter_order": 7,
+        "activity_id": 1004203,
+        "activity_name": "Jumat, 28 Agustus 2026 | Mari Membantu Sesama!",
+        "activity_order": 84,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 397884,
+        "chapter_name": "Tema 1 Minggu 7 (24-28 Agustus) | Pengerjaan Buku Lipat",
+        "chapter_order": 7,
+        "activity_id": 1004210,
+        "activity_name": "Jumat, 28 Agustus 2026 | Unggah LK Minggu 7",
+        "activity_order": 85,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 397884,
+        "chapter_name": "Tema 1 Minggu 7 (24-28 Agustus) | Pengerjaan Buku Lipat",
+        "chapter_order": 7,
+        "activity_id": 977505,
+        "activity_name": "Asesmen 5 Pengembangan Diri: Indahnya Saling Membantu dan Taat Aturan",
+        "activity_order": 86,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 400044,
+        "chapter_name": "Tema 1 Minggu 8 (31 Agt-4 Sept) | Finalisasi Sumatifku",
+        "chapter_order": 8,
+        "activity_id": 1008523,
+        "activity_name": "Daftar Kebutuhan Belajar Minggu 8",
+        "activity_order": 87,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 400044,
+        "chapter_name": "Tema 1 Minggu 8 (31 Agt-4 Sept) | Finalisasi Sumatifku",
+        "chapter_order": 8,
+        "activity_id": 1008527,
+        "activity_name": "Pertemuan Belajar Live 1: Menjadi Presenter Hebat",
+        "activity_order": 88,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 400044,
+        "chapter_name": "Tema 1 Minggu 8 (31 Agt-4 Sept) | Finalisasi Sumatifku",
+        "chapter_order": 8,
+        "activity_id": 1008529,
+        "activity_name": "Senin, 31 Agustus 2026 | Jadwal Presentasi Sumatif",
+        "activity_order": 89,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 400044,
+        "chapter_name": "Tema 1 Minggu 8 (31 Agt-4 Sept) | Finalisasi Sumatifku",
+        "chapter_order": 8,
+        "activity_id": 1008531,
+        "activity_name": "Senin, 31 Agustus 2026 | Membuat Papan Garis Bilangan",
+        "activity_order": 90,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 400044,
+        "chapter_name": "Tema 1 Minggu 8 (31 Agt-4 Sept) | Finalisasi Sumatifku",
+        "chapter_order": 8,
+        "activity_id": 1008534,
+        "activity_name": "Selasa, 1 September 2026 | Checkpoint 3 Sumatif: Buku Lipat Anak Sehat",
+        "activity_order": 91,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 400044,
+        "chapter_name": "Tema 1 Minggu 8 (31 Agt-4 Sept) | Finalisasi Sumatifku",
+        "chapter_order": 8,
+        "activity_id": 1008537,
+        "activity_name": "Selasa, 1 September 2026 | Mari Lihat dan Bandingkan!",
+        "activity_order": 92,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 400044,
+        "chapter_name": "Tema 1 Minggu 8 (31 Agt-4 Sept) | Finalisasi Sumatifku",
+        "chapter_order": 8,
+        "activity_id": 1008538,
+        "activity_name": "Selasa, 1 September 2026 | Yuk, Seimbangkan!",
+        "activity_order": 93,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 400044,
+        "chapter_name": "Tema 1 Minggu 8 (31 Agt-4 Sept) | Finalisasi Sumatifku",
+        "chapter_order": 8,
+        "activity_id": 1008539,
+        "activity_name": "Pertemuan Belajar Live 2: Jam Aktivitasku",
+        "activity_order": 94,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 400044,
+        "chapter_name": "Tema 1 Minggu 8 (31 Agt-4 Sept) | Finalisasi Sumatifku",
+        "chapter_order": 8,
+        "activity_id": 1008545,
+        "activity_name": "Rabu, 2 September 2026 | Sudahkah Aktivitas Wajibmu Selesai?",
+        "activity_order": 95,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 400044,
+        "chapter_name": "Tema 1 Minggu 8 (31 Agt-4 Sept) | Finalisasi Sumatifku",
+        "chapter_order": 8,
+        "activity_id": 1008546,
+        "activity_name": "Kamis, 3 September 2026 | Memasak Telur Rebus",
+        "activity_order": 96,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 400044,
+        "chapter_name": "Tema 1 Minggu 8 (31 Agt-4 Sept) | Finalisasi Sumatifku",
+        "chapter_order": 8,
+        "activity_id": 1008547,
+        "activity_name": "Kamis, 3 September 2026 | Sudahkah Aku Menjaga Pancaindraku?",
+        "activity_order": 97,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 400044,
+        "chapter_name": "Tema 1 Minggu 8 (31 Agt-4 Sept) | Finalisasi Sumatifku",
+        "chapter_order": 8,
+        "activity_id": 977506,
+        "activity_name": "Asesmen 6: Yuk Hitung dan Ukur!",
+        "activity_order": 98,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 400044,
+        "chapter_name": "Tema 1 Minggu 8 (31 Agt-4 Sept) | Finalisasi Sumatifku",
+        "chapter_order": 8,
+        "activity_id": 1007905,
+        "activity_name": "Asesmen Sumatif : Buku Lipat Anak Sehat",
+        "activity_order": 99,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 400046,
+        "chapter_name": "Tema 1 Minggu 9 (7-11 September) | Presentasi Sumatif",
+        "chapter_order": 9,
+        "activity_id": 1014619,
+        "activity_name": "Daftar Kebutuhan Belajar Minggu 9",
+        "activity_order": 100,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 400046,
+        "chapter_name": "Tema 1 Minggu 9 (7-11 September) | Presentasi Sumatif",
+        "chapter_order": 9,
+        "activity_id": 1014622,
+        "activity_name": "Pertemuan Belajar Live 1: Aku Anak Sehat! [Presentasi Sumatif]",
+        "activity_order": 101,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 400046,
+        "chapter_name": "Tema 1 Minggu 9 (7-11 September) | Presentasi Sumatif",
+        "chapter_order": 9,
+        "activity_id": 1014624,
+        "activity_name": "Senin, 7 September 2026 | Mengurutkan Panjang Benda",
+        "activity_order": 102,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 400046,
+        "chapter_name": "Tema 1 Minggu 9 (7-11 September) | Presentasi Sumatif",
+        "chapter_order": 9,
+        "activity_id": 1014625,
+        "activity_name": "Selasa, 8 September 2026 | Mengenal Simbol <,> dan =",
+        "activity_order": 103,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 400046,
+        "chapter_name": "Tema 1 Minggu 9 (7-11 September) | Presentasi Sumatif",
+        "chapter_order": 9,
+        "activity_id": 1014626,
+        "activity_name": "Selasa, 8 September 2026 | Coba Bandingkan dan Urutkan!",
+        "activity_order": 104,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 400046,
+        "chapter_name": "Tema 1 Minggu 9 (7-11 September) | Presentasi Sumatif",
+        "chapter_order": 9,
+        "activity_id": 1014632,
+        "activity_name": "Pertemuan Belajar Live 2: Aku Anak Sehat! [Presentasi Sumatif]",
+        "activity_order": 105,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 400046,
+        "chapter_name": "Tema 1 Minggu 9 (7-11 September) | Presentasi Sumatif",
+        "chapter_order": 9,
+        "activity_id": 1014640,
+        "activity_name": "Rabu, 9 September 2026 | Waktu Membaca: Murid Paling Berani!",
+        "activity_order": 106,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 400046,
+        "chapter_name": "Tema 1 Minggu 9 (7-11 September) | Presentasi Sumatif",
+        "chapter_order": 9,
+        "activity_id": 1014861,
+        "activity_name": "Kamis, 10 September 2026 | Kamus Kosakataku",
+        "activity_order": 107,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 400046,
+        "chapter_name": "Tema 1 Minggu 9 (7-11 September) | Presentasi Sumatif",
+        "chapter_order": 9,
+        "activity_id": 1014866,
+        "activity_name": "Kamis, 10 September 2026 | Menulis Pada Garis",
+        "activity_order": 108,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 400046,
+        "chapter_name": "Tema 1 Minggu 9 (7-11 September) | Presentasi Sumatif",
+        "chapter_order": 9,
+        "activity_id": 1014868,
+        "activity_name": "Jumat, 11 September 2026 | Ini Bagian Privasiku",
+        "activity_order": 109,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 400046,
+        "chapter_name": "Tema 1 Minggu 9 (7-11 September) | Presentasi Sumatif",
+        "chapter_order": 9,
+        "activity_id": 1014878,
+        "activity_name": "Jumat, 11 September 2026 | Masihkah Kamu Ingat Nilai Tempat?",
+        "activity_order": 110,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 400047,
+        "chapter_name": "Tema 1 Minggu 10 (14-18 September) | Presentasi Sumatif",
+        "chapter_order": 10,
+        "activity_id": 1024909,
+        "activity_name": "Daftar Kebutuhan Belajar Minggu 10",
+        "activity_order": 111,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 400047,
+        "chapter_name": "Tema 1 Minggu 10 (14-18 September) | Presentasi Sumatif",
+        "chapter_order": 10,
+        "activity_id": 1024907,
+        "activity_name": "Pertemuan Belajar Live 1: Aku Anak Sehat! [Presentasi Sumatif]",
+        "activity_order": 112,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 400047,
+        "chapter_name": "Tema 1 Minggu 10 (14-18 September) | Presentasi Sumatif",
+        "chapter_order": 10,
+        "activity_id": 1024915,
+        "activity_name": "Senin, 18 September 2026 | Yuk, Hidup Sehat Seperti Bella!",
+        "activity_order": 113,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 400047,
+        "chapter_name": "Tema 1 Minggu 10 (14-18 September) | Presentasi Sumatif",
+        "chapter_order": 10,
+        "activity_id": 1024916,
+        "activity_name": "Selasa, 15 September 2026 | Tantangan Matematika: Lupa Cuci Tangan!",
+        "activity_order": 114,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 400047,
+        "chapter_name": "Tema 1 Minggu 10 (14-18 September) | Presentasi Sumatif",
+        "chapter_order": 10,
+        "activity_id": 1024917,
+        "activity_name": "Selasa, 15 September 2026 | Mana yang Sehat?",
+        "activity_order": 115,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 400047,
+        "chapter_name": "Tema 1 Minggu 10 (14-18 September) | Presentasi Sumatif",
+        "chapter_order": 10,
+        "activity_id": 1024918,
+        "activity_name": "Pertemuan Belajar Live 2: Aku Anak Sehat! [Presentasi Sumatif]",
+        "activity_order": 116,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 400047,
+        "chapter_name": "Tema 1 Minggu 10 (14-18 September) | Presentasi Sumatif",
+        "chapter_order": 10,
+        "activity_id": 1024919,
+        "activity_name": "Rabu, 16 September 2026 | Ada Makanan apa di Rumahku?",
+        "activity_order": 117,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 400047,
+        "chapter_name": "Tema 1 Minggu 10 (14-18 September) | Presentasi Sumatif",
+        "chapter_order": 10,
+        "activity_id": 1024933,
+        "activity_name": "Rabu, 16 September 2026 | Memilih Karya untuk Pameran",
+        "activity_order": 118,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 400047,
+        "chapter_name": "Tema 1 Minggu 10 (14-18 September) | Presentasi Sumatif",
+        "chapter_order": 10,
+        "activity_id": 1024921,
+        "activity_name": "Kamis, 17 September 2026 | Ukur-ukur di Posyandu",
+        "activity_order": 119,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 400047,
+        "chapter_name": "Tema 1 Minggu 10 (14-18 September) | Presentasi Sumatif",
+        "chapter_order": 10,
+        "activity_id": 1024923,
+        "activity_name": "Kamis, 17 September 2026 | Unggah LK Minggu 10",
+        "activity_order": 120,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 400047,
+        "chapter_name": "Tema 1 Minggu 10 (14-18 September) | Presentasi Sumatif",
+        "chapter_order": 10,
+        "activity_id": 1024925,
+        "activity_name": "Jumat, 18 September 2026 | Sudahkah Aku Menyelesaikan Tugas Wajibku?",
+        "activity_order": 121,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 406817,
+        "chapter_name": "Tema 1 Minggu 11 (21-25 September 2026) | Refleksiku",
+        "chapter_order": 11,
+        "activity_id": 1025573,
+        "activity_name": "Daftar Kebutuhan Belajar Minggu 11",
+        "activity_order": 122,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 406817,
+        "chapter_name": "Tema 1 Minggu 11 (21-25 September 2026) | Refleksiku",
+        "chapter_order": 11,
+        "activity_id": 1025579,
+        "activity_name": "Pertemuan Belajar Live 1: Sasa dan Tutu Menjaga Mata",
+        "activity_order": 123,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 406817,
+        "chapter_name": "Tema 1 Minggu 11 (21-25 September 2026) | Refleksiku",
+        "chapter_order": 11,
+        "activity_id": 1025586,
+        "activity_name": "Senin, 21 September 2026 |Menjaga Kesehatan Gigi",
+        "activity_order": 124,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 406817,
+        "chapter_name": "Tema 1 Minggu 11 (21-25 September 2026) | Refleksiku",
+        "chapter_order": 11,
+        "activity_id": 1025597,
+        "activity_name": "Senin, 21 September 2026 | Aku Siap Pameran Karya!",
+        "activity_order": 125,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 406817,
+        "chapter_name": "Tema 1 Minggu 11 (21-25 September 2026) | Refleksiku",
+        "chapter_order": 11,
+        "activity_id": 1025602,
+        "activity_name": "Selasa, 22 September 2026 | Mengenal Garis Bilangan",
+        "activity_order": 126,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 406817,
+        "chapter_name": "Tema 1 Minggu 11 (21-25 September 2026) | Refleksiku",
+        "chapter_order": 11,
+        "activity_id": 1025606,
+        "activity_name": "Selasa, 22 September 2026 | Mengenal Anggota Keluargaku",
+        "activity_order": 127,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 406817,
+        "chapter_name": "Tema 1 Minggu 11 (21-25 September 2026) | Refleksiku",
+        "chapter_order": 11,
+        "activity_id": 1025612,
+        "activity_name": "Selasa, 2 September 2026 | Bermain dengan Pola",
+        "activity_order": 128,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 406817,
+        "chapter_name": "Tema 1 Minggu 11 (21-25 September 2026) | Refleksiku",
+        "chapter_order": 11,
+        "activity_id": 1025620,
+        "activity_name": "Pertemuan Belajar Live 2: Aku Mahir Berhitung!",
+        "activity_order": 129,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 406817,
+        "chapter_name": "Tema 1 Minggu 11 (21-25 September 2026) | Refleksiku",
+        "chapter_order": 11,
+        "activity_id": 1025641,
+        "activity_name": "Rabu, 23 September 2026 | Apa yang Sudah Aku Pelajari di Tema 1?",
+        "activity_order": 130,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 406817,
+        "chapter_name": "Tema 1 Minggu 11 (21-25 September 2026) | Refleksiku",
+        "chapter_order": 11,
+        "activity_id": 1025648,
+        "activity_name": "Kamis, 24 September 2026 | Sayur Buatan Mama",
+        "activity_order": 131,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 406817,
+        "chapter_name": "Tema 1 Minggu 11 (21-25 September 2026) | Refleksiku",
+        "chapter_order": 11,
+        "activity_id": 1025670,
+        "activity_name": "Kamis, 24 September 2026 | Ingat Kembali Simbol Pancasila",
+        "activity_order": 132,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 406817,
+        "chapter_name": "Tema 1 Minggu 11 (21-25 September 2026) | Refleksiku",
+        "chapter_order": 11,
+        "activity_id": 1025682,
+        "activity_name": "Pengumpulan Lensa Aksara",
+        "activity_order": 133,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 406817,
+        "chapter_name": "Tema 1 Minggu 11 (21-25 September 2026) | Refleksiku",
+        "chapter_order": 11,
+        "activity_id": 1025688,
+        "activity_name": "Timeline Tema 2: Aku Penjelajah Dunia",
+        "activity_order": 134,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 409578,
+        "chapter_name": "Tema 2 Minggu 1 (5-9 Okt 2026) | Penjelajah Dunia",
+        "chapter_order": 12,
+        "activity_id": 1035916,
+        "activity_name": "Daftar Kebutuhan Belajar Minggu 1",
+        "activity_order": 135,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 409578,
+        "chapter_name": "Tema 2 Minggu 1 (5-9 Okt 2026) | Penjelajah Dunia",
+        "chapter_order": 12,
+        "activity_id": 1033231,
+        "activity_name": "Pertemuan Belajar Live 1: Mengenal Arah dan Petunjuk",
+        "activity_order": 136,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 409578,
+        "chapter_name": "Tema 2 Minggu 1 (5-9 Okt 2026) | Penjelajah Dunia",
+        "chapter_order": 12,
+        "activity_id": 1033233,
+        "activity_name": "Senin, 5 Oktober 2026 | Aku Bisa Membaca Arah!",
+        "activity_order": 137,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 409578,
+        "chapter_name": "Tema 2 Minggu 1 (5-9 Okt 2026) | Penjelajah Dunia",
+        "chapter_order": 12,
+        "activity_id": 1035933,
+        "activity_name": "Selasa, 6 Oktober 2026 | Ingat Kembali Huruf Vokal dan Konsonan",
+        "activity_order": 138,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 409578,
+        "chapter_name": "Tema 2 Minggu 1 (5-9 Okt 2026) | Penjelajah Dunia",
+        "chapter_order": 12,
+        "activity_id": 1035942,
+        "activity_name": "Selasa, 6 Oktober 2026 | Menulis dalam Garis",
+        "activity_order": 139,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 409578,
+        "chapter_name": "Tema 2 Minggu 1 (5-9 Okt 2026) | Penjelajah Dunia",
+        "chapter_order": 12,
+        "activity_id": 1035946,
+        "activity_name": "Selasa, 6 Oktober 2026 | Ingat Kembali Huruf dan Arahnya",
+        "activity_order": 140,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 409578,
+        "chapter_name": "Tema 2 Minggu 1 (5-9 Okt 2026) | Penjelajah Dunia",
+        "chapter_order": 12,
+        "activity_id": 1035958,
+        "activity_name": "Pertemuan Belajar Live 2: Berkenalan dengan Uang",
+        "activity_order": 141,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 409578,
+        "chapter_name": "Tema 2 Minggu 1 (5-9 Okt 2026) | Penjelajah Dunia",
+        "chapter_order": 12,
+        "activity_id": 1035974,
+        "activity_name": "Rabu, 7 Oktober 2026 | Hati-hati Uang Palsu!",
+        "activity_order": 142,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 409578,
+        "chapter_name": "Tema 2 Minggu 1 (5-9 Okt 2026) | Penjelajah Dunia",
+        "chapter_order": 12,
+        "activity_id": 1035980,
+        "activity_name": "Kamis, 8 Oktober 2026 | Detektif Masalah",
+        "activity_order": 143,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 409578,
+        "chapter_name": "Tema 2 Minggu 1 (5-9 Okt 2026) | Penjelajah Dunia",
+        "chapter_order": 12,
+        "activity_id": 1035984,
+        "activity_name": "Kamis, 8 Oktober 2026 | Misi Kamar Rapi",
+        "activity_order": 144,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 409578,
+        "chapter_name": "Tema 2 Minggu 1 (5-9 Okt 2026) | Penjelajah Dunia",
+        "chapter_order": 12,
+        "activity_id": 1035987,
+        "activity_name": "Kamis, 8 Oktober 2026 | Bantu Lebah Temukan Madu",
+        "activity_order": 145,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 409578,
+        "chapter_name": "Tema 2 Minggu 1 (5-9 Okt 2026) | Penjelajah Dunia",
+        "chapter_order": 12,
+        "activity_id": 1035989,
+        "activity_name": "Jumat, 9 Oktober 2026 | Membuat Tujuan dan Kesepakatan",
+        "activity_order": 146,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 409578,
+        "chapter_name": "Tema 2 Minggu 1 (5-9 Okt 2026) | Penjelajah Dunia",
+        "chapter_order": 12,
+        "activity_id": 1035991,
+        "activity_name": "Jumat, 9 Oktober 2026 | Unggah Tujuan Belajarmu",
+        "activity_order": 147,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 409579,
+        "chapter_name": "Tema 2 Minggu 2 (12-16 Okt 2026) | Aku dan Lingkunganku",
+        "chapter_order": 13,
+        "activity_id": 1036952,
+        "activity_name": "Daftar Kebutuhan Belajar Minggu 2",
+        "activity_order": 148,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 409579,
+        "chapter_name": "Tema 2 Minggu 2 (12-16 Okt 2026) | Aku dan Lingkunganku",
+        "chapter_order": 13,
+        "activity_id": 1036890,
+        "activity_name": "Pertemuan Belajar Live 1: Mencari Suku Kata",
+        "activity_order": 149,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 409579,
+        "chapter_name": "Tema 2 Minggu 2 (12-16 Okt 2026) | Aku dan Lingkunganku",
+        "chapter_order": 13,
+        "activity_id": 1037461,
+        "activity_name": "Senin, 12 Oktober 2026 | Bermain Kartu Suku Kata",
+        "activity_order": 150,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 409579,
+        "chapter_name": "Tema 2 Minggu 2 (12-16 Okt 2026) | Aku dan Lingkunganku",
+        "chapter_order": 13,
+        "activity_id": 1037464,
+        "activity_name": "Selasa, 13 Oktober 2026 | Mengenal Hak dan Kewajiban",
+        "activity_order": 151,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 409579,
+        "chapter_name": "Tema 2 Minggu 2 (12-16 Okt 2026) | Aku dan Lingkunganku",
+        "chapter_order": 13,
+        "activity_id": 1037467,
+        "activity_name": "Selasa, 13 Oktober 2026 | Hak dan Kewajibanku di Rumah",
+        "activity_order": 152,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 409579,
+        "chapter_name": "Tema 2 Minggu 2 (12-16 Okt 2026) | Aku dan Lingkunganku",
+        "chapter_order": 13,
+        "activity_id": 1037470,
+        "activity_name": "Selasa, 13 Oktober 2026 | Perkenalan Tema FMM 2026/2027",
+        "activity_order": 153,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 409579,
+        "chapter_name": "Tema 2 Minggu 2 (12-16 Okt 2026) | Aku dan Lingkunganku",
+        "chapter_order": 13,
+        "activity_id": 1037729,
+        "activity_name": "Selasa, 13 Oktober 2026 | Unggah LK Hak dan Kewajiban",
+        "activity_order": 154,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 409579,
+        "chapter_name": "Tema 2 Minggu 2 (12-16 Okt 2026) | Aku dan Lingkunganku",
+        "chapter_order": 13,
+        "activity_id": 1037732,
+        "activity_name": "Pertemuan Belajar Live 2: Belajar Bertransaksi",
+        "activity_order": 155,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 409579,
+        "chapter_name": "Tema 2 Minggu 2 (12-16 Okt 2026) | Aku dan Lingkunganku",
+        "chapter_order": 13,
+        "activity_id": 1037770,
+        "activity_name": "Rabu, 14 Oktober 2026 | Harapan 5 Lembar Uang",
+        "activity_order": 156,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 409579,
+        "chapter_name": "Tema 2 Minggu 2 (12-16 Okt 2026) | Aku dan Lingkunganku",
+        "chapter_order": 13,
+        "activity_id": 1037773,
+        "activity_name": "Kamis, 15 Oktober 2026 | Detektif Peet Mencari Cangkang",
+        "activity_order": 157,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 409579,
+        "chapter_name": "Tema 2 Minggu 2 (12-16 Okt 2026) | Aku dan Lingkunganku",
+        "chapter_order": 13,
+        "activity_id": 1037775,
+        "activity_name": "Kamis, 15 Oktober 2026 | Memilih Baju untuk Hari Esok",
+        "activity_order": 158,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 409579,
+        "chapter_name": "Tema 2 Minggu 2 (12-16 Okt 2026) | Aku dan Lingkunganku",
+        "chapter_order": 13,
+        "activity_id": 1037776,
+        "activity_name": "Kamis, 15 Oktober 2026 | Membuat Es Krim Pola",
+        "activity_order": 159,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 409579,
+        "chapter_name": "Tema 2 Minggu 2 (12-16 Okt 2026) | Aku dan Lingkunganku",
+        "chapter_order": 13,
+        "activity_id": 1037778,
+        "activity_name": "Jumat, 16 Oktober 2025 | Menggambar Rumahku dan Sekitarnya",
+        "activity_order": 160,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 409579,
+        "chapter_name": "Tema 2 Minggu 2 (12-16 Okt 2026) | Aku dan Lingkunganku",
+        "chapter_order": 13,
+        "activity_id": 1037783,
+        "activity_name": "Jumat, 16 Oktober 2025 | Unggah LK Rumahku dan Sekitarnya",
+        "activity_order": 161,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411659,
+        "chapter_name": "Tema 2 Minggu 3 (19-23 Okt 2026) | Panduan Sumatif",
+        "chapter_order": 14,
+        "activity_id": 1039443,
+        "activity_name": "Daftar Kebutuhan Belajar Minggu 3",
+        "activity_order": 162,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411659,
+        "chapter_name": "Tema 2 Minggu 3 (19-23 Okt 2026) | Panduan Sumatif",
+        "chapter_order": 14,
+        "activity_id": 1041726,
+        "activity_name": "Pertemuan Belajar Live 1: Anggota Keluargaku",
+        "activity_order": 163,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411659,
+        "chapter_name": "Tema 2 Minggu 3 (19-23 Okt 2026) | Panduan Sumatif",
+        "chapter_order": 14,
+        "activity_id": 1041736,
+        "activity_name": "Senin, 19 Oktober 2026 | Waktu Membaca: Kakak dan Adik Laki-Laki",
+        "activity_order": 164,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411659,
+        "chapter_name": "Tema 2 Minggu 3 (19-23 Okt 2026) | Panduan Sumatif",
+        "chapter_order": 14,
+        "activity_id": 1041739,
+        "activity_name": "Selasa, 20 Oktober 2026 | Mengenal Pola Bilangan",
+        "activity_order": 165,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411659,
+        "chapter_name": "Tema 2 Minggu 3 (19-23 Okt 2026) | Panduan Sumatif",
+        "chapter_order": 14,
+        "activity_id": 1041757,
+        "activity_name": "Selasa, 20 Oktober 2026 | Bilangan Bisa Berpola",
+        "activity_order": 166,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411659,
+        "chapter_name": "Tema 2 Minggu 3 (19-23 Okt 2026) | Panduan Sumatif",
+        "chapter_order": 14,
+        "activity_id": 1041767,
+        "activity_name": "Selasa, 20 Oktober 2026 | Bermain Pola Bilangan",
+        "activity_order": 167,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411659,
+        "chapter_name": "Tema 2 Minggu 3 (19-23 Okt 2026) | Panduan Sumatif",
+        "chapter_order": 14,
+        "activity_id": 1041774,
+        "activity_name": "Pertemuan Belajar Live 2: Pola Bilangan dan Panduan Sumatif",
+        "activity_order": 168,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411659,
+        "chapter_name": "Tema 2 Minggu 3 (19-23 Okt 2026) | Panduan Sumatif",
+        "chapter_order": 14,
+        "activity_id": 1041787,
+        "activity_name": "Panduan Proyek Sumatif: Koper Aku dan Keluargaku",
+        "activity_order": 169,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411659,
+        "chapter_name": "Tema 2 Minggu 3 (19-23 Okt 2026) | Panduan Sumatif",
+        "chapter_order": 14,
+        "activity_id": 1041796,
+        "activity_name": "Rabu, 21 Oktober 2026 | Membuat Pizza Berpola",
+        "activity_order": 170,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411659,
+        "chapter_name": "Tema 2 Minggu 3 (19-23 Okt 2026) | Panduan Sumatif",
+        "chapter_order": 14,
+        "activity_id": 1041800,
+        "activity_name": "Kamis, 22 Oktober 2026 | Keliling Benua Asia",
+        "activity_order": 171,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411659,
+        "chapter_name": "Tema 2 Minggu 3 (19-23 Okt 2026) | Panduan Sumatif",
+        "chapter_order": 14,
+        "activity_id": 1041802,
+        "activity_name": "Perayaan Bulan Bahasa: Ini Bahasa Daerahku!",
+        "activity_order": 172,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411659,
+        "chapter_name": "Tema 2 Minggu 3 (19-23 Okt 2026) | Panduan Sumatif",
+        "chapter_order": 14,
+        "activity_id": 1041809,
+        "activity_name": "Kamis, 22 Oktober 2026 | Mengenal Benua dan Lautan di Dunia",
+        "activity_order": 173,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411659,
+        "chapter_name": "Tema 2 Minggu 3 (19-23 Okt 2026) | Panduan Sumatif",
+        "chapter_order": 14,
+        "activity_id": 1041813,
+        "activity_name": "Jumat, 23 Oktober 2026 | Pasca Homeroom: Unggah Kreasi Bahan Alam",
+        "activity_order": 174,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411661,
+        "chapter_name": "Tema 2 Minggu 4 (26-30 Okt 2026) | Keluarga dan Sekitar",
+        "chapter_order": 15,
+        "activity_id": 1045181,
+        "activity_name": "Daftar Kebutuhan Belajar Minggu 4",
+        "activity_order": 175,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411661,
+        "chapter_name": "Tema 2 Minggu 4 (26-30 Okt 2026) | Keluarga dan Sekitar",
+        "chapter_order": 15,
+        "activity_id": 1045626,
+        "activity_name": "Pertemuan Belajar Live 1: Aktivitasku di Rumah",
+        "activity_order": 176,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411661,
+        "chapter_name": "Tema 2 Minggu 4 (26-30 Okt 2026) | Keluarga dan Sekitar",
+        "chapter_order": 15,
+        "activity_id": 1045657,
+        "activity_name": "Senin, 26 Oktober 2026 | Buat Kalimatnya, Yuk!",
+        "activity_order": 177,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411661,
+        "chapter_name": "Tema 2 Minggu 4 (26-30 Okt 2026) | Keluarga dan Sekitar",
+        "chapter_order": 15,
+        "activity_id": 1045665,
+        "activity_name": "Selasa, 27 Oktober 2026 | Mengingat Cara Menjumlah dan Mengurang",
+        "activity_order": 178,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411661,
+        "chapter_name": "Tema 2 Minggu 4 (26-30 Okt 2026) | Keluarga dan Sekitar",
+        "chapter_order": 15,
+        "activity_id": 1045669,
+        "activity_name": "Selasa, 27 Oktober 2026 | Mengenal Kembali Garis Bilangan",
+        "activity_order": 179,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411661,
+        "chapter_name": "Tema 2 Minggu 4 (26-30 Okt 2026) | Keluarga dan Sekitar",
+        "chapter_order": 15,
+        "activity_id": 1045670,
+        "activity_name": "Selasa, 27 Oktober 2026 | Temukan Pasangan Angkanya",
+        "activity_order": 180,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411661,
+        "chapter_name": "Tema 2 Minggu 4 (26-30 Okt 2026) | Keluarga dan Sekitar",
+        "chapter_order": 15,
+        "activity_id": 1045682,
+        "activity_name": "Rabu, 28 Oktober 2026 | Mengelompokkan Benda di Sekitarku",
+        "activity_order": 181,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411661,
+        "chapter_name": "Tema 2 Minggu 4 (26-30 Okt 2026) | Keluarga dan Sekitar",
+        "chapter_order": 15,
+        "activity_id": 1045684,
+        "activity_name": "Rabu, 28 Oktober 2026 | Yuk, kelompokkan!",
+        "activity_order": 182,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411661,
+        "chapter_name": "Tema 2 Minggu 4 (26-30 Okt 2026) | Keluarga dan Sekitar",
+        "chapter_order": 15,
+        "activity_id": 1045685,
+        "activity_name": "Pertemuan Belajar Live 2 Spesial Narasumber: Aku Sayang Keluargaku!",
+        "activity_order": 183,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411661,
+        "chapter_name": "Tema 2 Minggu 4 (26-30 Okt 2026) | Keluarga dan Sekitar",
+        "chapter_order": 15,
+        "activity_id": 1045687,
+        "activity_name": "Kamis, 29 Oktober 2026 | Berburu Benda di Sekitarku",
+        "activity_order": 184,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411661,
+        "chapter_name": "Tema 2 Minggu 4 (26-30 Okt 2026) | Keluarga dan Sekitar",
+        "chapter_order": 15,
+        "activity_id": 1045690,
+        "activity_name": "Kamis, 29 Oktober 2026 | Pra Narasumber: Pintu Ajaib Silsilah Keluarga",
+        "activity_order": 185,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411661,
+        "chapter_name": "Tema 2 Minggu 4 (26-30 Okt 2026) | Keluarga dan Sekitar",
+        "chapter_order": 15,
+        "activity_id": 977977,
+        "activity_name": "Asesmen 1 Tema 2: Aturan, Hak dan Kewajibanku",
+        "activity_order": 186,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411661,
+        "chapter_name": "Tema 2 Minggu 4 (26-30 Okt 2026) | Keluarga dan Sekitar",
+        "chapter_order": 15,
+        "activity_id": 1045695,
+        "activity_name": "Jumat, 30 Oktober 2026 | Bukan Titik Biasa",
+        "activity_order": 187,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411662,
+        "chapter_name": "Tema 2 Minggu 5 (2-6 Nov 2026) | Aku Mahir Pecahan",
+        "chapter_order": 16,
+        "activity_id": 1047635,
+        "activity_name": "Daftar Kebutuhan Belajar Minggu 5",
+        "activity_order": 188,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411662,
+        "chapter_name": "Tema 2 Minggu 5 (2-6 Nov 2026) | Aku Mahir Pecahan",
+        "chapter_order": 16,
+        "activity_id": 1047676,
+        "activity_name": "Pertemuan Belajar Live 1: Membuat Koper Keluargaku",
+        "activity_order": 189,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411662,
+        "chapter_name": "Tema 2 Minggu 5 (2-6 Nov 2026) | Aku Mahir Pecahan",
+        "chapter_order": 16,
+        "activity_id": 1049375,
+        "activity_name": "Senin, 2 November 2026 | Checkpoint Sumatif 1",
+        "activity_order": 190,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411662,
+        "chapter_name": "Tema 2 Minggu 5 (2-6 Nov 2026) | Aku Mahir Pecahan",
+        "chapter_order": 16,
+        "activity_id": 1049395,
+        "activity_name": "Selasa, 3 November 2026 | Aku Bisa Menyusun Kata!",
+        "activity_order": 191,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411662,
+        "chapter_name": "Tema 2 Minggu 5 (2-6 Nov 2026) | Aku Mahir Pecahan",
+        "chapter_order": 16,
+        "activity_id": 977983,
+        "activity_name": "Asesmen Literasi dan Numerasi",
+        "activity_order": 192,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411662,
+        "chapter_name": "Tema 2 Minggu 5 (2-6 Nov 2026) | Aku Mahir Pecahan",
+        "chapter_order": 16,
+        "activity_id": 1049399,
+        "activity_name": "Selasa, 3 November 2026 | Pohon Keluarga Meri Deka",
+        "activity_order": 193,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411662,
+        "chapter_name": "Tema 2 Minggu 5 (2-6 Nov 2026) | Aku Mahir Pecahan",
+        "chapter_order": 16,
+        "activity_id": 1049408,
+        "activity_name": "Pertemuan Belajar Live 2 | Apa itu Pecahan?",
+        "activity_order": 194,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411662,
+        "chapter_name": "Tema 2 Minggu 5 (2-6 Nov 2026) | Aku Mahir Pecahan",
+        "chapter_order": 16,
+        "activity_id": 1049422,
+        "activity_name": "Rabu, 4 November 2026 | Telur Dadar Untukku dan Keluargaku!",
+        "activity_order": 195,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411662,
+        "chapter_name": "Tema 2 Minggu 5 (2-6 Nov 2026) | Aku Mahir Pecahan",
+        "chapter_order": 16,
+        "activity_id": 1049426,
+        "activity_name": "Kamis, 5 November 2026 | Mengenali Keluargaku",
+        "activity_order": 196,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411662,
+        "chapter_name": "Tema 2 Minggu 5 (2-6 Nov 2026) | Aku Mahir Pecahan",
+        "chapter_order": 16,
+        "activity_id": 1049430,
+        "activity_name": "Kamis, 5 November 2026 | Lihat di Sekitarku",
+        "activity_order": 197,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411662,
+        "chapter_name": "Tema 2 Minggu 5 (2-6 Nov 2026) | Aku Mahir Pecahan",
+        "chapter_order": 16,
+        "activity_id": 1049433,
+        "activity_name": "Kamis, 5 November 2026 | Tentukan Urutannya!",
+        "activity_order": 198,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411662,
+        "chapter_name": "Tema 2 Minggu 5 (2-6 Nov 2026) | Aku Mahir Pecahan",
+        "chapter_order": 16,
+        "activity_id": 977975,
+        "activity_name": "Asesmen 2 Tema 2: Aku Bisa Menyelesaikan Masalah",
+        "activity_order": 199,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411663,
+        "chapter_name": "Tema 2 Minggu 6 (9-13 Nov 2026) | Aku dan Sumatifku",
+        "chapter_order": 17,
+        "activity_id": 1051902,
+        "activity_name": "Daftar Kebutuhan Belajar Minggu 6",
+        "activity_order": 200,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411663,
+        "chapter_name": "Tema 2 Minggu 6 (9-13 Nov 2026) | Aku dan Sumatifku",
+        "chapter_order": 17,
+        "activity_id": 1051909,
+        "activity_name": "Pertemuan Belajar Live 1: Sudah Sampai Mana, ya?",
+        "activity_order": 201,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411663,
+        "chapter_name": "Tema 2 Minggu 6 (9-13 Nov 2026) | Aku dan Sumatifku",
+        "chapter_order": 17,
+        "activity_id": 1051914,
+        "activity_name": "Senin, 9 November 2026 | Checkpoint Sumatif",
+        "activity_order": 202,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411663,
+        "chapter_name": "Tema 2 Minggu 6 (9-13 Nov 2026) | Aku dan Sumatifku",
+        "chapter_order": 17,
+        "activity_id": 1051915,
+        "activity_name": "Selasa, 10 November 2026 | Mengenang Jasa Pahlawan",
+        "activity_order": 203,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411663,
+        "chapter_name": "Tema 2 Minggu 6 (9-13 Nov 2026) | Aku dan Sumatifku",
+        "chapter_order": 17,
+        "activity_id": 1051917,
+        "activity_name": "Selasa, 10 November 2026 | Menulis Kosakata Baru",
+        "activity_order": 204,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411663,
+        "chapter_name": "Tema 2 Minggu 6 (9-13 Nov 2026) | Aku dan Sumatifku",
+        "chapter_order": 17,
+        "activity_id": 1051919,
+        "activity_name": "Selasa, 10 November 2026 | Kreasi Bunga Pahlawanku",
+        "activity_order": 205,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411663,
+        "chapter_name": "Tema 2 Minggu 6 (9-13 Nov 2026) | Aku dan Sumatifku",
+        "chapter_order": 17,
+        "activity_id": 1051920,
+        "activity_name": "Pertemuan Belajar Live 2: Berbagi dengan Temanku",
+        "activity_order": 206,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411663,
+        "chapter_name": "Tema 2 Minggu 6 (9-13 Nov 2026) | Aku dan Sumatifku",
+        "chapter_order": 17,
+        "activity_id": 1051930,
+        "activity_name": "Rabu, 11 November 2026 | Berapa Bagian yang Aku Miliki, ya?",
+        "activity_order": 207,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411663,
+        "chapter_name": "Tema 2 Minggu 6 (9-13 Nov 2026) | Aku dan Sumatifku",
+        "chapter_order": 17,
+        "activity_id": 1051932,
+        "activity_name": "Kamis, 12 November 2026 | Bantuan yang Kuberikan",
+        "activity_order": 208,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411663,
+        "chapter_name": "Tema 2 Minggu 6 (9-13 Nov 2026) | Aku dan Sumatifku",
+        "chapter_order": 17,
+        "activity_id": 1051935,
+        "activity_name": "Kamis, 12 November 2026 | Waktu Membaca: Riri dan Cuaca",
+        "activity_order": 209,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411663,
+        "chapter_name": "Tema 2 Minggu 6 (9-13 Nov 2026) | Aku dan Sumatifku",
+        "chapter_order": 17,
+        "activity_id": 1051936,
+        "activity_name": "Kamis, 12 November 2026 | Padlet Bercerita: Riri dan Cuaca",
+        "activity_order": 210,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411663,
+        "chapter_name": "Tema 2 Minggu 6 (9-13 Nov 2026) | Aku dan Sumatifku",
+        "chapter_order": 17,
+        "activity_id": 1051937,
+        "activity_name": "Jumat, 13 November 2026 | Unggah LK Minggu 6",
+        "activity_order": 211,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 386780,
+        "chapter_name": "Refleksi Akhir Tahun",
+        "chapter_order": 19,
+        "activity_id": 979980,
+        "activity_name": "Refleksi Pembelajaran TA 26/27",
+        "activity_order": 212,
+        "is_addon": 0
+      }
+    ]
+  },
+  "year-1-english-semester-1-ta-20262027": {
+    "platform_id": "4",
+    "program_id": 3508,
+    "activities": [
+      {
+        "chapter_id": 384925,
+        "chapter_name": "LIVE Session/Tatap Muka English Theme 1",
+        "chapter_order": 1,
+        "activity_id": 977665,
+        "activity_name": "Zoom Link and Schedule",
+        "activity_order": 1,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 384925,
+        "chapter_name": "LIVE Session/Tatap Muka English Theme 1",
+        "chapter_order": 1,
+        "activity_id": 977672,
+        "activity_name": "Recordings and Slides (Week 2 - Week 4)",
+        "activity_order": 2,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 384925,
+        "chapter_name": "LIVE Session/Tatap Muka English Theme 1",
+        "chapter_order": 1,
+        "activity_id": 997920,
+        "activity_name": "Recordings and Slides (Week 5 - Week 8)",
+        "activity_order": 3,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 384925,
+        "chapter_name": "LIVE Session/Tatap Muka English Theme 1",
+        "chapter_order": 1,
+        "activity_id": 1022626,
+        "activity_name": "Recordings and Slides (Week 9 - 11)",
+        "activity_order": 4,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 384926,
+        "chapter_name": "Week 2 | 20-24 July 2026 | Find Your English House!",
+        "chapter_order": 2,
+        "activity_id": 978237,
+        "activity_name": "Monday, 20 July 2026 | Slides of Introducing the English Houses",
+        "activity_order": 5,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 384926,
+        "chapter_name": "Week 2 | 20-24 July 2026 | Find Your English House!",
+        "chapter_order": 2,
+        "activity_id": 975845,
+        "activity_name": "Tuesday, 21 July 2026 | What is my English House?",
+        "activity_order": 6,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 384926,
+        "chapter_name": "Week 2 | 20-24 July 2026 | Find Your English House!",
+        "chapter_order": 2,
+        "activity_id": 978250,
+        "activity_name": "Wednesday, 22 July 2026 | Share with friends: My English House",
+        "activity_order": 7,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 384926,
+        "chapter_name": "Week 2 | 20-24 July 2026 | Find Your English House!",
+        "chapter_order": 2,
+        "activity_id": 978331,
+        "activity_name": "Thursday, 23 July 2026 | English Letters Make Sounds: Listen and Say!",
+        "activity_order": 8,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 384926,
+        "chapter_name": "Week 2 | 20-24 July 2026 | Find Your English House!",
+        "chapter_order": 2,
+        "activity_id": 978302,
+        "activity_name": "Friday, 24 July 2026 | Worksheet: Short CVC Words",
+        "activity_order": 9,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388646,
+        "chapter_name": "Week 3 | 27-31 July 2026 | From Head to Toe, Lets Move",
+        "chapter_order": 3,
+        "activity_id": 981994,
+        "activity_name": "Monday, 27 July 2026 | Slides of From Head to Toe, Let's Move!",
+        "activity_order": 10,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388646,
+        "chapter_name": "Week 3 | 27-31 July 2026 | From Head to Toe, Lets Move",
+        "chapter_order": 3,
+        "activity_id": 982008,
+        "activity_name": "Tuesday, 28 July 2026 | Story Reading: From Head to Toe",
+        "activity_order": 11,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388646,
+        "chapter_name": "Week 3 | 27-31 July 2026 | From Head to Toe, Lets Move",
+        "chapter_order": 3,
+        "activity_id": 982019,
+        "activity_name": "Wednesday, 29 July 2026 | Interactive Activity: Healthy or Unhealthy? ",
+        "activity_order": 12,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388646,
+        "chapter_name": "Week 3 | 27-31 July 2026 | From Head to Toe, Lets Move",
+        "chapter_order": 3,
+        "activity_id": 982024,
+        "activity_name": "Thursday, 30 July 2026 | Video Viewing: Parts of The Body",
+        "activity_order": 13,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388646,
+        "chapter_name": "Week 3 | 27-31 July 2026 | From Head to Toe, Lets Move",
+        "chapter_order": 3,
+        "activity_id": 982039,
+        "activity_name": "Friday, 31 July 2026 | Phonics Corner: Short Vowel O",
+        "activity_order": 14,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 389685,
+        "chapter_name": "Week 4 | 3 - 7 August 2026 | My Healthy Routines",
+        "chapter_order": 4,
+        "activity_id": 985395,
+        "activity_name": "Monday, 3 August 2026 | Slides of My Healthy Routines",
+        "activity_order": 15,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 389685,
+        "chapter_name": "Week 4 | 3 - 7 August 2026 | My Healthy Routines",
+        "chapter_order": 4,
+        "activity_id": 985406,
+        "activity_name": " Tuesday, 4 August 2026 | Padlet: I Am Healthy!",
+        "activity_order": 16,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 389685,
+        "chapter_name": "Week 4 | 3 - 7 August 2026 | My Healthy Routines",
+        "chapter_order": 4,
+        "activity_id": 985409,
+        "activity_name": "Wednesday, 5 August 2026 | Healthy or Unhealthy? ",
+        "activity_order": 17,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 389685,
+        "chapter_name": "Week 4 | 3 - 7 August 2026 | My Healthy Routines",
+        "chapter_order": 4,
+        "activity_id": 985411,
+        "activity_name": "Thursday, 6 August 2026 | Listening to Audiobook: Ready, Set, Brush!",
+        "activity_order": 18,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 389685,
+        "chapter_name": "Week 4 | 3 - 7 August 2026 | My Healthy Routines",
+        "chapter_order": 4,
+        "activity_id": 985426,
+        "activity_name": "Friday, 7 August 2026 | Phonics Corner: Short Vowel I",
+        "activity_order": 19,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 392055,
+        "chapter_name": "Week 5 | 10 - 14 August 2026 | Today, I Feel...",
+        "chapter_order": 5,
+        "activity_id": 991050,
+        "activity_name": "Monday, 10 August 2026 | Slides of \"Today, I Feel...\"",
+        "activity_order": 20,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 392055,
+        "chapter_name": "Week 5 | 10 - 14 August 2026 | Today, I Feel...",
+        "chapter_order": 5,
+        "activity_id": 991058,
+        "activity_name": "Tuesday, 11 August 2026 | Video Viewing: Share My Emotions",
+        "activity_order": 21,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 392055,
+        "chapter_name": "Week 5 | 10 - 14 August 2026 | Today, I Feel...",
+        "chapter_order": 5,
+        "activity_id": 991055,
+        "activity_name": "Wednesday, 12 August 2026 | Padlet: I Did My Worksheet!",
+        "activity_order": 22,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 392055,
+        "chapter_name": "Week 5 | 10 - 14 August 2026 | Today, I Feel...",
+        "chapter_order": 5,
+        "activity_id": 991066,
+        "activity_name": "Thursday, 13 August 2026 | Download and do the Formative Assessment",
+        "activity_order": 23,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 392055,
+        "chapter_name": "Week 5 | 10 - 14 August 2026 | Today, I Feel...",
+        "chapter_order": 5,
+        "activity_id": 978416,
+        "activity_name": "Friday, 14 August 2026: Upload Your Formative Assessment Theme 1",
+        "activity_order": 24,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 394369,
+        "chapter_name": "Week 6 | 18 - 21 August 2026 | Say and Write",
+        "chapter_order": 6,
+        "activity_id": 995228,
+        "activity_name": "Tuesday, 18 August 2026 | Slides of \"Feel, Say and Write It.\"",
+        "activity_order": 25,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 394369,
+        "chapter_name": "Week 6 | 18 - 21 August 2026 | Say and Write",
+        "chapter_order": 6,
+        "activity_id": 995231,
+        "activity_name": " Wednesday, 19 August 2026 | Summative Project Guideline",
+        "activity_order": 26,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 394369,
+        "chapter_name": "Week 6 | 18 - 21 August 2026 | Say and Write",
+        "chapter_order": 6,
+        "activity_id": 995234,
+        "activity_name": "Thursday, 20 August 2026 | The Feelings Game",
+        "activity_order": 27,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 394369,
+        "chapter_name": "Week 6 | 18 - 21 August 2026 | Say and Write",
+        "chapter_order": 6,
+        "activity_id": 995235,
+        "activity_name": "Friday, 21 August 2026 | Capital Letter Game",
+        "activity_order": 28,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 398319,
+        "chapter_name": "Week 7 | 24 - 28 August 2026 | What Can I Say",
+        "chapter_order": 7,
+        "activity_id": 1004573,
+        "activity_name": "Monday, 24 August 2026 | Slides of \"What Can I Say?\"",
+        "activity_order": 29,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 398319,
+        "chapter_name": "Week 7 | 24 - 28 August 2026 | What Can I Say",
+        "chapter_order": 7,
+        "activity_id": 1004587,
+        "activity_name": "Wednesday, 26 August 2026 | Summative Project Step 1 & 2",
+        "activity_order": 30,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 398319,
+        "chapter_name": "Week 7 | 24 - 28 August 2026 | What Can I Say",
+        "chapter_order": 7,
+        "activity_id": 1004607,
+        "activity_name": "Thursday, 27 August 2026 | Summative Project Step 3",
+        "activity_order": 31,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 398319,
+        "chapter_name": "Week 7 | 24 - 28 August 2026 | What Can I Say",
+        "chapter_order": 7,
+        "activity_id": 1004630,
+        "activity_name": "Friday, 28 August 2026 | Padlet: Read and Choose!",
+        "activity_order": 32,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 398344,
+        "chapter_name": "Week 8 | 31 Aug - 4 September 2026 | Project Showcase 1",
+        "chapter_order": 8,
+        "activity_id": 1009691,
+        "activity_name": " Monday, 31 August 2026 | Project Showcase 1",
+        "activity_order": 33,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 398344,
+        "chapter_name": "Week 8 | 31 Aug - 4 September 2026 | Project Showcase 1",
+        "chapter_order": 8,
+        "activity_id": 1009717,
+        "activity_name": "Tuesday, 1 September 2026 | Phonics Corner: CVC Words",
+        "activity_order": 34,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 398344,
+        "chapter_name": "Week 8 | 31 Aug - 4 September 2026 | Project Showcase 1",
+        "chapter_order": 8,
+        "activity_id": 1009736,
+        "activity_name": "Wednesday, 2 September 2026 | Video Viewing: \u201cI Am NOT Scared\u201d",
+        "activity_order": 35,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 398344,
+        "chapter_name": "Week 8 | 31 Aug - 4 September 2026 | Project Showcase 1",
+        "chapter_order": 8,
+        "activity_id": 1009774,
+        "activity_name": "Thursday, 3 September 2026 | Let\u2019s Give Your Project One Last Check!",
+        "activity_order": 36,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 398344,
+        "chapter_name": "Week 8 | 31 Aug - 4 September 2026 | Project Showcase 1",
+        "chapter_order": 8,
+        "activity_id": 978417,
+        "activity_name": "Friday, 4 September 2026 | Summative Project Assessment: Theme 1",
+        "activity_order": 37,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 398345,
+        "chapter_name": "Week 9 | 7 - 11 September 2026 | Project Showcase 2",
+        "chapter_order": 9,
+        "activity_id": 1014959,
+        "activity_name": "Monday, 7 September 2026 | Project Showcase 2",
+        "activity_order": 38,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 398345,
+        "chapter_name": "Week 9 | 7 - 11 September 2026 | Project Showcase 2",
+        "chapter_order": 9,
+        "activity_id": 1014974,
+        "activity_name": "Tuesday, 8 September 2026 | Find the Middle Sound!",
+        "activity_order": 39,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 398345,
+        "chapter_name": "Week 9 | 7 - 11 September 2026 | Project Showcase 2",
+        "chapter_order": 9,
+        "activity_id": 1014985,
+        "activity_name": "Wednesday, 9 September 2026 | CVC Sentences Mystery Game",
+        "activity_order": 40,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 398345,
+        "chapter_name": "Week 9 | 7 - 11 September 2026 | Project Showcase 2",
+        "chapter_order": 9,
+        "activity_id": 1014994,
+        "activity_name": "Thursday, 10 September 2026 | Assessment Checkpoint",
+        "activity_order": 41,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 398345,
+        "chapter_name": "Week 9 | 7 - 11 September 2026 | Project Showcase 2",
+        "chapter_order": 9,
+        "activity_id": 978418,
+        "activity_name": "Friday, 11 September 2026 | Summative Assessment Quiz: Theme 1",
+        "activity_order": 42,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 398346,
+        "chapter_name": "Week 10 | 14 - 18 September 2026 | Theme 1 Reflection",
+        "chapter_order": 10,
+        "activity_id": 1027369,
+        "activity_name": "Monday, 14 September 2026 | Theme 1 Reflection",
+        "activity_order": 43,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 398346,
+        "chapter_name": "Week 10 | 14 - 18 September 2026 | Theme 1 Reflection",
+        "chapter_order": 10,
+        "activity_id": 1027374,
+        "activity_name": "Tuesday, 15 September 2026 | Padlet: Theme 1 Reflection",
+        "activity_order": 44,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 398346,
+        "chapter_name": "Week 10 | 14 - 18 September 2026 | Theme 1 Reflection",
+        "chapter_order": 10,
+        "activity_id": 1027378,
+        "activity_name": "Wednesday, 16 September 2026 | Let's Practise the \"U\" Sound! ",
+        "activity_order": 45,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 398346,
+        "chapter_name": "Week 10 | 14 - 18 September 2026 | Theme 1 Reflection",
+        "chapter_order": 10,
+        "activity_id": 1027383,
+        "activity_name": "Thursday, 17 September 2026 | Assessment Checkpoint",
+        "activity_order": 46,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 398346,
+        "chapter_name": "Week 10 | 14 - 18 September 2026 | Theme 1 Reflection",
+        "chapter_order": 10,
+        "activity_id": 1027387,
+        "activity_name": "Friday, 18 September 2026 | Deadline All Assessments",
+        "activity_order": 47,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 407550,
+        "chapter_name": "Week 11 | 21 - 25 September 2026 | End of Theme 1",
+        "chapter_order": 11,
+        "activity_id": 1027396,
+        "activity_name": "Monday, 21 September 2026 | Well Done, Friends!",
+        "activity_order": 48,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 407550,
+        "chapter_name": "Week 11 | 21 - 25 September 2026 | End of Theme 1",
+        "chapter_order": 11,
+        "activity_id": 1029342,
+        "activity_name": "Tuesday, 22 September 2026 | This Is My Emotions Flipbook!",
+        "activity_order": 49,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 407550,
+        "chapter_name": "Week 11 | 21 - 25 September 2026 | End of Theme 1",
+        "chapter_order": 11,
+        "activity_id": 1029344,
+        "activity_name": "Wednesday, 23 September 2026 | Listen and Find!",
+        "activity_order": 50,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 407550,
+        "chapter_name": "Week 11 | 21 - 25 September 2026 | End of Theme 1",
+        "chapter_order": 11,
+        "activity_id": 1029346,
+        "activity_name": "Thursday, 24 September 2026 | Get Ready for Theme 2",
+        "activity_order": 51,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 407550,
+        "chapter_name": "Week 11 | 21 - 25 September 2026 | End of Theme 1",
+        "chapter_order": 11,
+        "activity_id": 1029347,
+        "activity_name": "Friday, 25 September 2026 | Theme 1: Self Reflection ",
+        "activity_order": 52,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411098,
+        "chapter_name": "LIVE Session/Tatap Muka English Theme 2",
+        "chapter_order": 12,
+        "activity_id": 1037527,
+        "activity_name": "Zoom Link and Schedule",
+        "activity_order": 53,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411098,
+        "chapter_name": "LIVE Session/Tatap Muka English Theme 2",
+        "chapter_order": 12,
+        "activity_id": 1037533,
+        "activity_name": "Recordings and Slides (Week 1 - Week 3)",
+        "activity_order": 54,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411098,
+        "chapter_name": "LIVE Session/Tatap Muka English Theme 2",
+        "chapter_order": 12,
+        "activity_id": 1050066,
+        "activity_name": "Recordings and Slides (Week 4 - Week 6)",
+        "activity_order": 55,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411194,
+        "chapter_name": "Week 1 | 5 - 9 October 2026 | Family Members",
+        "chapter_order": 13,
+        "activity_id": 1038057,
+        "activity_name": "Monday, 5 October 2026 | Slides of \"Meet My Family\"",
+        "activity_order": 56,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411194,
+        "chapter_name": "Week 1 | 5 - 9 October 2026 | Family Members",
+        "chapter_order": 13,
+        "activity_id": 1038067,
+        "activity_name": "Tuesday, 6 October 2026 | Find the Pair!",
+        "activity_order": 57,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411194,
+        "chapter_name": "Week 1 | 5 - 9 October 2026 | Family Members",
+        "chapter_order": 13,
+        "activity_id": 1038069,
+        "activity_name": "Wednesday, 7 October 2026 | Drawing My Family Members!",
+        "activity_order": 58,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411194,
+        "chapter_name": "Week 1 | 5 - 9 October 2026 | Family Members",
+        "chapter_order": 13,
+        "activity_id": 1038071,
+        "activity_name": "Thursday, 8 October 2026 | Padlet: This Is My Family Drawing!",
+        "activity_order": 59,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411194,
+        "chapter_name": "Week 1 | 5 - 9 October 2026 | Family Members",
+        "chapter_order": 13,
+        "activity_id": 1038073,
+        "activity_name": "Friday, 9 October 2026 | Let's Trace The Words!",
+        "activity_order": 60,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 412100,
+        "chapter_name": "Week 2 | 12 - 16 October 2026 | Welcome Home",
+        "chapter_order": 14,
+        "activity_id": 1040915,
+        "activity_name": "Monday, 12 October 2026 | Slides of \"Welcome Home\"",
+        "activity_order": 61,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 412100,
+        "chapter_name": "Week 2 | 12 - 16 October 2026 | Welcome Home",
+        "chapter_order": 14,
+        "activity_id": 1041412,
+        "activity_name": "Tuesday, 13 October 2026 | Video Watching: Parts of the House",
+        "activity_order": 62,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 412100,
+        "chapter_name": "Week 2 | 12 - 16 October 2026 | Welcome Home",
+        "chapter_order": 14,
+        "activity_id": 1041384,
+        "activity_name": "Wednesday, 14 October 2026 | Around the House",
+        "activity_order": 63,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 412100,
+        "chapter_name": "Week 2 | 12 - 16 October 2026 | Welcome Home",
+        "chapter_order": 14,
+        "activity_id": 1041385,
+        "activity_name": "Thursday, 15 October 2026 | Count and Say: How Many Things Are There?",
+        "activity_order": 64,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 412100,
+        "chapter_name": "Week 2 | 12 - 16 October 2026 | Welcome Home",
+        "chapter_order": 14,
+        "activity_id": 978420,
+        "activity_name": " Friday, 16 October 2026 | Formative Assessment: Theme 2",
+        "activity_order": 65,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 413243,
+        "chapter_name": "Week 3 | 19 - 23 October 2026 | Toys",
+        "chapter_order": 15,
+        "activity_id": 1044498,
+        "activity_name": "Monday, 19 October 2026 | Slides of \"Ben's Toys\"",
+        "activity_order": 66,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 413243,
+        "chapter_name": "Week 3 | 19 - 23 October 2026 | Toys",
+        "chapter_order": 15,
+        "activity_id": 1044499,
+        "activity_name": "Tuesday, 20 October 2026 | Video Watching: In, On, Under, By",
+        "activity_order": 67,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 413243,
+        "chapter_name": "Week 3 | 19 - 23 October 2026 | Toys",
+        "chapter_order": 15,
+        "activity_id": 1044501,
+        "activity_name": "Wednesday, 21 October 2026 | Toys Vocabulary Worksheet",
+        "activity_order": 68,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 413243,
+        "chapter_name": "Week 3 | 19 - 23 October 2026 | Toys",
+        "chapter_order": 15,
+        "activity_id": 1044502,
+        "activity_name": "Thursday, 22 October 2026 | Padlet: Toys Vocabulary Worksheet",
+        "activity_order": 69,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 413243,
+        "chapter_name": "Week 3 | 19 - 23 October 2026 | Toys",
+        "chapter_order": 15,
+        "activity_id": 1044507,
+        "activity_name": "Friday, 23 October 2026 | Prepositions Game: In, On, Under, By",
+        "activity_order": 70,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 414292,
+        "chapter_name": "Week 4 | 26 - 30 October 2026 | Favourite Activities",
+        "chapter_order": 16,
+        "activity_id": 1048112,
+        "activity_name": "Monday, 26 October 2026 | Slides of \"A Day in My Life\"",
+        "activity_order": 71,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 414292,
+        "chapter_name": "Week 4 | 26 - 30 October 2026 | Favourite Activities",
+        "chapter_order": 16,
+        "activity_id": 1048118,
+        "activity_name": "Tuesday, 27 October 2026 | Daily Routine",
+        "activity_order": 72,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 414292,
+        "chapter_name": "Week 4 | 26 - 30 October 2026 | Favourite Activities",
+        "chapter_order": 16,
+        "activity_id": 1048120,
+        "activity_name": "Wednesday, 28 October 2026 | Pair or No Pair?",
+        "activity_order": 73,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 414292,
+        "chapter_name": "Week 4 | 26 - 30 October 2026 | Favourite Activities",
+        "chapter_order": 16,
+        "activity_id": 1048123,
+        "activity_name": "Thursday, 29 October 2026 | Our Favourite Activity ",
+        "activity_order": 74,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 414292,
+        "chapter_name": "Week 4 | 26 - 30 October 2026 | Favourite Activities",
+        "chapter_order": 16,
+        "activity_id": 1048130,
+        "activity_name": "Friday, 30 October 2026 | Summative Project Guideline Theme 2",
+        "activity_order": 75,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 415277,
+        "chapter_name": "Week 5 | 2 - 6 November 2026 | Numbers",
+        "chapter_order": 17,
+        "activity_id": 1050385,
+        "activity_name": "Monday, 2 November 2026 | Slides of \"How Many Toys?\"",
+        "activity_order": 76,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 415277,
+        "chapter_name": "Week 5 | 2 - 6 November 2026 | Numbers",
+        "chapter_order": 17,
+        "activity_id": 1050389,
+        "activity_name": "Tuesday, 3 November 2026 | Numbers Rescue Mission!",
+        "activity_order": 77,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 415277,
+        "chapter_name": "Week 5 | 2 - 6 November 2026 | Numbers",
+        "chapter_order": 17,
+        "activity_id": 1050390,
+        "activity_name": "Wednesday, 4 November 2026 | Listen and Match the Number!",
+        "activity_order": 78,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 415277,
+        "chapter_name": "Week 5 | 2 - 6 November 2026 | Numbers",
+        "chapter_order": 17,
+        "activity_id": 1050391,
+        "activity_name": "Thursday, 5 October 2026 | Numbers Worksheet: Read and Write!",
+        "activity_order": 79,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 415277,
+        "chapter_name": "Week 5 | 2 - 6 November 2026 | Numbers",
+        "chapter_order": 17,
+        "activity_id": 1050393,
+        "activity_name": "Friday, 5 November 2026 | Padlet: Submit Your Numbers Worksheet!",
+        "activity_order": 80,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 386056,
+        "chapter_name": "Week 10 | 7-11 December 2026 | End of Theme 2",
+        "chapter_order": 19,
+        "activity_id": 978314,
+        "activity_name": "Theme 2: Self Reflection ",
+        "activity_order": 81,
+        "is_addon": 0
+      }
+    ]
+  },
+  "year-1-pjok-semester-1-ta-20262027": {
+    "platform_id": "4",
+    "program_id": 1830,
+    "activities": [
+      {
+        "chapter_id": 386332,
+        "chapter_name": "Selamat Datang di Semester 1 PJOK",
+        "chapter_order": 1,
+        "activity_id": 978831,
+        "activity_name": "[INFORMASI] Jadwal Belajar Live",
+        "activity_order": 1,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 386332,
+        "chapter_name": "Selamat Datang di Semester 1 PJOK",
+        "chapter_order": 1,
+        "activity_id": 978835,
+        "activity_name": "[INFORMASI] Rekaman Belajar Live",
+        "activity_order": 2,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 386824,
+        "chapter_name": "Week 2 | 20 - 24 July 2026 | Gerak Pertamaku!",
+        "chapter_order": 2,
+        "activity_id": 980197,
+        "activity_name": "Senin, 20 Jul 2026 | Apa Itu PJOK?",
+        "activity_order": 3,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 386824,
+        "chapter_name": "Week 2 | 20 - 24 July 2026 | Gerak Pertamaku!",
+        "chapter_order": 2,
+        "activity_id": 980211,
+        "activity_name": "Selasa, 21 Jul 2026 | Persiapan Sebelum Berolahraga!",
+        "activity_order": 4,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 386824,
+        "chapter_name": "Week 2 | 20 - 24 July 2026 | Gerak Pertamaku!",
+        "chapter_order": 2,
+        "activity_id": 980213,
+        "activity_name": "Rabu, 22 Jul 2026 | Mengenal Gerak Pemanasan",
+        "activity_order": 5,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 386824,
+        "chapter_name": "Week 2 | 20 - 24 July 2026 | Gerak Pertamaku!",
+        "chapter_order": 2,
+        "activity_id": 980215,
+        "activity_name": "Kamis, 23 Jul 2026 | Yuk, Kita Pendinginan!",
+        "activity_order": 6,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 386824,
+        "chapter_name": "Week 2 | 20 - 24 July 2026 | Gerak Pertamaku!",
+        "chapter_order": 2,
+        "activity_id": 980217,
+        "activity_name": "Jumat, 24 Jul 2026 | Jangan Lupa Pemanasan dan Pendinginan!",
+        "activity_order": 7,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388882,
+        "chapter_name": "Week 3 | 27 - 31 July 2026 | Gerak Dasar Non Lokomotor",
+        "chapter_order": 3,
+        "activity_id": 982919,
+        "activity_name": "Senin, 27 Jul 2026 | Macam-Macam Gerak di PJOK",
+        "activity_order": 8,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388882,
+        "chapter_name": "Week 3 | 27 - 31 July 2026 | Gerak Dasar Non Lokomotor",
+        "chapter_order": 3,
+        "activity_id": 982988,
+        "activity_name": "Selasa, 28 Jul 2026 | Yuk, Kenalan dengan Gerak Non Lokomotor!",
+        "activity_order": 9,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388882,
+        "chapter_name": "Week 3 | 27 - 31 July 2026 | Gerak Dasar Non Lokomotor",
+        "chapter_order": 3,
+        "activity_id": 982924,
+        "activity_name": "Rabu, 29 Jul 2026 | Tubuh Sehat, Tanpa Berpindah Tempat",
+        "activity_order": 10,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388882,
+        "chapter_name": "Week 3 | 27 - 31 July 2026 | Gerak Dasar Non Lokomotor",
+        "chapter_order": 3,
+        "activity_id": 983432,
+        "activity_name": "Kamis, 30 Jul 2026 | Gerak di Tempat, Tetap Semangat!",
+        "activity_order": 11,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388882,
+        "chapter_name": "Week 3 | 27 - 31 July 2026 | Gerak Dasar Non Lokomotor",
+        "chapter_order": 3,
+        "activity_id": 982936,
+        "activity_name": "Jumat, 31 Jul 2026 | Tantangan Gerak Tanpa Berpindah Tempat!",
+        "activity_order": 12,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 390516,
+        "chapter_name": "Week 4  | 03 - 07 August 2026 | Gerak Kaki Senam Irama",
+        "chapter_order": 4,
+        "activity_id": 987130,
+        "activity_name": "Senin, 03 Aug 2026 | Tubuh Sehat, Berolahraga Senam!",
+        "activity_order": 13,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 390516,
+        "chapter_name": "Week 4  | 03 - 07 August 2026 | Gerak Kaki Senam Irama",
+        "chapter_order": 4,
+        "activity_id": 987158,
+        "activity_name": "Selasa, 04 Aug 2026 | Tahukah Kamu?",
+        "activity_order": 14,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 390516,
+        "chapter_name": "Week 4  | 03 - 07 August 2026 | Gerak Kaki Senam Irama",
+        "chapter_order": 4,
+        "activity_id": 987303,
+        "activity_name": "Rabu, 05 Aug 2026 | Mengenal Gerak Senam Irama",
+        "activity_order": 15,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 390516,
+        "chapter_name": "Week 4  | 03 - 07 August 2026 | Gerak Kaki Senam Irama",
+        "chapter_order": 4,
+        "activity_id": 987311,
+        "activity_name": "Kamis, 06 Aug 2026 | Gerak Kaki Senam Irama",
+        "activity_order": 16,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 390516,
+        "chapter_name": "Week 4  | 03 - 07 August 2026 | Gerak Kaki Senam Irama",
+        "chapter_order": 4,
+        "activity_id": 987317,
+        "activity_name": "Jumat, 07 Aug 2026 | Yuk, Ikuti Irama Musik!",
+        "activity_order": 17,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 392973,
+        "chapter_name": "Week 5 | 10 - 14 August 2026 | Gerak Tangan Senam Irama",
+        "chapter_order": 5,
+        "activity_id": 991527,
+        "activity_name": "Senin, 10 Aug 2026 | Perjalanan Waktu Mengenal Senam Irama",
+        "activity_order": 18,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 392973,
+        "chapter_name": "Week 5 | 10 - 14 August 2026 | Gerak Tangan Senam Irama",
+        "chapter_order": 5,
+        "activity_id": 991539,
+        "activity_name": "Selasa, 11 Aug 2026 | Manfaat Olahraga Senam Irama",
+        "activity_order": 19,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 392973,
+        "chapter_name": "Week 5 | 10 - 14 August 2026 | Gerak Tangan Senam Irama",
+        "chapter_order": 5,
+        "activity_id": 991546,
+        "activity_name": "Rabu, 12 Aug 2026 | Persiapan Sebelum Senam",
+        "activity_order": 20,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 392973,
+        "chapter_name": "Week 5 | 10 - 14 August 2026 | Gerak Tangan Senam Irama",
+        "chapter_order": 5,
+        "activity_id": 991558,
+        "activity_name": "Kamis, 13 Aug 2026 | Gerak Tangan Senam Irama",
+        "activity_order": 21,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 392973,
+        "chapter_name": "Week 5 | 10 - 14 August 2026 | Gerak Tangan Senam Irama",
+        "chapter_order": 5,
+        "activity_id": 991565,
+        "activity_name": "Jumat, 14 Aug 2026 | Rentangkan Tangan, Kita Bergerak!",
+        "activity_order": 22,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 395128,
+        "chapter_name": "Week 6 | 17 - 21 August 2026 | Gerak Gabungan Senam",
+        "chapter_order": 6,
+        "activity_id": 997216,
+        "activity_name": "Senin, 17 Aug 2026 | DAY OFF - Hari Kemerdekaan",
+        "activity_order": 23,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 395128,
+        "chapter_name": "Week 6 | 17 - 21 August 2026 | Gerak Gabungan Senam",
+        "chapter_order": 6,
+        "activity_id": 997218,
+        "activity_name": "Selasa, 18 Aug 2026 | Gerak Olahraga Pada Lomba 17 Agustus",
+        "activity_order": 24,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 395128,
+        "chapter_name": "Week 6 | 17 - 21 August 2026 | Gerak Gabungan Senam",
+        "chapter_order": 6,
+        "activity_id": 997221,
+        "activity_name": "Rabu, 19 Aug 2026 | Ayo Bermain! Lengkapi Huruf Lomba 17 Agustus",
+        "activity_order": 25,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 395128,
+        "chapter_name": "Week 6 | 17 - 21 August 2026 | Gerak Gabungan Senam",
+        "chapter_order": 6,
+        "activity_id": 997222,
+        "activity_name": "Kamis, 20 Aug 2026 | Gerak Gabungan Senam Irama",
+        "activity_order": 26,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 395128,
+        "chapter_name": "Week 6 | 17 - 21 August 2026 | Gerak Gabungan Senam",
+        "chapter_order": 6,
+        "activity_id": 997224,
+        "activity_name": "Jumat, 21 Aug 2026 | Bergerak Asik Dengan Musik!",
+        "activity_order": 27,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 398851,
+        "chapter_name": "Week 7 | 24 - 28 August 2026 | Formatif 1",
+        "chapter_order": 7,
+        "activity_id": 1005415,
+        "activity_name": "Senin, 24 Aug 2026 | Tarik Garis, Temukan Gerakannya! ",
+        "activity_order": 28,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 398851,
+        "chapter_name": "Week 7 | 24 - 28 August 2026 | Formatif 1",
+        "chapter_order": 7,
+        "activity_id": 1005430,
+        "activity_name": "Selasa, 25 Aug 2026 | DAY OFF - Maulid Nabi Muhammad SAW",
+        "activity_order": 29,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 398851,
+        "chapter_name": "Week 7 | 24 - 28 August 2026 | Formatif 1",
+        "chapter_order": 7,
+        "activity_id": 1005432,
+        "activity_name": "Rabu, 26 Aug 2026 | Soal Formatif 1",
+        "activity_order": 30,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 398851,
+        "chapter_name": "Week 7 | 24 - 28 August 2026 | Formatif 1",
+        "chapter_order": 7,
+        "activity_id": 1005437,
+        "activity_name": "Kamis, 27 Aug 2026 | Yuk, Simak Panduannya!",
+        "activity_order": 31,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 398851,
+        "chapter_name": "Week 7 | 24 - 28 August 2026 | Formatif 1",
+        "chapter_order": 7,
+        "activity_id": 1005444,
+        "activity_name": "Jumat, 28 Aug 2026 | Waktunya Mengerjakan Formatif 1",
+        "activity_order": 32,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 398851,
+        "chapter_name": "Week 7 | 24 - 28 August 2026 | Formatif 1",
+        "chapter_order": 7,
+        "activity_id": 980143,
+        "activity_name": "[AKTIVITAS MANDIRI] Formatif Kemampuan Motorik 1",
+        "activity_order": 33,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 401294,
+        "chapter_name": "Week 8 | 31 - 04 September 2026 | Gerak Dasar Lokomotor",
+        "chapter_order": 8,
+        "activity_id": 1009927,
+        "activity_name": "Senin, 31 Aug 2026 | Kenalan Dengan Gerak Lokomotor",
+        "activity_order": 34,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 401294,
+        "chapter_name": "Week 8 | 31 - 04 September 2026 | Gerak Dasar Lokomotor",
+        "chapter_order": 8,
+        "activity_id": 1009929,
+        "activity_name": "Selasa, 01 Sep 2026 | Macam-Macam Gerak Lokomotor",
+        "activity_order": 35,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 401294,
+        "chapter_name": "Week 8 | 31 - 04 September 2026 | Gerak Dasar Lokomotor",
+        "chapter_order": 8,
+        "activity_id": 1009930,
+        "activity_name": "Rabu, 02 Sep 2026 | Hidup Sehat Dengan Berjalan Kaki ",
+        "activity_order": 36,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 401294,
+        "chapter_name": "Week 8 | 31 - 04 September 2026 | Gerak Dasar Lokomotor",
+        "chapter_order": 8,
+        "activity_id": 1009931,
+        "activity_name": "Kamis, 03 Sep 2026 | Tahukah, Kamu?",
+        "activity_order": 37,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 401294,
+        "chapter_name": "Week 8 | 31 - 04 September 2026 | Gerak Dasar Lokomotor",
+        "chapter_order": 8,
+        "activity_id": 1009934,
+        "activity_name": "Jumat, 04 Sep 2026 | Ayo, Melangkah Bersama!",
+        "activity_order": 38,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 404506,
+        "chapter_name": "Week 9 | 07 - 11 September 2026 | Variasi Gerak Berlari",
+        "chapter_order": 9,
+        "activity_id": 1017262,
+        "activity_name": "Senin, 07 Sep 2026 | Ready, Set, Run!",
+        "activity_order": 39,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 404506,
+        "chapter_name": "Week 9 | 07 - 11 September 2026 | Variasi Gerak Berlari",
+        "chapter_order": 9,
+        "activity_id": 1017266,
+        "activity_name": "Selasa, 08 Sep 2026 | Aku Siap Berlari!",
+        "activity_order": 40,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 404506,
+        "chapter_name": "Week 9 | 07 - 11 September 2026 | Variasi Gerak Berlari",
+        "chapter_order": 9,
+        "activity_id": 1017268,
+        "activity_name": "Rabu, 09 Sep 2026 | Persiapan Sebelum Berlari",
+        "activity_order": 41,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 404506,
+        "chapter_name": "Week 9 | 07 - 11 September 2026 | Variasi Gerak Berlari",
+        "chapter_order": 9,
+        "activity_id": 1017271,
+        "activity_name": "Kamis, 10 Sep 2026 | Yang Paling Cepat",
+        "activity_order": 42,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 404506,
+        "chapter_name": "Week 9 | 07 - 11 September 2026 | Variasi Gerak Berlari",
+        "chapter_order": 9,
+        "activity_id": 1017286,
+        "activity_name": "Jumat, 11 Sep 2026 | Ayo Berlari Bersama!",
+        "activity_order": 43,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 407192,
+        "chapter_name": "Week 10 | 14 - 18 September 2026 | Variasi Melompat",
+        "chapter_order": 10,
+        "activity_id": 1025677,
+        "activity_name": "Senin, 14 Sep 2026 | Satu, Dua, Tiga\u2026 Lompat! ",
+        "activity_order": 44,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 407192,
+        "chapter_name": "Week 10 | 14 - 18 September 2026 | Variasi Melompat",
+        "chapter_order": 10,
+        "activity_id": 1025685,
+        "activity_name": "Selasa, 15 Sep 2026 | Lompat ke Segala Arah",
+        "activity_order": 45,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 407192,
+        "chapter_name": "Week 10 | 14 - 18 September 2026 | Variasi Melompat",
+        "chapter_order": 10,
+        "activity_id": 1025695,
+        "activity_name": "Rabu, 16 Sep 2026 | Yuk, Kenali Manfaat Melompat! ",
+        "activity_order": 46,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 407192,
+        "chapter_name": "Week 10 | 14 - 18 September 2026 | Variasi Melompat",
+        "chapter_order": 10,
+        "activity_id": 1025711,
+        "activity_name": "Kamis, 17 Sep 2026 | Lompat Tinggi Tanpa Cedera",
+        "activity_order": 47,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 407192,
+        "chapter_name": "Week 10 | 14 - 18 September 2026 | Variasi Melompat",
+        "chapter_order": 10,
+        "activity_id": 1025721,
+        "activity_name": "Jumat, 18 Sep 2026 | Tantangan Gerak Melompat! ",
+        "activity_order": 48,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 408761,
+        "chapter_name": "Week 11 | 21 - 25 September 2026 | Gerakan Teman Satwa",
+        "chapter_order": 11,
+        "activity_id": 1030643,
+        "activity_name": "Senin, 21 Sep 2026 | Menirukan Gerakan Teman Satwa",
+        "activity_order": 49,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 408761,
+        "chapter_name": "Week 11 | 21 - 25 September 2026 | Gerakan Teman Satwa",
+        "chapter_order": 11,
+        "activity_id": 1030644,
+        "activity_name": "Selasa, 22 Sep 2026 | Bergerak Seperti Teman Satwa",
+        "activity_order": 50,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 408761,
+        "chapter_name": "Week 11 | 21 - 25 September 2026 | Gerakan Teman Satwa",
+        "chapter_order": 11,
+        "activity_id": 1030645,
+        "activity_name": "Rabu, 23 Sep 2026 | Rahasia Sehat Dari Hutan ",
+        "activity_order": 51,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 408761,
+        "chapter_name": "Week 11 | 21 - 25 September 2026 | Gerakan Teman Satwa",
+        "chapter_order": 11,
+        "activity_id": 1030646,
+        "activity_name": "Kamis, 24 Sep 2026 | Persiapan Sebelum Menirukan Gerak Teman Satwa",
+        "activity_order": 52,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 408761,
+        "chapter_name": "Week 11 | 21 - 25 September 2026 | Gerakan Teman Satwa",
+        "chapter_order": 11,
+        "activity_id": 1030647,
+        "activity_name": "Jumat, 25 Sep 2026 | Saatnya Bergerak di Alam!",
+        "activity_order": 53,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411193,
+        "chapter_name": "Week 1 | 05 - 09 October 2026 | Triwulan 2",
+        "chapter_order": 12,
+        "activity_id": 1037653,
+        "activity_name": "Senin, 05 Oct 2026 |Siap Menjelajah Triwulan 2",
+        "activity_order": 54,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411193,
+        "chapter_name": "Week 1 | 05 - 09 October 2026 | Triwulan 2",
+        "chapter_order": 12,
+        "activity_id": 1037668,
+        "activity_name": "Selasa, 06 Oct 2026 | Apa Itu Tabata? ",
+        "activity_order": 55,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411193,
+        "chapter_name": "Week 1 | 05 - 09 October 2026 | Triwulan 2",
+        "chapter_order": 12,
+        "activity_id": 1037675,
+        "activity_name": "Rabu, 07 Oct 2026 | Macam-Macam Gerak Tabata",
+        "activity_order": 56,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411193,
+        "chapter_name": "Week 1 | 05 - 09 October 2026 | Triwulan 2",
+        "chapter_order": 12,
+        "activity_id": 1037678,
+        "activity_name": "Kamis, 08 Oct 2026 | Yang Harus di Perhatikan saat Tabata",
+        "activity_order": 57,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411193,
+        "chapter_name": "Week 1 | 05 - 09 October 2026 | Triwulan 2",
+        "chapter_order": 12,
+        "activity_id": 1037680,
+        "activity_name": "Jumat, 09 Oct 2026 | Ayo Kita Tabata!",
+        "activity_order": 58,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411236,
+        "chapter_name": "Week 2 | 12 - 16 October 2026 | Formatif 2",
+        "chapter_order": 13,
+        "activity_id": 1038310,
+        "activity_name": "Senin, 12 Oct 2026 | Tarik Garis, Temukan Gerakan Lokomotor!",
+        "activity_order": 59,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411236,
+        "chapter_name": "Week 2 | 12 - 16 October 2026 | Formatif 2",
+        "chapter_order": 13,
+        "activity_id": 1038312,
+        "activity_name": "Selasa, 13 Oct 2026 | Soal Formatif 2",
+        "activity_order": 60,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411236,
+        "chapter_name": "Week 2 | 12 - 16 October 2026 | Formatif 2",
+        "chapter_order": 13,
+        "activity_id": 1038313,
+        "activity_name": "Rabu, 14 0ct 2026 | Membaca Rubrik Penilaian",
+        "activity_order": 61,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411236,
+        "chapter_name": "Week 2 | 12 - 16 October 2026 | Formatif 2",
+        "chapter_order": 13,
+        "activity_id": 1038314,
+        "activity_name": "Kamis, 15 Oct 2026 | Membaca Skema Penilaian",
+        "activity_order": 62,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411236,
+        "chapter_name": "Week 2 | 12 - 16 October 2026 | Formatif 2",
+        "chapter_order": 13,
+        "activity_id": 1038316,
+        "activity_name": "Jumat, 16 Oct 2026 | Waktunya Mengerjakan Formatif 2",
+        "activity_order": 63,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 411236,
+        "chapter_name": "Week 2 | 12 - 16 October 2026 | Formatif 2",
+        "chapter_order": 13,
+        "activity_id": 980144,
+        "activity_name": "[AKTIVITAS MANDIRI] Formatif Kemampuan Motorik 2",
+        "activity_order": 64,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 413554,
+        "chapter_name": "Week 3 | 19 - 23 October 2026 | Kilas Balik Semester 1",
+        "chapter_order": 14,
+        "activity_id": 1044968,
+        "activity_name": "Senin, 19 Oct 2026 | Perjalanan Olahraga di Semester 1",
+        "activity_order": 65,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 413554,
+        "chapter_name": "Week 3 | 19 - 23 October 2026 | Kilas Balik Semester 1",
+        "chapter_order": 14,
+        "activity_id": 1045272,
+        "activity_name": "Selasa, 20 Oct 2026 | Perjalanan Olahragaku di Triwulan 1",
+        "activity_order": 66,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 413554,
+        "chapter_name": "Week 3 | 19 - 23 October 2026 | Kilas Balik Semester 1",
+        "chapter_order": 14,
+        "activity_id": 1045294,
+        "activity_name": "Rabu, 21 Oct 2026 | Perjalanan Olahragaku di Triwulan 2",
+        "activity_order": 67,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 413554,
+        "chapter_name": "Week 3 | 19 - 23 October 2026 | Kilas Balik Semester 1",
+        "chapter_order": 14,
+        "activity_id": 1045301,
+        "activity_name": "Kamis, 22 Oct 2026 | Variasi Gerak di Triwulan 1",
+        "activity_order": 68,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 413554,
+        "chapter_name": "Week 3 | 19 - 23 October 2026 | Kilas Balik Semester 1",
+        "chapter_order": 14,
+        "activity_id": 1045309,
+        "activity_name": "Jumat, 23 Oct 2026 | Variasi Gerak di Triwulan 2",
+        "activity_order": 69,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 414281,
+        "chapter_name": "Week 4 | 26 - 30 October 2026 | Sumatif Semester 1",
+        "chapter_order": 15,
+        "activity_id": 1048030,
+        "activity_name": "Senin, 26 Oct 2026 | Ayo Membaca Skema Penilaian",
+        "activity_order": 70,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 414281,
+        "chapter_name": "Week 4 | 26 - 30 October 2026 | Sumatif Semester 1",
+        "chapter_order": 15,
+        "activity_id": 1048042,
+        "activity_name": "Selasa, 27 Oct 2026 | Yuk, Kenali Rubrik Penilaian",
+        "activity_order": 71,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 414281,
+        "chapter_name": "Week 4 | 26 - 30 October 2026 | Sumatif Semester 1",
+        "chapter_order": 15,
+        "activity_id": 1048067,
+        "activity_name": "Rabu, 28 Oct 2026 | Persiapan Mengerjakan Sumatif",
+        "activity_order": 72,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 414281,
+        "chapter_name": "Week 4 | 26 - 30 October 2026 | Sumatif Semester 1",
+        "chapter_order": 15,
+        "activity_id": 1048065,
+        "activity_name": "Kamis, 29 Oct 2026 | Mengulas Materi Selama Satu Semester",
+        "activity_order": 73,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 414281,
+        "chapter_name": "Week 4 | 26 - 30 October 2026 | Sumatif Semester 1",
+        "chapter_order": 15,
+        "activity_id": 1048052,
+        "activity_name": "Jumat, 30 Oct 2026 | Soal Sumatif Semester 1",
+        "activity_order": 74,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 414281,
+        "chapter_name": "Week 4 | 26 - 30 October 2026 | Sumatif Semester 1",
+        "chapter_order": 15,
+        "activity_id": 980147,
+        "activity_name": "[AKTIVITAS MANDIRI] SUMATIF",
+        "activity_order": 75,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 415489,
+        "chapter_name": "Week 5 | 02 - 06 November 2026 | Aktivitas Fisik 1 ",
+        "chapter_order": 16,
+        "activity_id": 1050506,
+        "activity_name": "Senin, 02 Nov 2026 | Yuk, Menjelajahi Gerak Olahraga!",
+        "activity_order": 76,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 415489,
+        "chapter_name": "Week 5 | 02 - 06 November 2026 | Aktivitas Fisik 1 ",
+        "chapter_order": 16,
+        "activity_id": 1050509,
+        "activity_name": "Selasa, 03 Nov 2026 | Menaklukkan Tantangan Gerak Olahraga",
+        "activity_order": 77,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 415489,
+        "chapter_name": "Week 5 | 02 - 06 November 2026 | Aktivitas Fisik 1 ",
+        "chapter_order": 16,
+        "activity_id": 1050512,
+        "activity_name": "Rabu, 04 Nov 2026 | Gerak Hebat, Banyak Manfaat!",
+        "activity_order": 78,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 415489,
+        "chapter_name": "Week 5 | 02 - 06 November 2026 | Aktivitas Fisik 1 ",
+        "chapter_order": 16,
+        "activity_id": 1050515,
+        "activity_name": "Kamis, 05 Nov 2026 | Tips Berolahraga Dengan Aman ",
+        "activity_order": 79,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 415489,
+        "chapter_name": "Week 5 | 02 - 06 November 2026 | Aktivitas Fisik 1 ",
+        "chapter_order": 16,
+        "activity_id": 1050516,
+        "activity_name": "Jumat, 06 Nov 2026 | Gerakan Dasar Awal Tubuh Sehat",
+        "activity_order": 80,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388634,
+        "chapter_name": "REFLEKSI",
+        "chapter_order": 17,
+        "activity_id": 982430,
+        "activity_name": "[AKTIVITAS MANDIRI] - REFLEKSI",
+        "activity_order": 81,
+        "is_addon": 0
+      }
+    ]
+  },
+  "year-1-homeroom-20262027": {
+    "platform_id": "4",
+    "program_id": 2537,
+    "activities": [
+      {
+        "chapter_id": 386070,
+        "chapter_name": "Penguatan Komunitas Murid Merdeka ",
+        "chapter_order": 1,
+        "activity_id": 978329,
+        "activity_name": "Selamat Datang di Kelas 1!",
+        "activity_order": 1,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 386070,
+        "chapter_name": "Penguatan Komunitas Murid Merdeka ",
+        "chapter_order": 1,
+        "activity_id": 978336,
+        "activity_name": "Panduan Orang Tua (Akses Platform)",
+        "activity_order": 2,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 386070,
+        "chapter_name": "Penguatan Komunitas Murid Merdeka ",
+        "chapter_order": 1,
+        "activity_id": 978341,
+        "activity_name": "Buku Panduan Orang Tua TA 2026/2027",
+        "activity_order": 3,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 386070,
+        "chapter_name": "Penguatan Komunitas Murid Merdeka ",
+        "chapter_order": 1,
+        "activity_id": 978355,
+        "activity_name": "Pembagian Rombongan dan Jadwal Belajar",
+        "activity_order": 4,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 386070,
+        "chapter_name": "Penguatan Komunitas Murid Merdeka ",
+        "chapter_order": 1,
+        "activity_id": 978736,
+        "activity_name": "Kalender Akademik ",
+        "activity_order": 5,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 386070,
+        "chapter_name": "Penguatan Komunitas Murid Merdeka ",
+        "chapter_order": 1,
+        "activity_id": 979089,
+        "activity_name": "Selasa, 14 Juli 2026 [Belajar Live] | Ayo Berkenalan !",
+        "activity_order": 6,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 386070,
+        "chapter_name": "Penguatan Komunitas Murid Merdeka ",
+        "chapter_order": 1,
+        "activity_id": 979099,
+        "activity_name": "Selasa, 14 Juli 2026 | School Tour",
+        "activity_order": 7,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 386070,
+        "chapter_name": "Penguatan Komunitas Murid Merdeka ",
+        "chapter_order": 1,
+        "activity_id": 979105,
+        "activity_name": "Selasa, 14 Juli 2026 | Yuk, Cek Kebutuhan Belajarmu!",
+        "activity_order": 8,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 386070,
+        "chapter_name": "Penguatan Komunitas Murid Merdeka ",
+        "chapter_order": 1,
+        "activity_id": 979107,
+        "activity_name": "Rabu, 15 Juli atau Kamis, 16 Juli 2026 | [Belajar Live] Yuk, Sepakati!",
+        "activity_order": 9,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 386070,
+        "chapter_name": "Penguatan Komunitas Murid Merdeka ",
+        "chapter_order": 1,
+        "activity_id": 979118,
+        "activity_name": "Rabu, 15 Juli 2026 | Peranku di Kelas",
+        "activity_order": 10,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 386070,
+        "chapter_name": "Penguatan Komunitas Murid Merdeka ",
+        "chapter_order": 1,
+        "activity_id": 979126,
+        "activity_name": "Rabu, 15 Juli 2026 | Berkenalan di Padlet",
+        "activity_order": 11,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 386070,
+        "chapter_name": "Penguatan Komunitas Murid Merdeka ",
+        "chapter_order": 1,
+        "activity_id": 979129,
+        "activity_name": "Kamis, 16 Juli 2026 | Ada Aturan apa saja di Sekolahku?",
+        "activity_order": 12,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 386070,
+        "chapter_name": "Penguatan Komunitas Murid Merdeka ",
+        "chapter_order": 1,
+        "activity_id": 979132,
+        "activity_name": "Kamis, 16 Juli 2026 | Peraturan di Sekolah dan di Rumah",
+        "activity_order": 13,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 386070,
+        "chapter_name": "Penguatan Komunitas Murid Merdeka ",
+        "chapter_order": 1,
+        "activity_id": 979133,
+        "activity_name": "Kamis, 16 Juli 2026 | Perbedaan Hub Induk dan Hub Jarak",
+        "activity_order": 14,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 386070,
+        "chapter_name": "Penguatan Komunitas Murid Merdeka ",
+        "chapter_order": 1,
+        "activity_id": 979137,
+        "activity_name": "Jumat, 17 Juli 2026 | [BL Homeroom] Membuat Mindmap Tujuan Belajar",
+        "activity_order": 15,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 385953,
+        "chapter_name": "Tema 1: Aku Anak Sehat",
+        "chapter_order": 2,
+        "activity_id": 977987,
+        "activity_name": "Jumat, 24 Juli 2026 | Aksi Kecil untuk Diriku",
+        "activity_order": 16,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 385953,
+        "chapter_name": "Tema 1: Aku Anak Sehat",
+        "chapter_order": 2,
+        "activity_id": 981040,
+        "activity_name": "Jumat, 24 Juli 2026 | Unggah Lembar Kerja : Aksi Kecil untuk Diriku",
+        "activity_order": 17,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 385953,
+        "chapter_name": "Tema 1: Aku Anak Sehat",
+        "chapter_order": 2,
+        "activity_id": 983308,
+        "activity_name": "Jumat, 31 Juli 2026 [Belajar Live] | Berkenalan dengan Emosi",
+        "activity_order": 18,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 385953,
+        "chapter_name": "Tema 1: Aku Anak Sehat",
+        "chapter_order": 2,
+        "activity_id": 987393,
+        "activity_name": "Jumat, 7 Agustus 2026 | Menggambar Ekspresi Emosi",
+        "activity_order": 19,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 385953,
+        "chapter_name": "Tema 1: Aku Anak Sehat",
+        "chapter_order": 2,
+        "activity_id": 991805,
+        "activity_name": "Jumat, 14 Agustus 2026 | [Belajar Live] Menyambut Hari Kemerdekaan",
+        "activity_order": 20,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 385953,
+        "chapter_name": "Tema 1: Aku Anak Sehat",
+        "chapter_order": 2,
+        "activity_id": 998236,
+        "activity_name": "Jumat, 21 Agustus 2026 | Hidup Teratur itu Indah",
+        "activity_order": 21,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 385953,
+        "chapter_name": "Tema 1: Aku Anak Sehat",
+        "chapter_order": 2,
+        "activity_id": 998237,
+        "activity_name": "Jumat, 21 Agustus 2026 | Menyusun Aturan dan Kesepakatan di Rumah ",
+        "activity_order": 22,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 385953,
+        "chapter_name": "Tema 1: Aku Anak Sehat",
+        "chapter_order": 2,
+        "activity_id": 1004216,
+        "activity_name": "Jumat, 28 Agustus 2026 | [Belajar Live Homeroom] Mari Membantu Sesama",
+        "activity_order": 23,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 385953,
+        "chapter_name": "Tema 1: Aku Anak Sehat",
+        "chapter_order": 2,
+        "activity_id": 1008551,
+        "activity_name": "Jumat, 4 September 2026 | Membantu Ayah dan Ibu di Rumah",
+        "activity_order": 24,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 385953,
+        "chapter_name": "Tema 1: Aku Anak Sehat",
+        "chapter_order": 2,
+        "activity_id": 1014886,
+        "activity_name": "Jumat, 11 September | [Belajar Live] Diriku Istimewa dan Berharga",
+        "activity_order": 25,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 385953,
+        "chapter_name": "Tema 1: Aku Anak Sehat",
+        "chapter_order": 2,
+        "activity_id": 1024930,
+        "activity_name": "Jumat, 18 September 2026 | Aku Siap Berkomitmen!",
+        "activity_order": 26,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 385953,
+        "chapter_name": "Tema 1: Aku Anak Sehat",
+        "chapter_order": 2,
+        "activity_id": 1025709,
+        "activity_name": "Jumat, 25 September 2026 | [Belajar Live Homeroom] Festival Anak Sehat",
+        "activity_order": 27,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 407046,
+        "chapter_name": "Tema 2: Penjelajah Dunia",
+        "chapter_order": 3,
+        "activity_id": 1031958,
+        "activity_name": "Memulai Belajar di Tema 2 | Refleksi dan Aspirasi Orang Tua",
+        "activity_order": 28,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 407046,
+        "chapter_name": "Tema 2: Penjelajah Dunia",
+        "chapter_order": 3,
+        "activity_id": 1035995,
+        "activity_name": "Jumat, 9 Oktober 2026 | Belajar Live Homeroom: Menentukan Tujuan",
+        "activity_order": 29,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 407046,
+        "chapter_name": "Tema 2: Penjelajah Dunia",
+        "chapter_order": 3,
+        "activity_id": 1037785,
+        "activity_name": "Jumat, 16 Oktober 2026 | Menulis Jurnal Refleksi Minggu 2",
+        "activity_order": 30,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 407046,
+        "chapter_name": "Tema 2: Penjelajah Dunia",
+        "chapter_order": 3,
+        "activity_id": 1041816,
+        "activity_name": "Jumat, 23 Oktober 2026 | [Belajar Live Homeroom] Kreasi Bahan Alam",
+        "activity_order": 31,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 407046,
+        "chapter_name": "Tema 2: Penjelajah Dunia",
+        "chapter_order": 3,
+        "activity_id": 1049475,
+        "activity_name": "Jumat, 30 Oktober 2026 | Menulis Jurnal Refleksi Minggu 4",
+        "activity_order": 32,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 407046,
+        "chapter_name": "Tema 2: Penjelajah Dunia",
+        "chapter_order": 3,
+        "activity_id": 1049460,
+        "activity_name": "Jumat, 6 November 2026 | [Belajar Live Homeroom] Refleksi Tugasku",
+        "activity_order": 33,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 407046,
+        "chapter_name": "Tema 2: Penjelajah Dunia",
+        "chapter_order": 3,
+        "activity_id": 1051950,
+        "activity_name": "Jumat, 13 November 2026 | Menyelesaikan Proyek Sumatifku",
+        "activity_order": 34,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 386413,
+        "chapter_name": "Refleksi Akhir Tahun",
+        "chapter_order": 4,
+        "activity_id": 979139,
+        "activity_name": "Refleksi Pembelajaran TA 26/27",
+        "activity_order": 35,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 981485,
+        "activity_name": "Add On Offline | SD 1-3 | SMM Area Jakarta & Depok | 27-31 Juli",
+        "activity_order": 35.01,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 981562,
+        "activity_name": "Add On Offline | SD 1-3 | SMM Jawa & Luar Jawa Lainnya | 27-31 Juli",
+        "activity_order": 35.02,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 981571,
+        "activity_name": "Add On Offline | SD 1-3 | SMM Area Tangerang & Bekasi 27-31 Juli 2026",
+        "activity_order": 35.03,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 985805,
+        "activity_name": "Add On Offline | SD 1-3 | SMM Area Tangerang & Bekasi 3-7 Agustus 2026",
+        "activity_order": 35.04,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 985844,
+        "activity_name": "Add On Offline | SD 1-3 | SMM Jawa & Luar Jawa Lainnya | 3-7 Agustus",
+        "activity_order": 35.05,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 986091,
+        "activity_name": "Add On Offline | SD 1-3 | SMM Area Jakarta & Depok | 3-7 Agustus",
+        "activity_order": 35.06,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 990217,
+        "activity_name": "Add On Offline | SD 1-3 | SMM Area Jakarta & Depok | 10-14 Agustus",
+        "activity_order": 35.07,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 990228,
+        "activity_name": "Add On Offline | SD 1-3 | SMM Jawa & Luar Jawa Lainnya | 10-14 Agustus",
+        "activity_order": 35.08,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 990308,
+        "activity_name": "Add On Offline | SD 1-3 | SMM Area Tangerang & Bekasi 10-14 Agustus",
+        "activity_order": 35.09,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 992630,
+        "activity_name": "Kelas Ekspresi | SD 1-3 | SMM Area Tangerang & Bekasi | 18-20 Agustus",
+        "activity_order": 35.1,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 992700,
+        "activity_name": "Kelas Ekspresi  | SD 1-3 | SMM Jawa & Luar Jawa Lainnya |18-20 Agustus",
+        "activity_order": 35.11,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 992774,
+        "activity_name": "Kelas Ekspresi | SD 1-3 | SMM Area Jakarta & Depok | 18-20 Agustus",
+        "activity_order": 35.12,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 994738,
+        "activity_name": "Add On Offline | SD 1-3 | SMM Area Tangerang & Bekasi 18-21 Agustus",
+        "activity_order": 35.13,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 994780,
+        "activity_name": "Add On Offline | SD 1-3 | SMM Area Jakarta & Depok | 18-21 Agustus",
+        "activity_order": 35.14,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 995008,
+        "activity_name": "Add On Offline | SD 1-3 | SMM Jawa & Luar Jawa Lainnya | 18-21 Agustus",
+        "activity_order": 35.15,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 997074,
+        "activity_name": "Add On Offline | SD 1-3 | SMM Area Jakarta & Depok | 24-28 Agustus",
+        "activity_order": 35.16,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1000383,
+        "activity_name": "Add On Offline | SD 1-3 | SMM Area Tangerang & Bekasi 24-28 Agustus",
+        "activity_order": 35.17,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1000446,
+        "activity_name": "Add On Offline | SD 1-3 | SMM Jawa & Luar Jawa Lainnya | 24-28 Agustus",
+        "activity_order": 35.18,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1006207,
+        "activity_name": "Add On Offline | SD 1-3 | SMM Area Jakarta & Depok | 31-4 September",
+        "activity_order": 35.19,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1006500,
+        "activity_name": "Add On Offline | SD 1-3 | SMM Area Tangerang & Bekasi | 31-4 September",
+        "activity_order": 35.2,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1006508,
+        "activity_name": "Add On Offline | SD 1-3 | SMM Jawa & Luar Jawa Lainnya | 31-4 Sep ",
+        "activity_order": 35.21,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1013119,
+        "activity_name": "Add On Offline | SD 1-3 | SMM Area Jakarta & Depok | 7-11 September",
+        "activity_order": 35.22,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1013126,
+        "activity_name": "Add On Offline | SD 1-3 | SMM Area Tangerang & Bekasi | 7-11 September",
+        "activity_order": 35.23,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1013129,
+        "activity_name": "Add On Offline | SD 1-3 | SMM Jawa & Luar Jawa Lainnya | 7-11 Sep",
+        "activity_order": 35.24,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1021723,
+        "activity_name": "Add On Offline | SD 1-3 | SMM Area Jakarta & Depok | 14-18 September",
+        "activity_order": 35.25,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1021760,
+        "activity_name": "Add On Offline | SD 1-3 | SMM Area Tangerang & Bekasi | 14-18 Sept",
+        "activity_order": 35.26,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1021765,
+        "activity_name": "Add On Offline | SD 1-3 | SMM Jawa & Luar Jawa Lainnya | 14-18 Sept",
+        "activity_order": 35.27,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1028538,
+        "activity_name": "Pameran Karya | SD 1-3 | 21-25 September 2026",
+        "activity_order": 35.28,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1036334,
+        "activity_name": "Add On Offline | SD 1-3 | Senin, 5 Oktober 2026",
+        "activity_order": 35.29,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1036335,
+        "activity_name": "Add On Offline | SD 1-3 | Senin, 12 Oktober 2026",
+        "activity_order": 35.3,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1036336,
+        "activity_name": "Add On Offline | SD 1-3 | Senin, 19 Oktober 2026",
+        "activity_order": 35.31,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1036337,
+        "activity_name": "Add On Offline | SD 1-3 | Selasa, 6 Oktober 2026",
+        "activity_order": 35.32,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1036339,
+        "activity_name": "Add On Offline | SD 1-3 | Selasa, 13 Oktober 2026",
+        "activity_order": 35.33,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1036340,
+        "activity_name": "Add On Offline | SD 1-3 | Selasa, 20 Oktober 2026",
+        "activity_order": 35.34,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1036437,
+        "activity_name": "Add On Offline | SD 1-3 | Rabu, 7 Oktober 2026",
+        "activity_order": 35.35,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1036694,
+        "activity_name": "Add On Offline | SD 1-3 | Rabu, 14 Oktober 2026",
+        "activity_order": 35.36,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1036695,
+        "activity_name": "Add On Offline | SD 1-3 | Rabu, 21 Oktober 2026",
+        "activity_order": 35.37,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1036696,
+        "activity_name": "Add On Offline | SD 1-3 | Kamis, 8 Oktober 2026",
+        "activity_order": 35.38,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1036698,
+        "activity_name": "Add On Offline | SD 1-3 | Kamis, 15 Oktober 2026",
+        "activity_order": 35.39,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1036699,
+        "activity_name": "Add On Offline | SD 1-3 | Kamis, 22 Oktober 2026",
+        "activity_order": 35.4,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1036700,
+        "activity_name": "Add On Offline | SD 1-3 | Jumat, 9 Oktober 2026",
+        "activity_order": 35.41,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1036701,
+        "activity_name": "Add On Offline | SD 1-3 | Jumat, 16 Oktober 2026",
+        "activity_order": 35.42,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1036702,
+        "activity_name": "Add On Offline | SD 1-3 | Jumat, 23 Oktober 2026",
+        "activity_order": 35.43,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1045746,
+        "activity_name": "Add On Offline | SD 1-3 | Senin, 26 Oktober 2026",
+        "activity_order": 35.44,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1045786,
+        "activity_name": "Add On Offline | SD 1-3 | Selasa, 27 Oktober 2026",
+        "activity_order": 35.45,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1045788,
+        "activity_name": "Add On Offline | SD 1-3 | Rabu, 28 Oktober 2026",
+        "activity_order": 35.46,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1045789,
+        "activity_name": "Add On Offline | SD 1-3 | Kamis, 29 Oktober 2026",
+        "activity_order": 35.47,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1045790,
+        "activity_name": "Add On Offline | SD 1-3 | Jumat, 30 Oktober 2026",
+        "activity_order": 35.48,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1049390,
+        "activity_name": "Add On Offline | SD 1-3 | Senin, 2 November 2026",
+        "activity_order": 35.49,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1049393,
+        "activity_name": "Add On Offline | SD 1-3 | Selasa, 3 November 2026",
+        "activity_order": 35.5,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1049396,
+        "activity_name": "Add On Offline | SD 1-3 | Rabu, 4 November 2026",
+        "activity_order": 35.51,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1049397,
+        "activity_name": "Add On Offline | SD 1-3 | Kamis, 5 November 2026",
+        "activity_order": 35.52,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1049398,
+        "activity_name": "Add On Offline | SD 1-3 | Jumat, 6 November 2026",
+        "activity_order": 35.53,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1052112,
+        "activity_name": "Add On Offline | SD 1-3 | Senin, 9 November 2026",
+        "activity_order": 35.54,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1052114,
+        "activity_name": "Add On Offline | SD 1-3 | Selasa, 10 November 2026",
+        "activity_order": 35.55,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1052116,
+        "activity_name": "Add On Offline | SD 1-3 | Rabu, 11 November 2026",
+        "activity_order": 35.56,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1052118,
+        "activity_name": "Add On Offline | SD 1-3 | Kamis, 12 November 2026",
+        "activity_order": 35.57,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 388864,
+        "chapter_name": "Add On Offline",
+        "chapter_order": 5,
+        "activity_id": 1052122,
+        "activity_name": "Add On Offline | SD 1-3 | Jumat, 13 November 2026",
+        "activity_order": 35.58,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 389416,
+        "chapter_name": "Add On Kelas Plus",
+        "chapter_order": 6,
+        "activity_id": 981699,
+        "activity_name": "Add On Kelas Plus | SD 1 | Kamis, 30-7 | Bermain dengan Bilangan",
+        "activity_order": 35.59,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 389416,
+        "chapter_name": "Add On Kelas Plus",
+        "chapter_order": 6,
+        "activity_id": 985773,
+        "activity_name": "Add On Kelas Plus | Year 1 ",
+        "activity_order": 35.6,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 389416,
+        "chapter_name": "Add On Kelas Plus",
+        "chapter_order": 6,
+        "activity_id": 994360,
+        "activity_name": "Add On Kelas Plus | Year 1 | Week 6",
+        "activity_order": 35.61,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 389416,
+        "chapter_name": "Add On Kelas Plus",
+        "chapter_order": 6,
+        "activity_id": 1000314,
+        "activity_name": "Add On Kelas Plus | Year 1 | Week 7",
+        "activity_order": 35.62,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 389416,
+        "chapter_name": "Add On Kelas Plus",
+        "chapter_order": 6,
+        "activity_id": 1007590,
+        "activity_name": "Add On Kelas Plus | Year 1 | Week 8",
+        "activity_order": 35.63,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 389416,
+        "chapter_name": "Add On Kelas Plus",
+        "chapter_order": 6,
+        "activity_id": 1019959,
+        "activity_name": "Add On Kelas Plus | Year 1 | Week 9",
+        "activity_order": 35.64,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 389416,
+        "chapter_name": "Add On Kelas Plus",
+        "chapter_order": 6,
+        "activity_id": 1042937,
+        "activity_name": "Add On Kelas Plus | Year 1 | TW 2 | Week 3",
+        "activity_order": 35.65,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 389416,
+        "chapter_name": "Add On Kelas Plus",
+        "chapter_order": 6,
+        "activity_id": 1046616,
+        "activity_name": "Add On Kelas Plus | Year 1 | TW 2 | Week 4",
+        "activity_order": 35.66,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 389416,
+        "chapter_name": "Add On Kelas Plus",
+        "chapter_order": 6,
+        "activity_id": 1049922,
+        "activity_name": "Add On Kelas Plus | Year 1 | TW 2 | Week 5",
+        "activity_order": 35.67,
+        "is_addon": 1
+      },
+      {
+        "chapter_id": 389416,
+        "chapter_name": "Add On Kelas Plus",
+        "chapter_order": 6,
+        "activity_id": 1052234,
+        "activity_name": "Add On Kelas Plus | Year 1 | TW 2 | Week 6",
+        "activity_order": 35.68,
+        "is_addon": 1
+      }
+    ]
+  },
+  "memulai-belajar-di-smm-year-13-ta-20262027": {
+    "platform_id": "4",
+    "program_id": 4150,
+    "activities": [
+      {
+        "chapter_id": 112081,
+        "chapter_name": "Buku Panduan",
+        "chapter_order": 1,
+        "activity_id": 251685,
+        "activity_name": "Buku Panduan Orang Tua",
+        "activity_order": 1,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 112081,
+        "chapter_name": "Buku Panduan",
+        "chapter_order": 1,
+        "activity_id": 3766,
+        "activity_name": "Panduan Asesmen",
+        "activity_order": 2,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 126436,
+        "chapter_name": "Cara Memulai Belajar melalui PDF",
+        "chapter_order": 2,
+        "activity_id": 137975,
+        "activity_name": "Kontak Sekolah Murid Merdeka",
+        "activity_order": 3,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 188912,
+        "chapter_name": "Cara Memulai Belajar Melalui Web Platform Sekolah.mu",
+        "chapter_order": 3,
+        "activity_id": 406425,
+        "activity_name": "Log in ke Sekolah.mu dan Akses Profil Akun ",
+        "activity_order": 4,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 188912,
+        "chapter_name": "Cara Memulai Belajar Melalui Web Platform Sekolah.mu",
+        "chapter_order": 3,
+        "activity_id": 150711,
+        "activity_name": "Cara Mengakses Aktivitas Belajar Live dan Aktivitas Mandiri",
+        "activity_order": 5,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 188912,
+        "chapter_name": "Cara Memulai Belajar Melalui Web Platform Sekolah.mu",
+        "chapter_order": 3,
+        "activity_id": 251077,
+        "activity_name": "Cara Mengikuti Aktivitas Tambahan (Add-on)",
+        "activity_order": 6,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 188912,
+        "chapter_name": "Cara Memulai Belajar Melalui Web Platform Sekolah.mu",
+        "chapter_order": 3,
+        "activity_id": 58598,
+        "activity_name": "Melakukan Pembayaran Tagihan Cicilan Paket Belajar",
+        "activity_order": 7,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 142305,
+        "chapter_name": "Panduan Administrasi",
+        "chapter_order": 4,
+        "activity_id": 128544,
+        "activity_name": "Panduan Pengisian Data Wajib Murid",
+        "activity_order": 8,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 142305,
+        "chapter_name": "Panduan Administrasi",
+        "chapter_order": 4,
+        "activity_id": 88500,
+        "activity_name": "Status atau Proses Pendaftaran Dapodik SMM",
+        "activity_order": 9,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 142305,
+        "chapter_name": "Panduan Administrasi",
+        "chapter_order": 4,
+        "activity_id": 380541,
+        "activity_name": "Alur Pengajuan Surat SMM",
+        "activity_order": 10,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 142305,
+        "chapter_name": "Panduan Administrasi",
+        "chapter_order": 4,
+        "activity_id": 22055,
+        "activity_name": "Alur Mutasi Perpindahan Siswa SMM",
+        "activity_order": 11,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 142305,
+        "chapter_name": "Panduan Administrasi",
+        "chapter_order": 4,
+        "activity_id": 120953,
+        "activity_name": "SOP Tagihan SMM",
+        "activity_order": 12,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 142305,
+        "chapter_name": "Panduan Administrasi",
+        "chapter_order": 4,
+        "activity_id": 380716,
+        "activity_name": "Cara Mencari NISN Secara Mandiri",
+        "activity_order": 13,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 142305,
+        "chapter_name": "Panduan Administrasi",
+        "chapter_order": 4,
+        "activity_id": 420496,
+        "activity_name": "Alur Perpindahan Peserta Didik dari Luar Negeri",
+        "activity_order": 14,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 142305,
+        "chapter_name": "Panduan Administrasi",
+        "chapter_order": 4,
+        "activity_id": 366500,
+        "activity_name": "Rekomendasi Izin Belajar WNA",
+        "activity_order": 15,
+        "is_addon": 0
+      }
+    ]
+  },
+  "waydivers-1-term-1-ay-20262027": {
+    "platform_id": "6",
+    "program_id": 57,
+    "activities": [
+      {
+        "chapter_id": 385100,
+        "chapter_name": "Welcome to Term 1 AY 26/27",
+        "chapter_order": 1,
+        "activity_id": 981583,
+        "activity_name": "Academic Calendar",
+        "activity_order": 1,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 385984,
+        "chapter_name": "Summative Description",
+        "chapter_order": 2,
+        "activity_id": 978149,
+        "activity_name": "Summative Description",
+        "activity_order": 2,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 385319,
+        "chapter_name": "Reading List",
+        "chapter_order": 3,
+        "activity_id": 976940,
+        "activity_name": "Reading List",
+        "activity_order": 3,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 385101,
+        "chapter_name": "Week 1-What can we hear and discover at a local market?",
+        "chapter_order": 4,
+        "activity_id": 978912,
+        "activity_name": "Pre-learning 1",
+        "activity_order": 4,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 385101,
+        "chapter_name": "Week 1-What can we hear and discover at a local market?",
+        "chapter_order": 4,
+        "activity_id": 978936,
+        "activity_name": "Group Session 1",
+        "activity_order": 5,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 385101,
+        "chapter_name": "Week 1-What can we hear and discover at a local market?",
+        "chapter_order": 4,
+        "activity_id": 978913,
+        "activity_name": "Pre-learning 2",
+        "activity_order": 6,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 385101,
+        "chapter_name": "Week 1-What can we hear and discover at a local market?",
+        "chapter_order": 4,
+        "activity_id": 978921,
+        "activity_name": "Group Session 2 (Meeting 1)",
+        "activity_order": 7,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 385101,
+        "chapter_name": "Week 1-What can we hear and discover at a local market?",
+        "chapter_order": 4,
+        "activity_id": 978915,
+        "activity_name": "Pre-learning 3",
+        "activity_order": 8,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 385101,
+        "chapter_name": "Week 1-What can we hear and discover at a local market?",
+        "chapter_order": 4,
+        "activity_id": 978930,
+        "activity_name": "Group Session 3 (Meeting 2)",
+        "activity_order": 9,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 385101,
+        "chapter_name": "Week 1-What can we hear and discover at a local market?",
+        "chapter_order": 4,
+        "activity_id": 978919,
+        "activity_name": "Individualized Session",
+        "activity_order": 10,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 385102,
+        "chapter_name": "Week 2-What can we hear and discover at a local market?",
+        "chapter_order": 5,
+        "activity_id": 981574,
+        "activity_name": "Pre-learning 1",
+        "activity_order": 11,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 385102,
+        "chapter_name": "Week 2-What can we hear and discover at a local market?",
+        "chapter_order": 5,
+        "activity_id": 981578,
+        "activity_name": "Group Session 1",
+        "activity_order": 12,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 385102,
+        "chapter_name": "Week 2-What can we hear and discover at a local market?",
+        "chapter_order": 5,
+        "activity_id": 982037,
+        "activity_name": "Pre-learning 2",
+        "activity_order": 13,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 385102,
+        "chapter_name": "Week 2-What can we hear and discover at a local market?",
+        "chapter_order": 5,
+        "activity_id": 982040,
+        "activity_name": "Group session 2 (Meeting 3)",
+        "activity_order": 14,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 385102,
+        "chapter_name": "Week 2-What can we hear and discover at a local market?",
+        "chapter_order": 5,
+        "activity_id": 982059,
+        "activity_name": "Pre-learning 3",
+        "activity_order": 15,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 385102,
+        "chapter_name": "Week 2-What can we hear and discover at a local market?",
+        "chapter_order": 5,
+        "activity_id": 982051,
+        "activity_name": "Group Session 3 (Meeting 4)",
+        "activity_order": 16,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 385102,
+        "chapter_name": "Week 2-What can we hear and discover at a local market?",
+        "chapter_order": 5,
+        "activity_id": 981584,
+        "activity_name": "Individualized Session",
+        "activity_order": 17,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388460,
+        "chapter_name": "Week 3-What do words and signs at a market tell us?",
+        "chapter_order": 6,
+        "activity_id": 983776,
+        "activity_name": "Pre-learning 1",
+        "activity_order": 18,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388460,
+        "chapter_name": "Week 3-What do words and signs at a market tell us?",
+        "chapter_order": 6,
+        "activity_id": 985654,
+        "activity_name": "Group Session 1 (Online Session)",
+        "activity_order": 19,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388460,
+        "chapter_name": "Week 3-What do words and signs at a market tell us?",
+        "chapter_order": 6,
+        "activity_id": 985607,
+        "activity_name": "Pre-learning 2",
+        "activity_order": 20,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388460,
+        "chapter_name": "Week 3-What do words and signs at a market tell us?",
+        "chapter_order": 6,
+        "activity_id": 985609,
+        "activity_name": "Group Session 2 (Meeting 5)",
+        "activity_order": 21,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388460,
+        "chapter_name": "Week 3-What do words and signs at a market tell us?",
+        "chapter_order": 6,
+        "activity_id": 985615,
+        "activity_name": "Pre-learning 3",
+        "activity_order": 22,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388460,
+        "chapter_name": "Week 3-What do words and signs at a market tell us?",
+        "chapter_order": 6,
+        "activity_id": 985617,
+        "activity_name": "Group Session 3 (Meeting 6)",
+        "activity_order": 23,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388460,
+        "chapter_name": "Week 3-What do words and signs at a market tell us?",
+        "chapter_order": 6,
+        "activity_id": 983780,
+        "activity_name": "Individualized Session",
+        "activity_order": 24,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388461,
+        "chapter_name": "Week 4-What do words and signs at a market tell us?",
+        "chapter_order": 7,
+        "activity_id": 987544,
+        "activity_name": "Pre-learning 1",
+        "activity_order": 25,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388461,
+        "chapter_name": "Week 4-What do words and signs at a market tell us?",
+        "chapter_order": 7,
+        "activity_id": 987591,
+        "activity_name": "Group Session 1 (Online Session)",
+        "activity_order": 26,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388461,
+        "chapter_name": "Week 4-What do words and signs at a market tell us?",
+        "chapter_order": 7,
+        "activity_id": 988504,
+        "activity_name": "Pre-learning 2",
+        "activity_order": 27,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388461,
+        "chapter_name": "Week 4-What do words and signs at a market tell us?",
+        "chapter_order": 7,
+        "activity_id": 988505,
+        "activity_name": "Group Session 2 (Meeting 7)",
+        "activity_order": 28,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388461,
+        "chapter_name": "Week 4-What do words and signs at a market tell us?",
+        "chapter_order": 7,
+        "activity_id": 990043,
+        "activity_name": "Pre-learning 3",
+        "activity_order": 29,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388461,
+        "chapter_name": "Week 4-What do words and signs at a market tell us?",
+        "chapter_order": 7,
+        "activity_id": 990045,
+        "activity_name": "Group Session 3 (Meeting 8)",
+        "activity_order": 30,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388461,
+        "chapter_name": "Week 4-What do words and signs at a market tell us?",
+        "chapter_order": 7,
+        "activity_id": 987586,
+        "activity_name": "Individualized Session ",
+        "activity_order": 31,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388462,
+        "chapter_name": "Week 5-How can I write and create my store miniature?",
+        "chapter_order": 8,
+        "activity_id": 991338,
+        "activity_name": "Pre-learning 1",
+        "activity_order": 32,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388462,
+        "chapter_name": "Week 5-How can I write and create my store miniature?",
+        "chapter_order": 8,
+        "activity_id": 991342,
+        "activity_name": "Group Session 1 (Online Session)",
+        "activity_order": 33,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388462,
+        "chapter_name": "Week 5-How can I write and create my store miniature?",
+        "chapter_order": 8,
+        "activity_id": 994213,
+        "activity_name": "Pre-learning 2",
+        "activity_order": 34,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388462,
+        "chapter_name": "Week 5-How can I write and create my store miniature?",
+        "chapter_order": 8,
+        "activity_id": 994215,
+        "activity_name": "Group Session 2 (Meeting 9)",
+        "activity_order": 35,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388462,
+        "chapter_name": "Week 5-How can I write and create my store miniature?",
+        "chapter_order": 8,
+        "activity_id": 995080,
+        "activity_name": "Pre-learning 3",
+        "activity_order": 36,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388462,
+        "chapter_name": "Week 5-How can I write and create my store miniature?",
+        "chapter_order": 8,
+        "activity_id": 995099,
+        "activity_name": "Group Session 3 (Meeting 10)",
+        "activity_order": 37,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388462,
+        "chapter_name": "Week 5-How can I write and create my store miniature?",
+        "chapter_order": 8,
+        "activity_id": 991341,
+        "activity_name": "Individualized Session ",
+        "activity_order": 38,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388463,
+        "chapter_name": "Week 6-How can I write and create my store miniature?",
+        "chapter_order": 9,
+        "activity_id": 996992,
+        "activity_name": "Pre-learning 1",
+        "activity_order": 39,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388463,
+        "chapter_name": "Week 6-How can I write and create my store miniature?",
+        "chapter_order": 9,
+        "activity_id": 997005,
+        "activity_name": "Group Session 1 (Online Session)",
+        "activity_order": 40,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388463,
+        "chapter_name": "Week 6-How can I write and create my store miniature?",
+        "chapter_order": 9,
+        "activity_id": 1000090,
+        "activity_name": "Pre-learning 2",
+        "activity_order": 41,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388463,
+        "chapter_name": "Week 6-How can I write and create my store miniature?",
+        "chapter_order": 9,
+        "activity_id": 1000091,
+        "activity_name": "Group Session 2 (Meeting 11)",
+        "activity_order": 42,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388463,
+        "chapter_name": "Week 6-How can I write and create my store miniature?",
+        "chapter_order": 9,
+        "activity_id": 1000100,
+        "activity_name": "Pre-learning 3",
+        "activity_order": 43,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388463,
+        "chapter_name": "Week 6-How can I write and create my store miniature?",
+        "chapter_order": 9,
+        "activity_id": 1000101,
+        "activity_name": "Group Session 3 (Meeting 12)",
+        "activity_order": 44,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388463,
+        "chapter_name": "Week 6-How can I write and create my store miniature?",
+        "chapter_order": 9,
+        "activity_id": 996999,
+        "activity_name": "Individualized Session",
+        "activity_order": 45,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388464,
+        "chapter_name": "Week 7-Formative Assessment",
+        "chapter_order": 10,
+        "activity_id": 1005791,
+        "activity_name": "Pre-learning 1",
+        "activity_order": 46,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388464,
+        "chapter_name": "Week 7-Formative Assessment",
+        "chapter_order": 10,
+        "activity_id": 1005794,
+        "activity_name": "Group Session 1 (Online Session)",
+        "activity_order": 47,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388464,
+        "chapter_name": "Week 7-Formative Assessment",
+        "chapter_order": 10,
+        "activity_id": 1005802,
+        "activity_name": "Group Session 2 (Meeting 13) - Progress Check",
+        "activity_order": 48,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388464,
+        "chapter_name": "Week 7-Formative Assessment",
+        "chapter_order": 10,
+        "activity_id": 1005813,
+        "activity_name": "Progress Check - Listening",
+        "activity_order": 49,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388464,
+        "chapter_name": "Week 7-Formative Assessment",
+        "chapter_order": 10,
+        "activity_id": 1005820,
+        "activity_name": "Progress Check - Writing",
+        "activity_order": 50,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388464,
+        "chapter_name": "Week 7-Formative Assessment",
+        "chapter_order": 10,
+        "activity_id": 1005807,
+        "activity_name": "Group Session 3 (Meeting 14) - Progress Check",
+        "activity_order": 51,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388464,
+        "chapter_name": "Week 7-Formative Assessment",
+        "chapter_order": 10,
+        "activity_id": 1005821,
+        "activity_name": "Progress Check - Speaking",
+        "activity_order": 52,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388464,
+        "chapter_name": "Week 7-Formative Assessment",
+        "chapter_order": 10,
+        "activity_id": 1005836,
+        "activity_name": "Progress Check - Reading",
+        "activity_order": 53,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388465,
+        "chapter_name": "Week 8-How can I sell my products at Local Market Day?",
+        "chapter_order": 11,
+        "activity_id": 1011207,
+        "activity_name": "Pre-learning 1",
+        "activity_order": 54,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388465,
+        "chapter_name": "Week 8-How can I sell my products at Local Market Day?",
+        "chapter_order": 11,
+        "activity_id": 1011221,
+        "activity_name": "Group Session 1 (online Session)",
+        "activity_order": 55,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388465,
+        "chapter_name": "Week 8-How can I sell my products at Local Market Day?",
+        "chapter_order": 11,
+        "activity_id": 1011197,
+        "activity_name": "Pre-Learning 2",
+        "activity_order": 56,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388465,
+        "chapter_name": "Week 8-How can I sell my products at Local Market Day?",
+        "chapter_order": 11,
+        "activity_id": 1011199,
+        "activity_name": "Group Session 2 (Meeting 15)",
+        "activity_order": 57,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388465,
+        "chapter_name": "Week 8-How can I sell my products at Local Market Day?",
+        "chapter_order": 11,
+        "activity_id": 1011214,
+        "activity_name": "Group Session 3 (Meeting 16)",
+        "activity_order": 58,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388465,
+        "chapter_name": "Week 8-How can I sell my products at Local Market Day?",
+        "chapter_order": 11,
+        "activity_id": 1011209,
+        "activity_name": "Individualized Session",
+        "activity_order": 59,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388466,
+        "chapter_name": "Week 9-How can I sell my products at Local Market Day?",
+        "chapter_order": 12,
+        "activity_id": 1014827,
+        "activity_name": "Pre-learning 1",
+        "activity_order": 60,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388466,
+        "chapter_name": "Week 9-How can I sell my products at Local Market Day?",
+        "chapter_order": 12,
+        "activity_id": 1014829,
+        "activity_name": "Group Session 1 (Online Session)",
+        "activity_order": 61,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388466,
+        "chapter_name": "Week 9-How can I sell my products at Local Market Day?",
+        "chapter_order": 12,
+        "activity_id": 1018962,
+        "activity_name": "Pre-Learning 2",
+        "activity_order": 62,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388466,
+        "chapter_name": "Week 9-How can I sell my products at Local Market Day?",
+        "chapter_order": 12,
+        "activity_id": 1018972,
+        "activity_name": "Group Session 2 ( Meeting 17)",
+        "activity_order": 63,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388466,
+        "chapter_name": "Week 9-How can I sell my products at Local Market Day?",
+        "chapter_order": 12,
+        "activity_id": 1019024,
+        "activity_name": "Reading Summative",
+        "activity_order": 64,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388466,
+        "chapter_name": "Week 9-How can I sell my products at Local Market Day?",
+        "chapter_order": 12,
+        "activity_id": 1019032,
+        "activity_name": "Writing Summative",
+        "activity_order": 65,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388466,
+        "chapter_name": "Week 9-How can I sell my products at Local Market Day?",
+        "chapter_order": 12,
+        "activity_id": 1022241,
+        "activity_name": "Group Session 3 (Meeting 18)",
+        "activity_order": 66,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388466,
+        "chapter_name": "Week 9-How can I sell my products at Local Market Day?",
+        "chapter_order": 12,
+        "activity_id": 1022239,
+        "activity_name": "Speaking Summative",
+        "activity_order": 67,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388466,
+        "chapter_name": "Week 9-How can I sell my products at Local Market Day?",
+        "chapter_order": 12,
+        "activity_id": 1022240,
+        "activity_name": "Listening Summative",
+        "activity_order": 68,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388466,
+        "chapter_name": "Week 9-How can I sell my products at Local Market Day?",
+        "chapter_order": 12,
+        "activity_id": 1014836,
+        "activity_name": "Individualized Session",
+        "activity_order": 69,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388467,
+        "chapter_name": "Week 10-How can I sell my products at Local Market Day?",
+        "chapter_order": 13,
+        "activity_id": 1028198,
+        "activity_name": "Pre-Learning 1",
+        "activity_order": 70,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388467,
+        "chapter_name": "Week 10-How can I sell my products at Local Market Day?",
+        "chapter_order": 13,
+        "activity_id": 1028216,
+        "activity_name": "Group Session 1 (Online Session)",
+        "activity_order": 71,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388467,
+        "chapter_name": "Week 10-How can I sell my products at Local Market Day?",
+        "chapter_order": 13,
+        "activity_id": 1028143,
+        "activity_name": "Pre-Learning 2",
+        "activity_order": 72,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388467,
+        "chapter_name": "Week 10-How can I sell my products at Local Market Day?",
+        "chapter_order": 13,
+        "activity_id": 1028148,
+        "activity_name": "Group Session 2 (Meeting 19)",
+        "activity_order": 73,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388467,
+        "chapter_name": "Week 10-How can I sell my products at Local Market Day?",
+        "chapter_order": 13,
+        "activity_id": 1028145,
+        "activity_name": "Pre-Learning 3",
+        "activity_order": 74,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388467,
+        "chapter_name": "Week 10-How can I sell my products at Local Market Day?",
+        "chapter_order": 13,
+        "activity_id": 1028932,
+        "activity_name": "Group Session 3 (Meeting 20)",
+        "activity_order": 75,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 388467,
+        "chapter_name": "Week 10-How can I sell my products at Local Market Day?",
+        "chapter_order": 13,
+        "activity_id": 1028202,
+        "activity_name": "Individualized Session",
+        "activity_order": 76,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 407693,
+        "chapter_name": "Week 11",
+        "chapter_order": 14,
+        "activity_id": 1028158,
+        "activity_name": "Pre-Learning 1",
+        "activity_order": 77,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 407693,
+        "chapter_name": "Week 11",
+        "chapter_order": 14,
+        "activity_id": 1028165,
+        "activity_name": "Group Session 1 (Online Session)",
+        "activity_order": 78,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 407693,
+        "chapter_name": "Week 11",
+        "chapter_order": 14,
+        "activity_id": 1032761,
+        "activity_name": "Pre-Learning 2",
+        "activity_order": 79,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 407693,
+        "chapter_name": "Week 11",
+        "chapter_order": 14,
+        "activity_id": 1032751,
+        "activity_name": "Group Session 2 (Meeting 21)",
+        "activity_order": 80,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 407693,
+        "chapter_name": "Week 11",
+        "chapter_order": 14,
+        "activity_id": 1038322,
+        "activity_name": "Group Session 3 (Meeting 22)",
+        "activity_order": 81,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 407693,
+        "chapter_name": "Week 11",
+        "chapter_order": 14,
+        "activity_id": 1028161,
+        "activity_name": "Individualized Session",
+        "activity_order": 82,
+        "is_addon": 0
+      }
+    ]
+  },
+  "waydivers-1-term-2-ay-20262027": {
+    "platform_id": "6",
+    "program_id": 71783,
+    "activities": [
+      {
+        "chapter_id": 408361,
+        "chapter_name": "Welcome to Term 2 AY 26/27",
+        "chapter_order": 1,
+        "activity_id": 1030167,
+        "activity_name": "Academic Calendar",
+        "activity_order": 1,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 408362,
+        "chapter_name": "Summative Description",
+        "chapter_order": 2,
+        "activity_id": 1030168,
+        "activity_name": "Summative Description ",
+        "activity_order": 2,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 408363,
+        "chapter_name": "Reading List",
+        "chapter_order": 3,
+        "activity_id": 1043906,
+        "activity_name": "Reading List",
+        "activity_order": 3,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 408364,
+        "chapter_name": "W1/ 5-10 October -Finding and Understanding Information",
+        "chapter_order": 4,
+        "activity_id": 1037916,
+        "activity_name": "Pre-Learning 1",
+        "activity_order": 4,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 408364,
+        "chapter_name": "W1/ 5-10 October -Finding and Understanding Information",
+        "chapter_order": 4,
+        "activity_id": 1037920,
+        "activity_name": "Group Session 1 (Online Session)",
+        "activity_order": 5,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 408364,
+        "chapter_name": "W1/ 5-10 October -Finding and Understanding Information",
+        "chapter_order": 4,
+        "activity_id": 1037903,
+        "activity_name": "Pre-Learning 2",
+        "activity_order": 6,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 408364,
+        "chapter_name": "W1/ 5-10 October -Finding and Understanding Information",
+        "chapter_order": 4,
+        "activity_id": 1037904,
+        "activity_name": "Group Session 2 (Meeting 1)",
+        "activity_order": 7,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 408364,
+        "chapter_name": "W1/ 5-10 October -Finding and Understanding Information",
+        "chapter_order": 4,
+        "activity_id": 1037907,
+        "activity_name": "Pre-Learning 3",
+        "activity_order": 8,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 408364,
+        "chapter_name": "W1/ 5-10 October -Finding and Understanding Information",
+        "chapter_order": 4,
+        "activity_id": 1037909,
+        "activity_name": "Group Session 3 (Meeting 2)",
+        "activity_order": 9,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 408364,
+        "chapter_name": "W1/ 5-10 October -Finding and Understanding Information",
+        "chapter_order": 4,
+        "activity_id": 1037919,
+        "activity_name": "Individualized Session",
+        "activity_order": 10,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 408365,
+        "chapter_name": "W2 / 12-17 October - Sharing and Clarifying Information",
+        "chapter_order": 5,
+        "activity_id": 1041929,
+        "activity_name": "Pre-Learning 1",
+        "activity_order": 11,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 408365,
+        "chapter_name": "W2 / 12-17 October - Sharing and Clarifying Information",
+        "chapter_order": 5,
+        "activity_id": 1041932,
+        "activity_name": "Group Session 1 (Online Session)",
+        "activity_order": 12,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 408365,
+        "chapter_name": "W2 / 12-17 October - Sharing and Clarifying Information",
+        "chapter_order": 5,
+        "activity_id": 1041905,
+        "activity_name": "Pre-Learning 2",
+        "activity_order": 13,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 408365,
+        "chapter_name": "W2 / 12-17 October - Sharing and Clarifying Information",
+        "chapter_order": 5,
+        "activity_id": 1041907,
+        "activity_name": "Group Session 2 (Meeting 3)",
+        "activity_order": 14,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 408365,
+        "chapter_name": "W2 / 12-17 October - Sharing and Clarifying Information",
+        "chapter_order": 5,
+        "activity_id": 1041916,
+        "activity_name": "Pre-Learning 3",
+        "activity_order": 15,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 408365,
+        "chapter_name": "W2 / 12-17 October - Sharing and Clarifying Information",
+        "chapter_order": 5,
+        "activity_id": 1041919,
+        "activity_name": "Group Session 3 (Meeting 4)",
+        "activity_order": 16,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 408366,
+        "chapter_name": "W3 / 19-24 October - Organising and Connecting Ideas",
+        "chapter_order": 6,
+        "activity_id": 1044873,
+        "activity_name": "Pre-Learning 1",
+        "activity_order": 17,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 408366,
+        "chapter_name": "W3 / 19-24 October - Organising and Connecting Ideas",
+        "chapter_order": 6,
+        "activity_id": 1044878,
+        "activity_name": "Group  Session 1 (Online Session)",
+        "activity_order": 18,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 408366,
+        "chapter_name": "W3 / 19-24 October - Organising and Connecting Ideas",
+        "chapter_order": 6,
+        "activity_id": 1044491,
+        "activity_name": "Pre-Learning 2",
+        "activity_order": 19,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 408366,
+        "chapter_name": "W3 / 19-24 October - Organising and Connecting Ideas",
+        "chapter_order": 6,
+        "activity_id": 1044492,
+        "activity_name": "Group Session 2 (Meeting 5)",
+        "activity_order": 20,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 408366,
+        "chapter_name": "W3 / 19-24 October - Organising and Connecting Ideas",
+        "chapter_order": 6,
+        "activity_id": 1044870,
+        "activity_name": "Pre-Learning 3",
+        "activity_order": 21,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 408366,
+        "chapter_name": "W3 / 19-24 October - Organising and Connecting Ideas",
+        "chapter_order": 6,
+        "activity_id": 1044861,
+        "activity_name": "Group Session 3 (Meeting 6)",
+        "activity_order": 22,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 408366,
+        "chapter_name": "W3 / 19-24 October - Organising and Connecting Ideas",
+        "chapter_order": 6,
+        "activity_id": 1044875,
+        "activity_name": "Individualized Session",
+        "activity_order": 23,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 408367,
+        "chapter_name": "W4/ 26-31 October -Listening and Understanding Messages",
+        "chapter_order": 7,
+        "activity_id": 1049004,
+        "activity_name": "Pre-Learning 1",
+        "activity_order": 24,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 408367,
+        "chapter_name": "W4/ 26-31 October -Listening and Understanding Messages",
+        "chapter_order": 7,
+        "activity_id": 1049009,
+        "activity_name": "Group Session 1 (Online Session)",
+        "activity_order": 25,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 408367,
+        "chapter_name": "W4/ 26-31 October -Listening and Understanding Messages",
+        "chapter_order": 7,
+        "activity_id": 1048967,
+        "activity_name": "Pre-Learning 2",
+        "activity_order": 26,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 408367,
+        "chapter_name": "W4/ 26-31 October -Listening and Understanding Messages",
+        "chapter_order": 7,
+        "activity_id": 1048970,
+        "activity_name": "Group Session 2 (Meeting 7)",
+        "activity_order": 27,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 408367,
+        "chapter_name": "W4/ 26-31 October -Listening and Understanding Messages",
+        "chapter_order": 7,
+        "activity_id": 1048982,
+        "activity_name": "Group Session 3 (Meeting 8)",
+        "activity_order": 28,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 408367,
+        "chapter_name": "W4/ 26-31 October -Listening and Understanding Messages",
+        "chapter_order": 7,
+        "activity_id": 1049007,
+        "activity_name": "Individualized Session",
+        "activity_order": 29,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 408368,
+        "chapter_name": "W5/2-7 November-Selecting and Communicating Information",
+        "chapter_order": 8,
+        "activity_id": 1050597,
+        "activity_name": "Pre-Learning 1",
+        "activity_order": 30,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 408368,
+        "chapter_name": "W5/2-7 November-Selecting and Communicating Information",
+        "chapter_order": 8,
+        "activity_id": 1050601,
+        "activity_name": "Group Session 1 (Online Session)",
+        "activity_order": 31,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 408368,
+        "chapter_name": "W5/2-7 November-Selecting and Communicating Information",
+        "chapter_order": 8,
+        "activity_id": 1051463,
+        "activity_name": "Pre-Learning 2",
+        "activity_order": 32,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 408368,
+        "chapter_name": "W5/2-7 November-Selecting and Communicating Information",
+        "chapter_order": 8,
+        "activity_id": 1051465,
+        "activity_name": "Group Session 2 (Meeting 9)",
+        "activity_order": 33,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 408368,
+        "chapter_name": "W5/2-7 November-Selecting and Communicating Information",
+        "chapter_order": 8,
+        "activity_id": 1051582,
+        "activity_name": "Group Session 3 (Meeting 10)",
+        "activity_order": 34,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 408368,
+        "chapter_name": "W5/2-7 November-Selecting and Communicating Information",
+        "chapter_order": 8,
+        "activity_id": 1051579,
+        "activity_name": "Pre-Learning 3",
+        "activity_order": 35,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 408368,
+        "chapter_name": "W5/2-7 November-Selecting and Communicating Information",
+        "chapter_order": 8,
+        "activity_id": 1051587,
+        "activity_name": "Group Work and Group Presentation",
+        "activity_order": 36,
+        "is_addon": 0
+      },
+      {
+        "chapter_id": 408368,
+        "chapter_name": "W5/2-7 November-Selecting and Communicating Information",
+        "chapter_order": 8,
+        "activity_id": 1050600,
+        "activity_name": "Individualized Session",
+        "activity_order": 37,
+        "is_addon": 0
+      }
+    ]
+  }
+}
