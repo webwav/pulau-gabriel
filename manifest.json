@@ -1,0 +1,25 @@
+{
+  "name": "Petualangan Pulau Gabriel",
+  "short_name": "Pulau Gabriel",
+  "description": "Peta Misi Belajar Interaktif Kapten Gabriel — SMM & Living English",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#082f49",
+  "theme_color": "#0284c7",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,1734 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#0284c7" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Pulau Gabriel" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png" />
+  <link rel="apple-touch-icon" href="assets/icon-192.png" />
+  <title>Petualangan Pulau Gabriel — Quest Map SMM & Living English</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --font-display: 'Fredoka', sans-serif;
+      --font-body: 'Nunito', sans-serif;
+    }
+    body {
+      font-family: var(--font-body);
+      background: linear-gradient(180deg, #0284c7 0%, #0369a1 45%, #0c4a6e 100%);
+      color: #1e293b;
+      overflow-x: hidden;
+      user-select: none;
+    }
+    h1, h2, h3, .font-game {
+      font-family: var(--font-display);
+      letter-spacing: 0.01em;
+    }
+    .btn-3d {
+      transition: transform 0.14s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.14s ease;
+    }
+    .btn-3d:active {
+      transform: translateY(4px) scale(0.97);
+    }
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-7px); }
+    }
+    @keyframes avatarBounce {
+      0%, 100% { transform: translate(-50%, -95%) scale(1); }
+      50% { transform: translate(-50%, -108%) scale(1.07); }
+    }
+    @keyframes ringPulse {
+      0% { transform: scale(0.95); opacity: 0.95; }
+      70% { transform: scale(1.55); opacity: 0; }
+      100% { transform: scale(1.65); opacity: 0; }
+    }
+    @keyframes ambientCloudDrift {
+      0% { transform: translateX(-6%); }
+      50% { transform: translateX(6%); }
+      100% { transform: translateX(-6%); }
+    }
+    .animate-float {
+      animation: floatSlow 3.2s ease-in-out infinite;
+    }
+    .animate-avatar {
+      animation: avatarBounce 1.7s ease-in-out infinite;
+    }
+    .pulse-ring::before {
+      content: '';
+      position: absolute;
+      inset: -9px;
+      border-radius: 9999px;
+      border: 4px solid #facc15;
+      animation: ringPulse 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+      pointer-events: none;
+    }
+
+    /* Map Stage & Zoom Camera */
+    .map-stage {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      min-height: 490px;
+      max-height: 78vh;
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 26px 65px -12px rgba(2, 24, 43, 0.8), inset 0 0 0 6px rgba(255, 255, 255, 0.38);
+      background: #0ea5e9;
+    }
+    .map-camera-layer {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.68s cubic-bezier(0.22, 1, 0.36, 1), filter 0.45s ease;
+      will-change: transform;
+    }
+    .map-bg-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      filter: saturate(1.1) contrast(1.03);
+      transition: opacity 0.35s ease;
+    }
+
+    /* Animated Cloud Transition Curtain */
+    .cloud-curtain {
+      position: absolute;
+      inset: 0;
+      z-index: 60;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .cloud-bank-left,
+    .cloud-bank-right,
+    .cloud-bank-top,
+    .cloud-bank-bottom {
+      position: absolute;
+      transition: transform 0.44s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.38s ease;
+      opacity: 0;
+      will-change: transform, opacity;
+    }
+    .cloud-bank-left {
+      top: -15%;
+      bottom: -15%;
+      left: -10%;
+      width: 75%;
+      transform: translateX(-110%) scale(1.05);
+    }
+    .cloud-bank-right {
+      top: -15%;
+      bottom: -15%;
+      right: -10%;
+      width: 75%;
+      transform: translateX(110%) scale(1.05);
+    }
+    .cloud-bank-top {
+      left: -10%;
+      right: -10%;
+      top: -20%;
+      height: 65%;
+      transform: translateY(-110%);
+    }
+    .cloud-bank-bottom {
+      left: -10%;
+      right: -10%;
+      bottom: -20%;
+      height: 65%;
+      transform: translateY(110%);
+    }
+    .cloud-curtain.active .cloud-bank-left {
+      transform: translateX(0%) scale(1.12);
+      opacity: 1;
+    }
+    .cloud-curtain.active .cloud-bank-right {
+      transform: translateX(0%) scale(1.12);
+      opacity: 1;
+    }
+    .cloud-curtain.active .cloud-bank-top {
+      transform: translateY(0%);
+      opacity: 0.95;
+    }
+    .cloud-curtain.active .cloud-bank-bottom {
+      transform: translateY(0%);
+      opacity: 0.95;
+    }
+    .cloud-center-badge {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(0.6);
+      opacity: 0;
+      transition: transform 0.32s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.25s ease;
+      z-index: 65;
+    }
+    .cloud-curtain.active .cloud-center-badge {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+
+    /* Ambient floating clouds at edges when zoomed in */
+    .ambient-clouds {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 12;
+      animation: ambientCloudDrift 14s ease-in-out infinite;
+    }
+
+    /* Stepping Stone Nodes — Extra Large & Never Overlapping */
+    .stone-node {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      transition: all 0.26s cubic-bezier(0.34, 1.56, 0.64, 1);
+      cursor: pointer;
+      z-index: 25;
+    }
+    .stone-node:hover {
+      transform: translate(-50%, -56%) scale(1.15);
+      z-index: 45;
+    }
+
+    /* Island Zone Landmark Pill */
+    .island-landmark {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      z-index: 22;
+      cursor: pointer;
+      transition: all 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .island-landmark:hover {
+      transform: translate(-50%, -56%) scale(1.1);
+      z-index: 40;
+    }
+
+    #confetti-canvas {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 100;
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(15, 23, 42, 0.1);
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(14, 165, 233, 0.5);
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+<body class="min-h-screen pb-14">
+
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-6 right-6 z-[95] hidden transform transition-all duration-300 bg-slate-900/95 text-white px-5 py-3.5 rounded-2xl shadow-2xl border-2 border-amber-400 flex items-center gap-3 max-w-md">
+    <span id="toast-icon" class="text-2xl">✨</span>
+    <div class="text-sm font-bold leading-snug" id="toast-text">Siap berpetualang!</div>
+  </div>
+
+  <!-- TOP HUD HEADER -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-sky-950/85 border-b-4 border-sky-400/30 px-3 sm:px-6 py-2.5 shadow-xl">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+
+      <!-- Left: Gabriel Avatar & Title -->
+      <div class="flex items-center gap-3">
+        <div class="relative group cursor-pointer" onclick="jumpToCurrentQuest()" title="Klik untuk lompat ke posisi Gabriel sekarang!">
+          <img src="assets/gabriel-avatar.jpg" alt="Gabriel Explorer" class="rounded-full object-cover border-4 border-amber-400 shadow-lg" style="width: 54px; height: 54px;" />
+          <span class="absolute -bottom-1 -right-1 bg-emerald-500 text-white text-[10px] font-black px-1.5 py-0.5 rounded-full border-2 border-white">LV <span id="hud-level">1</span></span>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <h1 class="text-xl sm:text-2xl font-bold text-white drop-shadow">Petualangan Pulau Gabriel</h1>
+            <span class="hidden md:inline-flex items-center gap-1 bg-amber-400/20 border border-amber-300/40 text-amber-200 text-xs font-extrabold px-2.5 py-0.5 rounded-full">
+              🧭 Kapten Gabriel (6 Thn)
+            </span>
+          </div>
+          <p class="text-xs sm:text-sm text-sky-200 font-semibold" id="hud-subtitle">
+            Klik nama Pulau di Peta Kepulauan untuk Zoom-In ☁️💨 dan membuka batu pijakan misi!
+          </p>
+        </div>
+      </div>
+
+      <!-- Center/Right: Counters & Treasure Chest -->
+      <div class="flex items-center gap-2 sm:gap-3 flex-wrap">
+        <!-- Star Counter -->
+        <div class="flex items-center gap-2 bg-gradient-to-b from-amber-400 to-amber-500 text-slate-950 px-3.5 py-1.5 rounded-2xl shadow-md border-2 border-amber-200">
+          <span class="text-xl">⭐</span>
+          <div>
+            <div class="text-[10px] font-black uppercase tracking-wider text-amber-950/80 leading-none">Bintang</div>
+            <div class="text-lg font-black leading-tight" id="hud-stars">0</div>
+          </div>
+        </div>
+
+        <!-- Treasure Chest Progress -->
+        <div onclick="openTreasureModal()" class="cursor-pointer btn-3d flex items-center gap-2.5 bg-gradient-to-b from-purple-600 to-indigo-700 text-white px-3.5 py-1.5 rounded-2xl shadow-md border-2 border-purple-300/60" title="Setiap 10 Bintang membuka Peti Harta Karun!">
+          <img src="assets/treasure-chest.jpg" alt="Peti" class="w-8 h-8 rounded-lg object-cover border border-amber-300" />
+          <div>
+            <div class="text-[10px] font-extrabold uppercase tracking-wider text-purple-200 leading-none">Peti Harta</div>
+            <div class="text-sm font-black leading-tight flex items-center gap-1">
+              <span id="hud-chests">0</span> 🎁
+              <span class="text-[11px] text-amber-300 font-bold" id="hud-next-chest">(0/10⭐)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Done / Skipped Pill -->
+        <div class="hidden sm:flex items-center gap-3 bg-sky-900/90 border-2 border-sky-400/30 text-white px-3.5 py-1.5 rounded-2xl text-xs font-bold">
+          <div class="text-center">
+            <div class="text-emerald-300 font-black text-sm" id="hud-done-count">0</div>
+            <div class="text-[10px] text-sky-200">Selesai</div>
+          </div>
+          <div class="h-6 w-[1px] bg-sky-700"></div>
+          <div class="text-center cursor-pointer hover:opacity-80" onclick="setCategoryFilter('skipped')" title="Lihat misi yang dilewati sementara">
+            <div class="text-amber-300 font-black text-sm" id="hud-skip-count">0</div>
+            <div class="text-[10px] text-sky-200">Ditunda 🚩</div>
+          </div>
+          <div class="h-6 w-[1px] bg-sky-700"></div>
+          <div class="text-center">
+            <div class="text-sky-200 font-black text-sm" id="hud-remaining-count">0</div>
+            <div class="text-[10px] text-sky-300">Tersisa</div>
+          </div>
+        </div>
+
+        <!-- Android PWA Install Button (Shown automatically when installable) -->
+        <button id="btn-install-pwa" onclick="installPWA()" class="hidden btn-3d bg-gradient-to-b from-amber-300 to-amber-500 hover:from-amber-200 hover:to-amber-400 text-slate-950 font-black px-3.5 py-2 rounded-2xl shadow-lg border-2 border-white flex items-center gap-1.5 text-xs sm:text-sm" title="Install Pulau Gabriel di Android">
+          <span>📲</span>
+          <span>Install App</span>
+        </button>
+
+        <!-- Quick Next Mission CTA -->
+        <button onclick="openCurrentQuestModal()" class="btn-3d bg-gradient-to-b from-emerald-400 to-emerald-600 hover:from-emerald-300 hover:to-emerald-500 text-slate-950 font-black px-4 py-2 rounded-2xl shadow-lg border-2 border-emerald-200 flex items-center gap-1.5 text-sm">
+          <span>🚀</span>
+          <span>Misi Sekarang!</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-7xl mx-auto px-3 sm:px-6 pt-4 space-y-4">
+
+    <!-- ISLAND & FILTER BAR -->
+    <div class="bg-sky-950/75 backdrop-blur-md border-2 border-sky-400/30 rounded-3xl p-3 sm:p-4 shadow-xl space-y-3">
+      <!-- Row 1: Island Selector Tabs (Clicking any island triggers Cloud Transition + Swoosh Zoom!) -->
+      <div class="flex items-center justify-between gap-2 flex-wrap">
+        <div class="flex items-center gap-1.5 sm:gap-2 overflow-x-auto pb-1 max-w-full" id="island-tabs">
+          <button onclick="setIslandFilter('all')" id="tab-island-all" class="island-tab btn-3d px-3.5 py-2 rounded-2xl font-extrabold text-xs sm:text-sm flex items-center gap-1.5 bg-amber-400 text-slate-950 shadow border-2 border-white">
+            <span>🗺️</span>
+            <span>Peta Kepulauan (Semua)</span>
+          </button>
+          <button onclick="setIslandFilter('daring')" id="tab-island-daring" class="island-tab btn-3d px-3.5 py-2 rounded-2xl font-extrabold text-xs sm:text-sm flex items-center gap-1.5 bg-sky-900/90 text-sky-100 border-2 border-sky-500/40 hover:bg-sky-800">
+            <span>🏝️</span>
+            <span>Zoom: Daring Rutin</span>
+          </button>
+          <button onclick="setIslandFilter('english')" id="tab-island-english" class="island-tab btn-3d px-3.5 py-2 rounded-2xl font-extrabold text-xs sm:text-sm flex items-center gap-1.5 bg-sky-900/90 text-sky-100 border-2 border-sky-500/40 hover:bg-sky-800">
+            <span>🏰</span>
+            <span>Zoom: SMM English</span>
+          </button>
+          <button onclick="setIslandFilter('living_english')" id="tab-island-living_english" class="island-tab btn-3d px-3.5 py-2 rounded-2xl font-extrabold text-xs sm:text-sm flex items-center gap-1.5 bg-sky-900/90 text-sky-100 border-2 border-sky-500/40 hover:bg-sky-800">
+            <span>⛵</span>
+            <span>Zoom: Living English</span>
+          </button>
+          <button onclick="setIslandFilter('pjok')" id="tab-island-pjok" class="island-tab btn-3d px-3.5 py-2 rounded-2xl font-extrabold text-xs sm:text-sm flex items-center gap-1.5 bg-sky-900/90 text-sky-100 border-2 border-sky-500/40 hover:bg-sky-800">
+            <span>🌋</span>
+            <span>Zoom: PJOK (Aman)</span>
+          </button>
+          <button onclick="setIslandFilter('homeroom')" id="tab-island-homeroom" class="island-tab btn-3d px-3.5 py-2 rounded-2xl font-extrabold text-xs sm:text-sm flex items-center gap-1.5 bg-sky-900/90 text-sky-100 border-2 border-sky-500/40 hover:bg-sky-800">
+            <span>🚨</span>
+            <span>Zoom: Homeroom</span>
+          </button>
+        </div>
+
+        <!-- Mode Filter Pills -->
+        <div class="flex items-center gap-1.5 flex-wrap">
+          <span class="px-2.5 py-1.5 rounded-xl text-[11px] font-extrabold bg-emerald-950/90 text-emerald-300 border border-emerald-500/40" title="191 materi SMM + 49 materi Living English yang sudah centang hijau di portal otomatis tidak dimasukkan ke map">
+            ✅ 240 Selesai di Portal (Sudah Dikeluarkan)
+          </span>
+          <button onclick="setCategoryFilter('kid')" id="filter-kid" class="cat-pill px-3 py-1.5 rounded-xl text-xs font-extrabold bg-emerald-400 text-slate-950 border-2 border-white shadow">
+            🌟 Semua Materi (<span id="pill-all-count">356</span>)
+          </button>
+          <button onclick="setCategoryFilter('belum_berjalan')" id="filter-belum_berjalan" class="cat-pill px-3 py-1.5 rounded-xl text-xs font-extrabold bg-sky-900 text-cyan-200 border border-cyan-400/60 hover:bg-sky-800" title="Semua materi Bulan November s/d Akhir Semester 1 (Desember 2026) yang memang belum berjalan">
+            📅 Belum Berjalan: Nov–Akhir Sem 1 (<span id="pill-upcoming-count">104</span>)
+          </button>
+          <button onclick="setCategoryFilter('belum_selesai')" id="filter-belum_selesai" class="cat-pill px-3 py-1.5 rounded-xl text-xs font-extrabold bg-sky-900 text-amber-200 border border-sky-600 hover:bg-sky-800" title="Materi Juli s/d Oktober 2026 yang belum dicentang di portal">
+            ⏳ Belum Selesai: Jul–Okt (<span id="pill-overdue-count">252</span>)
+          </button>
+          <button onclick="setCategoryFilter('boss')" id="filter-boss" class="cat-pill px-3 py-1.5 rounded-xl text-xs font-extrabold bg-sky-900 text-sky-200 border border-sky-600 hover:bg-sky-800">
+            🏆 Hanya Tugas & Sumatif (<span id="pill-boss-count">162</span>)
+          </button>
+          <button onclick="setCategoryFilter('skipped')" id="filter-skipped" class="cat-pill px-3 py-1.5 rounded-xl text-xs font-extrabold bg-sky-900 text-amber-300 border border-sky-600 hover:bg-sky-800">
+            🚩 Ditunda (<span id="pill-skip-count">0</span>)
+          </button>
+        </div>
+      </div>
+
+      <!-- Row 2: Chapter Paginator (10 Wide-Spaced Stepping Stones per Screen!) -->
+      <div class="flex flex-wrap items-center justify-between gap-2 pt-1 border-t border-sky-800/80 text-xs sm:text-sm">
+        <div class="flex items-center gap-2 flex-wrap">
+          <button onclick="changeChapter(-1)" id="btn-prev-chapter" class="btn-3d bg-sky-800 hover:bg-sky-700 disabled:opacity-40 text-white font-extrabold px-3.5 py-1.5 rounded-xl border border-sky-500/50">
+            ◀ Bab Sebelumnya
+          </button>
+          <div class="bg-sky-900/90 text-amber-300 font-black px-3.5 py-1.5 rounded-xl border border-amber-400/40" id="chapter-indicator">
+            Peta Bab 1
+          </div>
+          <button onclick="changeChapter(1)" id="btn-next-chapter" class="btn-3d bg-sky-800 hover:bg-sky-700 disabled:opacity-40 text-white font-extrabold px-3.5 py-1.5 rounded-xl border border-sky-500/50">
+            Bab Berikutnya ▶
+          </button>
+          <button onclick="jumpToCurrentQuest()" class="btn-3d bg-amber-400/20 hover:bg-amber-400/30 text-amber-200 border border-amber-400/50 font-bold px-3 py-1.5 rounded-xl inline-flex items-center gap-1">
+            📍 Cari Posisi Gabriel
+          </button>
+        </div>
+
+        <div class="flex items-center gap-3 text-xs text-sky-200 font-bold">
+          <span class="inline-flex items-center gap-1"><span class="w-3 h-3 rounded-full bg-emerald-400 inline-block border border-white"></span> Selesai</span>
+          <span class="inline-flex items-center gap-1"><span class="w-3 h-3 rounded-full bg-amber-400 inline-block border border-white"></span> Misi Sekarang</span>
+          <span class="inline-flex items-center gap-1"><span class="w-3 h-3 rounded-full bg-orange-400 inline-block border border-white"></span> Ditunda 🚩</span>
+          <span class="inline-flex items-center gap-1">🏆 = Tugas/Sumatif</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- INTERACTIVE TROPICAL QUEST MAP STAGE -->
+    <div class="map-stage select-none" id="map-stage">
+
+      <!-- ANIMATED FLUFFY CLOUD TRANSITION CURTAIN (Triggered on Island Zoom In / Out & Chapter Switch) -->
+      <div id="cloud-curtain" class="cloud-curtain">
+        <!-- Left Fluffy Cloud Bank -->
+        <svg class="cloud-bank-left" viewBox="0 0 600 500" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="cloudGradL" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#ffffff" />
+              <stop offset="70%" stop-color="#f0f9ff" />
+              <stop offset="100%" stop-color="#bae6fd" />
+            </linearGradient>
+          </defs>
+          <path fill="url(#cloudGradL)" d="M-50,0 L420,0 C490,40 540,95 490,150 C560,190 580,260 500,320 C550,370 510,450 430,500 L-50,500 Z" />
+          <circle cx="380" cy="110" r="95" fill="#ffffff" opacity="0.9" />
+          <circle cx="430" cy="240" r="115" fill="#ffffff" opacity="0.95" />
+          <circle cx="360" cy="390" r="105" fill="#f8fafc" opacity="0.9" />
+          <circle cx="210" cy="180" r="130" fill="#ffffff" />
+          <circle cx="230" cy="340" r="140" fill="#ffffff" />
+        </svg>
+
+        <!-- Right Fluffy Cloud Bank -->
+        <svg class="cloud-bank-right" viewBox="0 0 600 500" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="cloudGradR" x1="100%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#ffffff" />
+              <stop offset="70%" stop-color="#f0f9ff" />
+              <stop offset="100%" stop-color="#bae6fd" />
+            </linearGradient>
+          </defs>
+          <path fill="url(#cloudGradR)" d="M650,0 L180,0 C110,40 60,95 110,150 C40,190 20,260 100,320 C50,370 90,450 170,500 L650,500 Z" />
+          <circle cx="220" cy="120" r="100" fill="#ffffff" opacity="0.9" />
+          <circle cx="170" cy="250" r="120" fill="#ffffff" opacity="0.95" />
+          <circle cx="240" cy="390" r="105" fill="#f8fafc" opacity="0.9" />
+          <circle cx="390" cy="190" r="130" fill="#ffffff" />
+          <circle cx="370" cy="340" r="140" fill="#ffffff" />
+        </svg>
+
+        <!-- Top & Bottom Soft Cloud Puffs -->
+        <svg class="cloud-bank-top" viewBox="0 0 800 300" preserveAspectRatio="none">
+          <circle cx="150" cy="60" r="140" fill="#ffffff" opacity="0.95" />
+          <circle cx="350" cy="40" r="160" fill="#f8fafc" opacity="0.95" />
+          <circle cx="580" cy="50" r="150" fill="#ffffff" opacity="0.95" />
+          <circle cx="740" cy="70" r="130" fill="#f0f9ff" opacity="0.95" />
+        </svg>
+        <svg class="cloud-bank-bottom" viewBox="0 0 800 300" preserveAspectRatio="none">
+          <circle cx="140" cy="250" r="140" fill="#ffffff" opacity="0.95" />
+          <circle cx="380" cy="260" r="170" fill="#f8fafc" opacity="0.95" />
+          <circle cx="620" cy="250" r="150" fill="#ffffff" opacity="0.95" />
+          <circle cx="760" cy="240" r="130" fill="#f0f9ff" opacity="0.95" />
+        </svg>
+
+        <!-- Center Island Transition Badge -->
+        <div class="cloud-center-badge bg-slate-900/95 text-white px-6 py-4 rounded-3xl border-4 border-amber-400 shadow-2xl flex items-center gap-3">
+          <span id="cloud-badge-icon" class="text-4xl">🌋</span>
+          <div>
+            <div class="text-xs font-black uppercase tracking-widest text-amber-300" id="cloud-badge-sub">Terbang Menuju Pulau...</div>
+            <div class="text-xl sm:text-2xl font-black font-game" id="cloud-badge-title">Pulau Gerak Ceria</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CAMERA ZOOM LAYER (Transforms smoothly when zooming into an island) -->
+      <div id="map-camera-layer" class="map-camera-layer">
+        <img id="map-bg-img" src="assets/island-map.jpg" alt="Tropical Quest Map" class="map-bg-img" />
+      </div>
+
+      <!-- Subtle Vignette -->
+      <div class="absolute inset-0 bg-gradient-to-t from-sky-950/40 via-transparent to-sky-950/20 pointer-events-none z-10"></div>
+
+      <!-- Ambient Floating Clouds Frame when Zoomed In -->
+      <div id="zoomed-ambient-clouds" class="ambient-clouds hidden">
+        <svg class="w-full h-full" viewBox="0 0 1000 562.5" preserveAspectRatio="none">
+          <g fill="#ffffff" opacity="0.55">
+            <circle cx="30" cy="40" r="70" />
+            <circle cx="95" cy="25" r="55" />
+            <circle cx="960" cy="50" r="75" />
+            <circle cx="900" cy="30" r="50" />
+            <circle cx="40" cy="530" r="65" />
+            <circle cx="960" cy="525" r="70" />
+          </g>
+        </svg>
+      </div>
+
+      <!-- Active Island Zone Banner (Top-Left of Map) -->
+      <div class="absolute top-3 left-3 sm:top-4 sm:left-4 z-30 flex items-center gap-2.5 bg-slate-900/85 backdrop-blur-md text-white px-4 py-2 rounded-2xl border-2 border-amber-400/80 shadow-xl">
+        <span class="text-2xl sm:text-3xl" id="map-zone-icon">🗺️</span>
+        <div>
+          <div class="text-[11px] text-amber-300 font-extrabold uppercase tracking-wider leading-none" id="map-zone-subtitle">Klik Pulau untuk Zoom-In!</div>
+          <div class="text-sm sm:text-lg font-black leading-tight font-game" id="map-zone-title">Peta Kepulauan Gabriel</div>
+        </div>
+      </div>
+
+      <!-- Top-Right Zoom Out / Back to Archipelago Button (Visible when zoomed into an Island) -->
+      <button
+        id="btn-zoom-out"
+        onclick="setIslandFilter('all')"
+        class="hidden absolute top-3 right-3 sm:top-4 sm:right-4 z-30 btn-3d bg-gradient-to-b from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-black px-4 py-2.5 rounded-2xl border-3 border-white shadow-2xl flex items-center gap-2 text-xs sm:text-sm"
+      >
+        <span>🔍</span>
+        <span>Keluar Zoom (Lihat Semua Pulau)</span>
+      </button>
+
+      <!-- Hint Pill in Overview Mode (Top-Right) -->
+      <div id="overview-zoom-hint" class="absolute top-3 right-3 sm:top-4 sm:right-4 z-30 bg-sky-950/85 backdrop-blur-md text-amber-200 px-3.5 py-2 rounded-2xl border border-amber-400/50 text-xs font-extrabold hidden sm:flex items-center gap-1.5 shadow-lg">
+        <span>👆</span>
+        <span>Klik nama Pulau di peta untuk Zoom-In ukuran besar!</span>
+      </div>
+
+      <!-- Clickable Island Landmark Cards Layer -->
+      <div id="island-landmarks-layer"></div>
+
+      <!-- SVG Winding Trail Layer (Spans Full Screen when Zoomed In!) -->
+      <svg id="map-svg-layer" class="absolute inset-0 w-full h-full pointer-events-none z-20" viewBox="0 0 1000 562.5" preserveAspectRatio="none"></svg>
+
+      <!-- Stepping Stone Nodes Layer (Spaced widely across the entire screen!) -->
+      <div id="map-nodes-layer" class="absolute inset-0 z-25"></div>
+    </div>
+
+    <!-- NEXT MISSION QUICK ACTION CARD -->
+    <div id="current-mission-bar" class="bg-gradient-to-r from-amber-400 via-amber-300 to-yellow-300 text-slate-950 rounded-3xl p-4 sm:p-5 shadow-2xl border-4 border-white flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div class="flex items-center gap-4">
+        <div class="relative flex-shrink-0">
+          <img src="assets/gabriel-avatar.jpg" alt="Gabriel" class="w-16 h-16 rounded-2xl object-cover border-4 border-slate-900 shadow-md" />
+          <span class="absolute -top-2 -left-2 bg-rose-600 text-white text-xs font-black px-2 py-0.5 rounded-full border-2 border-white shadow">MISI AKTIF</span>
+        </div>
+        <div>
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="bg-slate-900 text-amber-300 text-xs font-black px-2.5 py-0.5 rounded-full" id="bar-level-badge">LEVEL 1</span>
+            <span class="bg-white/80 text-slate-900 text-xs font-extrabold px-2.5 py-0.5 rounded-full" id="bar-island-badge">🏝️ Pulau Daring Rutin</span>
+            <span class="bg-amber-600/20 text-slate-900 text-xs font-extrabold px-2.5 py-0.5 rounded-full" id="bar-date-badge">📅 Juli 2026</span>
+          </div>
+          <h2 class="text-lg sm:text-xl font-black text-slate-950 mt-1 leading-snug" id="bar-quest-title">Memuat misi...</h2>
+          <p class="text-xs sm:text-sm font-bold text-slate-800" id="bar-quest-module">Modul...</p>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-2 sm:gap-2.5 w-full md:w-auto justify-end">
+        <button onclick="speakCurrentQuest()" class="btn-3d bg-white hover:bg-slate-100 text-slate-900 font-extrabold px-3.5 py-2.5 rounded-2xl border-2 border-slate-900 shadow flex items-center gap-1.5 text-xs sm:text-sm" title="Bacakan judul misi untuk Gabriel">
+          <span>🔊</span>
+          <span>Baca Suara</span>
+        </button>
+        <a id="bar-direct-link" href="#" target="_blank" rel="noopener" onclick="onLaunchQuestClick(event)" class="btn-3d bg-sky-600 hover:bg-sky-500 text-white font-black px-4 py-2.5 rounded-2xl border-2 border-slate-900 shadow-lg flex items-center gap-1.5 text-xs sm:text-sm">
+          <span>🚀</span>
+          <span>Buka Materi Langsung</span>
+        </a>
+        <button onclick="markCurrentQuestDone()" class="btn-3d bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black px-4 py-2.5 rounded-2xl border-2 border-slate-900 shadow-lg flex items-center gap-1.5 text-xs sm:text-sm">
+          <span>✅</span>
+          <span>Selesai! (+Bintang)</span>
+        </button>
+        <button onclick="skipCurrentQuest()" class="btn-3d bg-amber-100 hover:bg-white text-slate-900 font-extrabold px-3.5 py-2.5 rounded-2xl border-2 border-slate-900 shadow flex items-center gap-1.5 text-xs sm:text-sm" title="Belum bisa dikerjakan sekarang? Lewati dulu, bisa kembali kapan saja!">
+          <span>⏭️</span>
+          <span>Lewati Dulu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- CHRONOLOGICAL QUEST LIST & PARENT CONTROL DRAWER -->
+    <section class="bg-sky-950/85 backdrop-blur-md border-2 border-sky-400/30 rounded-3xl p-4 sm:p-6 shadow-xl text-white space-y-4">
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <h3 class="text-lg sm:text-xl font-bold flex items-center gap-2">
+            <span>📜</span>
+            <span>Daftar Misi Kronologis (<span id="list-count">0</span> Materi Belum Selesai & Belum Berjalan s/d Akhir Sem 1)</span>
+          </h3>
+          <p class="text-xs text-sky-300 font-semibold">
+            Urut berdasarkan minggu/tanggal dari yang paling awal. Klik misi mana saja untuk langsung membuka link Sekolah.mu atau menandai selesai/ditunda.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2">
+          <input
+            type="text"
+            id="search-input"
+            oninput="onSearchInput(this.value)"
+            placeholder="🔍 Cari judul / minggu / topik..."
+            class="bg-sky-900/90 border-2 border-sky-500/40 rounded-xl px-3.5 py-2 text-xs sm:text-sm text-white placeholder-sky-300/70 focus:outline-none focus:border-amber-400 w-56 sm:w-64 font-bold"
+          />
+          <button onclick="exportProgressCSV()" class="btn-3d bg-indigo-600 hover:bg-indigo-500 text-white font-extrabold px-3.5 py-2 rounded-xl border border-indigo-300/50 text-xs sm:text-sm flex items-center gap-1.5">
+            <span>📥</span>
+            <span>Download CSV Progress</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Table / Cards of Quests -->
+      <div id="quest-list-container" class="space-y-2 max-h-[520px] overflow-y-auto pr-1"></div>
+    </section>
+
+  </main>
+
+  <!-- QUEST DETAIL POPUP MODAL -->
+  <div id="quest-modal" class="fixed inset-0 z-50 hidden bg-slate-950/75 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-gradient-to-b from-sky-900 to-slate-900 border-4 border-amber-400 rounded-3xl max-w-xl w-full p-5 sm:p-6 text-white shadow-2xl relative animate-float" style="animation-duration: 6s;">
+      <button onclick="closeQuestModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-800 hover:bg-rose-600 text-white font-black flex items-center justify-center border border-slate-600">
+        ✕
+      </button>
+
+      <!-- Top Badges -->
+      <div class="flex flex-wrap items-center gap-2 pr-10">
+        <span id="modal-level-pill" class="bg-amber-400 text-slate-950 text-xs font-black px-3 py-1 rounded-full">LEVEL 1</span>
+        <span id="modal-type-pill" class="bg-purple-500/30 border border-purple-300/50 text-purple-200 text-xs font-extrabold px-3 py-1 rounded-full">🏆 Misi Bintang 3</span>
+        <span id="modal-date-pill" class="bg-sky-800 text-sky-200 text-xs font-bold px-2.5 py-1 rounded-full">📅 2026</span>
+      </div>
+
+      <!-- Recovery Warning Banner for physical PJOK -->
+      <div id="modal-recovery-alert" class="hidden mt-3 bg-amber-500/20 border-2 border-amber-400 text-amber-200 rounded-2xl p-3 text-xs font-bold flex items-start gap-2.5">
+        <span class="text-xl">💚</span>
+        <div>
+          <div class="font-black text-amber-300">Catatan Pemulihan Gabriel (PJOK Fisik):</div>
+          <div>Aktivitas ini melibatkan gerak fisik. Jika Gabriel masih dalam masa pemulihan, Mama bisa klik <b>"⏭️ Lewati Dulu"</b> atau lakukan gerakan tangan ringan sambil duduk!</div>
+        </div>
+      </div>
+
+      <!-- Title & Module -->
+      <div class="mt-4 space-y-1.5">
+        <div class="text-xs font-extrabold text-sky-300 uppercase tracking-wider" id="modal-program-name">Program</div>
+        <h2 class="text-xl sm:text-2xl font-black text-white leading-snug font-game" id="modal-quest-title">Judul Misi</h2>
+        <div class="text-xs sm:text-sm text-amber-200 font-bold" id="modal-module-name">Modul / Minggu</div>
+      </div>
+
+      <!-- Voice Read Aloud & Link Info Box -->
+      <div class="mt-4 bg-slate-950/60 border border-sky-500/30 rounded-2xl p-3.5 space-y-2.5">
+        <div class="flex items-center justify-between gap-2 flex-wrap">
+          <button onclick="speakModalQuest()" class="btn-3d bg-amber-400 hover:bg-amber-300 text-slate-950 font-black px-3.5 py-1.5 rounded-xl text-xs flex items-center gap-1.5 shadow">
+            <span>🔊</span>
+            <span>Bacakan Misi (Suara)</span>
+          </button>
+          <span id="modal-status-badge" class="text-xs font-extrabold px-2.5 py-1 rounded-lg bg-slate-800 text-sky-200">Status: Belum Selesai</span>
+        </div>
+        <div class="text-[11px] text-sky-300/90 break-all font-mono bg-slate-900/90 px-2.5 py-1.5 rounded-lg border border-slate-800" id="modal-url-preview">
+          https://smm.sekolah.mu/...
+        </div>
+      </div>
+
+      <!-- Primary Launch Buttons -->
+      <div class="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+        <a id="modal-btn-direct" href="#" target="_blank" rel="noopener" onclick="onModalDirectLaunch(event)" class="btn-3d bg-gradient-to-b from-sky-400 to-sky-600 hover:from-sky-300 hover:to-sky-500 text-slate-950 font-black py-3 px-4 rounded-2xl shadow-lg border-2 border-white flex items-center justify-center gap-2 text-sm text-center">
+          <span>🚀</span>
+          <span>Mulai Misi (Link Aktivitas)</span>
+        </a>
+        <a id="modal-btn-program" href="#" target="_blank" rel="noopener" class="btn-3d bg-sky-800 hover:bg-sky-700 text-sky-100 font-extrabold py-3 px-4 rounded-2xl border-2 border-sky-500/50 flex items-center justify-center gap-2 text-xs sm:text-sm text-center">
+          <span>📂</span>
+          <span>Buka Daftar Modul Program</span>
+        </a>
+      </div>
+
+      <!-- Complete / Skip Action Buttons -->
+      <div class="mt-3 pt-3 border-t border-sky-800 grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+        <button onclick="completeModalQuest()" class="col-span-2 sm:col-span-1 btn-3d bg-gradient-to-b from-emerald-400 to-emerald-600 hover:from-emerald-300 hover:to-emerald-500 text-slate-950 font-black py-2.5 px-3 rounded-2xl border-2 border-emerald-100 shadow-lg flex items-center justify-center gap-1.5 text-xs sm:text-sm">
+          <span>✅</span>
+          <span>Selesai! (+<span id="modal-star-reward">3</span>⭐)</span>
+        </button>
+        <button onclick="skipModalQuest()" class="btn-3d bg-amber-400/20 hover:bg-amber-400/30 text-amber-200 font-extrabold py-2.5 px-3 rounded-2xl border-2 border-amber-400/50 flex items-center justify-center gap-1.5 text-xs sm:text-sm">
+          <span>⏭️</span>
+          <span>Lewati Dulu 🚩</span>
+        </button>
+        <button onclick="resetModalQuest()" class="btn-3d bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold py-2.5 px-3 rounded-2xl border border-slate-600 flex items-center justify-center gap-1 text-xs">
+          <span>🔄</span>
+          <span>Reset Belum</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TREASURE CHEST REWARD MODAL -->
+  <div id="treasure-modal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="bg-gradient-to-b from-indigo-900 via-purple-900 to-slate-900 border-4 border-amber-400 rounded-3xl max-w-md w-full p-6 text-center text-white shadow-2xl space-y-4 relative">
+      <button onclick="closeTreasureModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-800 hover:bg-rose-600 text-white font-black">✕</button>
+      <img src="assets/treasure-chest.jpg" alt="Peti Harta Karun" class="w-32 h-32 mx-auto rounded-3xl object-cover border-4 border-amber-300 shadow-2xl animate-float" />
+      <h2 class="text-2xl font-black text-amber-300 font-game">Koleksi Harta Karun Gabriel!</h2>
+      <p class="text-sm text-purple-100 font-semibold" id="treasure-modal-desc">
+        Setiap 10 Bintang ⭐ yang Gabriel kumpulkan dari menyelesaikan misi akan membuka 1 Peti Harta Karun Spesial!
+      </p>
+      <div id="treasure-badges-grid" class="grid grid-cols-3 gap-2.5 pt-2"></div>
+      <button onclick="closeTreasureModal()" class="btn-3d w-full bg-amber-400 hover:bg-amber-300 text-slate-950 font-black py-3 rounded-2xl border-2 border-white shadow-lg">
+        Lanjut Berpetualang! 🚀
+      </button>
+    </div>
+  </div>
+
+  <!-- Load Generated Quests Data -->
+  <script src="quests_data.js"></script>
+  <script>
+    const STORAGE_KEY = 'gabriel_quest_map_progress_v1';
+    // 10 wide-spaced stepping stones per map chapter so stones NEVER bunch up or overlap!
+    const CHAPTER_SIZE = 10;
+
+    // State
+    let progressMap = {};
+    let currentIsland = 'all'; // 'all' | 'daring' | 'english' | 'living_english' | 'pjok' | 'homeroom'
+    let currentCategoryFilter = 'kid'; // 'kid' | 'boss' | 'skipped'
+    let searchQuery = '';
+    let currentChapter = 0;
+    let activeModalQuestId = null;
+    let availableCustomIslandImages = {
+      daring: true,
+      english: true,
+      living_english: true,
+      pjok: true,
+      homeroom: true
+    };
+
+    // Camera zoom transform settings per island (used when zooming into the main archipelago map, or 1x if custom close-up image is loaded)
+    const ISLAND_CAMERA_CONFIG = {
+      all: { origin: '50% 50%', scale: 1, closeUpImg: 'assets/island-map.jpg' },
+      daring: { origin: '24% 45%', scale: 2.35, closeUpImg: 'assets/island-daring.jpg' },
+      english: { origin: '61% 29%', scale: 2.45, closeUpImg: 'assets/island-english.jpg' },
+      living_english: { origin: '48% 72%', scale: 2.45, closeUpImg: 'assets/island-living_english.jpg' },
+      pjok: { origin: '72% 70%', scale: 2.6, closeUpImg: 'assets/island-pjok.jpg' },
+      homeroom: { origin: '87% 46%', scale: 2.55, closeUpImg: 'assets/island-homeroom.jpg' }
+    };
+
+    // 10 Wide-Spaced Stepping Stone Coordinates (minimum 18% distance between stones across the ENTIRE 16:9 stage!)
+    // Used in Archipelago Overview Mode:
+    const OVERVIEW_WIDE_COORDS = [
+      { x: 16, y: 74 },
+      { x: 22, y: 50 },
+      { x: 30, y: 28 },
+      { x: 46, y: 25 },
+      { x: 64, y: 27 },
+      { x: 58, y: 47 },
+      { x: 42, y: 67 },
+      { x: 56, y: 76 },
+      { x: 73, y: 69 },
+      { x: 85, y: 46 }
+    ];
+
+    // Hand-traced coordinates along the actual drawn winding road of each of the 5 close-up 16:9 island illustrations!
+    const ZOOMED_ISLAND_WIDE_COORDS = {
+      daring: [
+        { x: 12, y: 82 },
+        { x: 25, y: 72 },
+        { x: 39, y: 76 },
+        { x: 52, y: 67 },
+        { x: 66, y: 61 },
+        { x: 77, y: 49 },
+        { x: 68, y: 36 },
+        { x: 63, y: 24 },
+        { x: 75, y: 19 },
+        { x: 83, y: 12 }
+      ],
+      english: [
+        { x: 14, y: 82 },
+        { x: 26, y: 71 },
+        { x: 38, y: 60 },
+        { x: 50, y: 67 },
+        { x: 64, y: 71 },
+        { x: 76, y: 61 },
+        { x: 74, y: 44 },
+        { x: 64, y: 31 },
+        { x: 73, y: 22 },
+        { x: 83, y: 15 }
+      ],
+      living_english: [
+        { x: 18, y: 83 },
+        { x: 23, y: 67 },
+        { x: 34, y: 57 },
+        { x: 46, y: 49 },
+        { x: 57, y: 40 },
+        { x: 45, y: 29 },
+        { x: 38, y: 21 },
+        { x: 54, y: 17 },
+        { x: 70, y: 21 },
+        { x: 82, y: 29 }
+      ],
+      pjok: [
+        { x: 12, y: 84 },
+        { x: 25, y: 71 },
+        { x: 39, y: 83 },
+        { x: 55, y: 85 },
+        { x: 70, y: 77 },
+        { x: 78, y: 64 },
+        { x: 82, y: 46 },
+        { x: 76, y: 27 },
+        { x: 83, y: 16 },
+        { x: 50, y: 60 }
+      ],
+      homeroom: [
+        { x: 12, y: 84 },
+        { x: 23, y: 72 },
+        { x: 36, y: 78 },
+        { x: 49, y: 69 },
+        { x: 43, y: 55 },
+        { x: 36, y: 43 },
+        { x: 48, y: 41 },
+        { x: 60, y: 44 },
+        { x: 68, y: 35 },
+        { x: 77, y: 29 }
+      ]
+    };
+
+    const TREASURE_BADGES = [
+      { stars: 10, icon: '🧭', name: 'Kompas Penjelajah' },
+      { stars: 20, icon: '🔭', name: 'Teropong Bintang' },
+      { stars: 30, icon: '🦜', name: 'Burung Beo Pintar' },
+      { stars: 40, icon: '⛵', name: 'Kapal Layar Emas' },
+      { stars: 50, icon: '👑', name: 'Mahkota Pulau Bahasa' },
+      { stars: 75, icon: '🐉', name: 'Penjaga Gunung Ramah' },
+      { stars: 100, icon: '💎', name: 'Permata Samudra' },
+      { stars: 150, icon: '🚀', name: 'Kapten Juara SMM' },
+      { stars: 200, icon: '🏆', name: 'Legenda Pulau Gabriel' }
+    ];
+
+    // Check if dedicated close-up island images exist in /assets/
+    ['daring', 'english', 'living_english', 'pjok', 'homeroom'].forEach(id => {
+      const img = new Image();
+      img.onload = () => {
+        availableCustomIslandImages[id] = true;
+        if (currentIsland === id) applyIslandCamera(id);
+      };
+      img.src = `assets/island-${id}.jpg`;
+    });
+
+    // Web Audio Synthesizer with Realistic Swoosh / Wind-Whoosh SFX!
+    const AudioFX = {
+      ctx: null,
+      init() {
+        if (!this.ctx) {
+          const AudioCtx = window.AudioContext || window.webkitAudioContext;
+          if (AudioCtx) this.ctx = new AudioCtx();
+        }
+        if (this.ctx && this.ctx.state === 'suspended') {
+          this.ctx.resume().catch(() => {});
+        }
+      },
+      playTone(freq, duration = 0.14, type = 'sine', delay = 0, vol = 0.15) {
+        try {
+          this.init();
+          if (!this.ctx) return;
+          const now = this.ctx.currentTime + delay;
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          osc.type = type;
+          osc.frequency.setValueAtTime(freq, now);
+          gain.gain.setValueAtTime(vol, now);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + duration);
+          osc.connect(gain);
+          gain.connect(this.ctx.destination);
+          osc.start(now);
+          osc.stop(now + duration);
+        } catch (e) {}
+      },
+      // Authentic Wind Swoosh / Cloud Whoosh Sound Effect!
+      swoosh(isZoomIn = true) {
+        try {
+          this.init();
+          if (!this.ctx) return;
+          const duration = 0.52;
+          const now = this.ctx.currentTime;
+
+          // Create white noise buffer for wind whoosh
+          const bufferSize = Math.floor(this.ctx.sampleRate * duration);
+          const buffer = this.ctx.createBuffer(1, bufferSize, this.ctx.sampleRate);
+          const data = buffer.getChannelData(0);
+          for (let i = 0; i < bufferSize; i++) {
+            data[i] = Math.random() * 2 - 1;
+          }
+
+          const noise = this.ctx.createBufferSource();
+          noise.buffer = buffer;
+
+          // Bandpass filter sweeping across frequencies for airy whoosh
+          const filter = this.ctx.createBiquadFilter();
+          filter.type = 'bandpass';
+          filter.Q.setValueAtTime(2.2, now);
+          if (isZoomIn) {
+            filter.frequency.setValueAtTime(220, now);
+            filter.frequency.exponentialRampToValueAtTime(1450, now + duration * 0.48);
+            filter.frequency.exponentialRampToValueAtTime(340, now + duration);
+          } else {
+            filter.frequency.setValueAtTime(1200, now);
+            filter.frequency.exponentialRampToValueAtTime(260, now + duration);
+          }
+
+          const gain = this.ctx.createGain();
+          gain.gain.setValueAtTime(0.01, now);
+          gain.gain.linearRampToValueAtTime(0.34, now + duration * 0.35);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + duration);
+
+          noise.connect(filter);
+          filter.connect(gain);
+          gain.connect(this.ctx.destination);
+
+          noise.start(now);
+          noise.stop(now + duration);
+
+          // Add gentle magical breeze chime
+          if (isZoomIn) {
+            this.playTone(440, 0.16, 'sine', 0.08, 0.09);
+            this.playTone(659.25, 0.22, 'triangle', 0.18, 0.11);
+          } else {
+            this.playTone(587.33, 0.16, 'sine', 0.06, 0.09);
+            this.playTone(392.00, 0.22, 'triangle', 0.16, 0.10);
+          }
+        } catch (e) {}
+      },
+      pop() {
+        this.playTone(520, 0.08, 'triangle', 0);
+        this.playTone(680, 0.09, 'sine', 0.05);
+      },
+      skip() {
+        this.playTone(440, 0.1, 'sine', 0);
+        this.playTone(392, 0.12, 'sine', 0.08);
+      },
+      win() {
+        [523.25, 659.25, 783.99, 1046.5].forEach((f, i) => {
+          this.playTone(f, 0.22, 'triangle', i * 0.09, 0.18);
+        });
+      }
+    };
+
+    // Trigger Cloud Curtain Animation + Callback in the middle of the cloud cover
+    let cloudTimeout1 = null;
+    let cloudTimeout2 = null;
+    function runCloudTransition(icon, subtitle, title, isZoomIn, midCallback) {
+      AudioFX.swoosh(isZoomIn);
+      const curtain = document.getElementById('cloud-curtain');
+      document.getElementById('cloud-badge-icon').textContent = icon;
+      document.getElementById('cloud-badge-sub').textContent = subtitle;
+      document.getElementById('cloud-badge-title').textContent = title;
+
+      clearTimeout(cloudTimeout1);
+      clearTimeout(cloudTimeout2);
+      curtain.classList.add('active');
+
+      cloudTimeout1 = setTimeout(() => {
+        if (midCallback) midCallback();
+      }, 280);
+
+      cloudTimeout2 = setTimeout(() => {
+        curtain.classList.remove('active');
+      }, 680);
+    }
+
+    function applyIslandCamera(islandId) {
+      const camLayer = document.getElementById('map-camera-layer');
+      const bgImg = document.getElementById('map-bg-img');
+      const ambientClouds = document.getElementById('zoomed-ambient-clouds');
+      const btnZoomOut = document.getElementById('btn-zoom-out');
+      const overviewHint = document.getElementById('overview-zoom-hint');
+      const cfg = ISLAND_CAMERA_CONFIG[islandId] || ISLAND_CAMERA_CONFIG.all;
+
+      if (islandId === 'all') {
+        bgImg.src = 'assets/island-map.jpg';
+        camLayer.style.transformOrigin = '50% 50%';
+        camLayer.style.transform = 'scale(1)';
+        ambientClouds.classList.add('hidden');
+        btnZoomOut.classList.add('hidden');
+        overviewHint.classList.remove('hidden');
+      } else {
+        if (availableCustomIslandImages[islandId]) {
+          bgImg.src = cfg.closeUpImg;
+          camLayer.style.transition = 'none';
+          camLayer.style.transformOrigin = '50% 50%';
+          camLayer.style.transform = 'scale(1.14)';
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              camLayer.style.transition = 'transform 0.65s cubic-bezier(0.22, 1, 0.36, 1)';
+              camLayer.style.transform = 'scale(1.01)';
+            });
+          });
+        } else {
+          bgImg.src = 'assets/island-map.jpg';
+          camLayer.style.transformOrigin = cfg.origin;
+          camLayer.style.transform = `scale(${cfg.scale})`;
+        }
+        ambientClouds.classList.remove('hidden');
+        btnZoomOut.classList.remove('hidden');
+        overviewHint.classList.add('hidden');
+      }
+    }
+
+    function loadProgress() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (raw) progressMap = JSON.parse(raw) || {};
+      } catch (e) {
+        progressMap = {};
+      }
+    }
+
+    function saveProgress() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(progressMap));
+      } catch (e) {}
+    }
+
+    function getQuestStatus(qId) {
+      return progressMap[qId]?.status || 'pending';
+    }
+
+    function getFilteredQuests() {
+      const all = window.GABRIEL_QUEST_DATA?.quests || [];
+      return all.filter(q => {
+        if (currentIsland !== 'all' && q.islandId !== currentIsland) return false;
+        const st = getQuestStatus(q.id);
+        if (currentCategoryFilter === 'kid' && !q.kidActionable) return false;
+        if (currentCategoryFilter === 'belum_berjalan' && q.timelineStatus !== 'belum_berjalan') return false;
+        if (currentCategoryFilter === 'belum_selesai' && q.timelineStatus !== 'belum_selesai') return false;
+        if (currentCategoryFilter === 'boss' && q.category !== 'boss_quest') return false;
+        if (currentCategoryFilter === 'skipped' && st !== 'skipped') return false;
+        if (searchQuery) {
+          const hay = `${q.rawTitle} ${q.module} ${q.program} ${q.date} ${q.timelineBadge || ''}`.toLowerCase();
+          if (!hay.includes(searchQuery.toLowerCase())) return false;
+        }
+        return true;
+      });
+    }
+
+    function getActiveNextQuest(filteredList) {
+      const list = filteredList || getFilteredQuests();
+      return list.find(q => getQuestStatus(q.id) === 'pending')
+          || list.find(q => getQuestStatus(q.id) === 'skipped')
+          || list[0]
+          || null;
+    }
+
+    function updateHUD() {
+      const all = window.GABRIEL_QUEST_DATA?.quests || [];
+      let totalStars = 0;
+      let doneCount = 0;
+      let skipCount = 0;
+
+      all.forEach(q => {
+        const st = getQuestStatus(q.id);
+        if (st === 'done') {
+          doneCount++;
+          totalStars += (q.stars || 2);
+        } else if (st === 'skipped') {
+          skipCount++;
+        }
+      });
+
+      const islandScoped = currentIsland === 'all' ? all : all.filter(q => q.islandId === currentIsland);
+      const upcomingCount = islandScoped.filter(q => q.timelineStatus === 'belum_berjalan').length;
+      const overdueCount = islandScoped.filter(q => q.timelineStatus === 'belum_selesai').length;
+      const bossCount = islandScoped.filter(q => q.category === 'boss_quest').length;
+
+      const pillAll = document.getElementById('pill-all-count');
+      const pillUpcoming = document.getElementById('pill-upcoming-count');
+      const pillOverdue = document.getElementById('pill-overdue-count');
+      const pillBoss = document.getElementById('pill-boss-count');
+      if (pillAll) pillAll.textContent = islandScoped.length;
+      if (pillUpcoming) pillUpcoming.textContent = upcomingCount;
+      if (pillOverdue) pillOverdue.textContent = overdueCount;
+      if (pillBoss) pillBoss.textContent = bossCount;
+
+      const actionableRemaining = all.filter(q => q.kidActionable && getQuestStatus(q.id) === 'pending').length;
+      const chests = Math.floor(totalStars / 10);
+      const nextChestStars = totalStars % 10;
+
+      document.getElementById('hud-stars').textContent = totalStars;
+      document.getElementById('hud-chests').textContent = chests;
+      document.getElementById('hud-next-chest').textContent = `(${nextChestStars}/10⭐)`;
+      document.getElementById('hud-done-count').textContent = doneCount;
+      document.getElementById('hud-skip-count').textContent = skipCount;
+      document.getElementById('pill-skip-count').textContent = skipCount;
+      document.getElementById('hud-remaining-count').textContent = actionableRemaining;
+
+      const activeQ = getActiveNextQuest();
+      if (activeQ) {
+        document.getElementById('hud-level').textContent = activeQ.chronologicalLevel;
+        document.getElementById('bar-level-badge').textContent = `LEVEL KRONOLOGIS #${activeQ.chronologicalLevel}`;
+        document.getElementById('bar-island-badge').textContent = `${activeQ.islandIcon} ${activeQ.islandName}`;
+        document.getElementById('bar-date-badge').textContent = `📅 ${activeQ.date} · ${activeQ.timelineBadge || activeQ.badge}`;
+        document.getElementById('bar-quest-title').textContent = activeQ.rawTitle;
+        document.getElementById('bar-quest-module').textContent = `${activeQ.program} — ${activeQ.module}`;
+        document.getElementById('bar-direct-link').href = activeQ.directUrl;
+      }
+    }
+
+    function renderIslandLandmarks() {
+      const container = document.getElementById('island-landmarks-layer');
+      // Hide other island landmarks when zoomed into a single island so the whole screen is clean for the stepping stones!
+      if (currentIsland !== 'all') {
+        container.innerHTML = '';
+        return;
+      }
+
+      const islands = window.GABRIEL_QUEST_DATA?.islands || {};
+      const all = window.GABRIEL_QUEST_DATA?.quests || [];
+
+      container.innerHTML = Object.values(islands).map(isl => {
+        const islQuests = all.filter(q => q.islandId === isl.id);
+        const done = islQuests.filter(q => getQuestStatus(q.id) === 'done').length;
+        const novDecCount = islQuests.filter(q => q.timelineStatus === 'belum_berjalan').length;
+        const julOctCount = islQuests.filter(q => q.timelineStatus === 'belum_selesai').length;
+        return `
+          <div
+            onclick="setIslandFilter('${isl.id}')"
+            class="island-landmark px-3.5 py-2 rounded-2xl backdrop-blur-md bg-slate-950/85 hover:bg-amber-400 text-white hover:text-slate-950 border-2 border-amber-300/80 hover:border-white shadow-2xl flex items-center gap-2 group"
+            style="left: ${isl.mapCenter.x}%; top: ${isl.mapCenter.y}%;"
+            title="Klik untuk Zoom-In ke ${isl.name}!"
+          >
+            <span class="text-xl sm:text-2xl">${isl.icon}</span>
+            <div class="leading-tight">
+              <div class="text-xs sm:text-sm font-black whitespace-nowrap flex items-center gap-1">
+                <span>${isl.name}</span>
+                <span class="text-[10px] bg-amber-400 group-hover:bg-slate-950 text-slate-950 group-hover:text-amber-300 px-1.5 py-0.2 rounded-full font-black">🔍 ZOOM</span>
+              </div>
+              <div class="text-[10px] font-extrabold text-amber-300 group-hover:text-slate-800">${done}/${islQuests.length} Selesai · ⏳${julOctCount} Jul–Okt · 📅${novDecCount} Nov–Des</div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function renderMapStage() {
+      const svg = document.getElementById('map-svg-layer');
+      const nodesLayer = document.getElementById('map-nodes-layer');
+      const prevBtn = document.getElementById('btn-prev-chapter');
+      const nextBtn = document.getElementById('btn-next-chapter');
+      const islands = window.GABRIEL_QUEST_DATA?.islands || {};
+
+      // On Archipelago Map (Peta Kepulauan), ONLY show the floating island name icons (no stepping stones or dashed path)
+      if (currentIsland === 'all') {
+        document.getElementById('map-zone-icon').textContent = '🗺️';
+        document.getElementById('map-zone-subtitle').textContent = 'Peta Kepulauan · Klik Nama Pulau untuk Masuk';
+        document.getElementById('map-zone-title').textContent = 'Peta Kepulauan Gabriel (5 Pulau Misi)';
+        document.getElementById('chapter-indicator').textContent = '🗺️ Peta Kepulauan — Klik Nama Pulau di Peta untuk Membuka Batu Pijakan!';
+        prevBtn.classList.add('hidden');
+        nextBtn.classList.add('hidden');
+        svg.innerHTML = '';
+        nodesLayer.innerHTML = '';
+        return;
+      }
+
+      prevBtn.classList.remove('hidden');
+      nextBtn.classList.remove('hidden');
+
+      const filtered = getFilteredQuests();
+      const totalChapters = Math.max(1, Math.ceil(filtered.length / CHAPTER_SIZE));
+      if (currentChapter >= totalChapters) currentChapter = totalChapters - 1;
+      if (currentChapter < 0) currentChapter = 0;
+
+      const startIdx = currentChapter * CHAPTER_SIZE;
+      const chapterQuests = filtered.slice(startIdx, startIdx + CHAPTER_SIZE);
+      const activeQ = getActiveNextQuest(filtered);
+
+      // Update Chapter Indicator
+      const firstLv = chapterQuests[0]?.chronologicalLevel || 0;
+      const lastLv = chapterQuests[chapterQuests.length - 1]?.chronologicalLevel || 0;
+      document.getElementById('chapter-indicator').textContent =
+        chapterQuests.length > 0
+          ? `Bab ${currentChapter + 1} / ${totalChapters} (Misi #${firstLv} – #${lastLv})`
+          : `Tidak ada misi pada filter ini`;
+
+      prevBtn.disabled = currentChapter <= 0;
+      nextBtn.disabled = currentChapter >= totalChapters - 1;
+
+      // Update Map Zone Header for Zoomed Island
+      const isl = islands[currentIsland];
+      document.getElementById('map-zone-icon').textContent = isl.icon;
+      document.getElementById('map-zone-subtitle').textContent = `MODE ZOOM PULAU · ${isl.subtitle}`;
+      document.getElementById('map-zone-title').textContent = `${isl.name} (Bab ${currentChapter + 1} dari ${totalChapters})`;
+
+      // Use wide full-screen coordinates traced along the custom close-up island road so stones are spread far apart!
+      const coordsList = ZOOMED_ISLAND_WIDE_COORDS[currentIsland] || OVERVIEW_WIDE_COORDS;
+
+      // Render SVG Winding Path connecting stones
+      if (chapterQuests.length > 1) {
+        const pts = chapterQuests.map((_, idx) => {
+          const c = coordsList[idx % coordsList.length];
+          return { x: c.x * 10, y: c.y * 5.625 };
+        });
+        let d = `M ${pts[0].x} ${pts[0].y}`;
+        for (let i = 1; i < pts.length; i++) {
+          const prev = pts[i - 1];
+          const curr = pts[i];
+          const cx = (prev.x + curr.x) / 2;
+          const cy = (prev.y + curr.y) / 2 - 18;
+          d += ` Q ${cx} ${cy}, ${curr.x} ${curr.y}`;
+        }
+        svg.innerHTML = `
+          <path d="${d}" fill="none" stroke="rgba(15, 23, 42, 0.65)" stroke-width="14" stroke-linecap="round" stroke-dasharray="1 20" />
+          <path d="${d}" fill="none" stroke="#fef08a" stroke-width="7" stroke-linecap="round" stroke-dasharray="14 16" />
+        `;
+      } else {
+        svg.innerHTML = '';
+      }
+
+      // Render Large, Widely-Spaced Stepping Stone Nodes
+      nodesLayer.innerHTML = chapterQuests.map((q, idx) => {
+        const c = coordsList[idx % coordsList.length];
+        const st = getQuestStatus(q.id);
+        const isCurrent = activeQ && activeQ.id === q.id;
+        const isBoss = q.category === 'boss_quest';
+
+        let bgClass = 'from-sky-400 to-sky-600 border-white text-white';
+        let statusPill = '';
+        if (st === 'done') {
+          bgClass = 'from-emerald-400 to-emerald-600 border-yellow-200 text-slate-950';
+          statusPill = '<span class="text-[10px] font-black text-emerald-300">⭐⭐⭐ Selesai</span>';
+        } else if (st === 'skipped') {
+          bgClass = 'from-amber-500 to-orange-600 border-amber-100 text-white';
+          statusPill = '<span class="text-[10px] font-black text-amber-300">🚩 Ditunda</span>';
+        } else if (isCurrent) {
+          bgClass = 'from-amber-300 via-amber-400 to-orange-500 border-white text-slate-950 pulse-ring';
+          statusPill = '<span class="text-[10px] font-black text-amber-300 animate-pulse">▶ MULAI MISI!</span>';
+        } else if (q.timelineStatus === 'belum_berjalan') {
+          statusPill = `<span class="text-[10px] font-black text-cyan-300">📅 ${q.date.slice(5)} (Nov–Sem1)</span>`;
+        } else {
+          statusPill = `<span class="text-[10px] font-bold text-sky-200">⏳ ${q.date.slice(5)}</span>`;
+        }
+        if (st === 'pending' && !isCurrent && isBoss) {
+          bgClass = 'from-purple-500 to-indigo-700 border-amber-300 text-white';
+        } else if (st === 'pending' && !isCurrent && q.timelineStatus === 'belum_berjalan') {
+          bgClass = 'from-cyan-500 to-blue-700 border-cyan-200 text-white';
+        }
+
+        const avatarHTML = isCurrent ? `
+          <div class="absolute left-1/2 top-0 animate-avatar z-40 pointer-events-none flex flex-col items-center">
+            <div class="bg-amber-400 text-slate-950 text-[10px] font-black px-2.5 py-0.5 rounded-full border-2 border-slate-900 shadow whitespace-nowrap mb-0.5">
+              Kapten Gabriel!
+            </div>
+            <img src="assets/gabriel-avatar.jpg" alt="Gabriel" class="w-13 h-13 sm:w-15 sm:h-15 rounded-full object-cover border-4 border-white shadow-2xl" style="width: 56px; height: 56px;" />
+          </div>
+        ` : '';
+
+        const topCornerIcon = isBoss
+          ? '<span class="absolute -top-2.5 -right-2.5 text-sm bg-amber-400 rounded-full w-7 h-7 flex items-center justify-center border-2 border-slate-900 shadow" title="Tugas & Asesmen (3 Bintang)">🏆</span>'
+          : (q.isPhysicalCaution
+              ? '<span class="absolute -top-2 -right-2 text-xs bg-emerald-500 rounded-full w-6 h-6 flex items-center justify-center border-2 border-white shadow" title="PJOK — Aman dilewati bila belum pulih">💚</span>'
+              : '');
+
+        // Short readable label under every stone when zoomed in so stones are super clear and easy to tap
+        const shortLabel = q.title.length > 24 ? q.title.slice(0, 22) + '…' : q.title;
+        const displayNum = currentIsland === 'all' ? q.chronologicalLevel : q.islandLevel;
+
+        return `
+          <div
+            onclick="openQuestModal('${q.id}')"
+            class="stone-node group flex flex-col items-center"
+            style="left: ${c.x}%; top: ${c.y}%;"
+          >
+            ${avatarHTML}
+            <div class="relative w-14 h-14 sm:w-16 sm:h-16 rounded-3xl bg-gradient-to-b ${bgClass} border-4 shadow-2xl flex flex-col items-center justify-center">
+              ${topCornerIcon}
+              <span class="text-xs leading-none">${q.islandIcon}</span>
+              <span class="text-base sm:text-xl font-black leading-tight font-game">${displayNum}</span>
+            </div>
+
+            <!-- Always-visible Stone Name Tag Pill (No Overlapping!) -->
+            <div class="mt-1.5 bg-slate-950/90 backdrop-blur-sm border border-white/30 group-hover:border-amber-400 px-2.5 py-1 rounded-xl shadow-lg text-center max-w-[145px] sm:max-w-[165px]">
+              <div class="text-[10px] sm:text-[11px] font-extrabold text-white truncate leading-tight">${shortLabel}</div>
+              <div class="leading-none mt-0.5">${statusPill}</div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function renderQuestList() {
+      const filtered = getFilteredQuests();
+      document.getElementById('list-count').textContent = filtered.length;
+      const container = document.getElementById('quest-list-container');
+      const activeQ = getActiveNextQuest(filtered);
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-8 text-sky-300 font-bold">
+            Tidak ada misi yang cocok dengan filter ini. Coba ganti tab pulau atau filter di atas!
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = filtered.map(q => {
+        const st = getQuestStatus(q.id);
+        const isCurrent = activeQ && activeQ.id === q.id;
+        let rowBg = 'bg-sky-900/60 border-sky-700/60 hover:border-sky-400';
+        if (st === 'done') rowBg = 'bg-emerald-950/70 border-emerald-500/50';
+        else if (st === 'skipped') rowBg = 'bg-amber-950/60 border-amber-500/50';
+        else if (isCurrent) rowBg = 'bg-amber-500/20 border-amber-400 shadow-lg';
+
+        return `
+          <div class="rounded-2xl border-2 p-3 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 transition ${rowBg}">
+            <div class="flex items-start gap-3 cursor-pointer flex-1" onclick="openQuestModal('${q.id}')">
+              <div class="w-11 h-11 rounded-xl bg-slate-900 border-2 border-amber-400/60 flex flex-col items-center justify-center flex-shrink-0 font-game">
+                <span class="text-[10px] leading-none">${q.islandIcon}</span>
+                <span class="text-sm font-black text-amber-300">${q.chronologicalLevel}</span>
+              </div>
+              <div class="space-y-0.5">
+                <div class="flex flex-wrap items-center gap-1.5">
+                  <span class="text-[11px] font-extrabold px-2 py-0.5 rounded-md bg-slate-900 text-sky-300">${q.date}</span>
+                  ${q.timelineStatus === 'belum_berjalan'
+                    ? `<span class="text-[11px] font-black px-2 py-0.5 rounded-md bg-cyan-950 border border-cyan-400/60 text-cyan-200">${q.timelineBadge}</span>`
+                    : `<span class="text-[11px] font-extrabold px-2 py-0.5 rounded-md bg-slate-900 text-amber-200/90">${q.timelineBadge || '⏳ Belum Selesai (Jul–Okt)'}</span>`
+                  }
+                  <span class="text-[11px] font-extrabold px-2 py-0.5 rounded-md bg-slate-900 text-amber-300">${q.badge}</span>
+                  ${q.isPhysicalCaution ? '<span class="text-[11px] font-extrabold px-2 py-0.5 rounded-md bg-emerald-900 text-emerald-200">💚 PJOK — Boleh Lewati Dulu</span>' : ''}
+                  ${st === 'done' ? '<span class="text-[11px] font-black px-2 py-0.5 rounded-md bg-emerald-500 text-slate-950">✅ SELESAI</span>' : ''}
+                  ${st === 'skipped' ? '<span class="text-[11px] font-black px-2 py-0.5 rounded-md bg-amber-400 text-slate-950">🚩 DITUNDA</span>' : ''}
+                </div>
+                <div class="font-extrabold text-sm sm:text-base text-white">${q.rawTitle}</div>
+                <div class="text-xs text-sky-300 font-semibold">${q.program} · ${q.module}</div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2 self-end sm:self-center flex-shrink-0">
+              <a
+                href="${q.directUrl}"
+                target="_blank"
+                rel="noopener"
+                onclick="copyTitleAndToast('${q.id}')"
+                class="btn-3d bg-sky-500 hover:bg-sky-400 text-slate-950 font-black px-3 py-2 rounded-xl text-xs flex items-center gap-1 shadow"
+                title="Buka link langsung aktivitas di Sekolah.mu"
+              >
+                <span>🚀</span>
+                <span>Buka Link</span>
+              </a>
+              ${st !== 'done' ? `
+                <button onclick="setQuestState('${q.id}', 'done')" class="btn-3d bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black px-3 py-2 rounded-xl text-xs">
+                  ✅ Selesai
+                </button>
+              ` : `
+                <button onclick="setQuestState('${q.id}', 'pending')" class="btn-3d bg-slate-800 hover:bg-slate-700 text-sky-200 font-bold px-2.5 py-2 rounded-xl text-xs">
+                  🔄 Batal
+                </button>
+              `}
+              ${st !== 'skipped' && st !== 'done' ? `
+                <button onclick="setQuestState('${q.id}', 'skipped')" class="btn-3d bg-amber-500/20 hover:bg-amber-500/30 border border-amber-400/50 text-amber-200 font-extrabold px-2.5 py-2 rounded-xl text-xs" title="Lewati dulu untuk nanti">
+                  ⏭️ Lewati
+                </button>
+              ` : ''}
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function refreshAll() {
+      updateHUD();
+      renderIslandLandmarks();
+      renderMapStage();
+      renderQuestList();
+    }
+
+    function updateIslandTabStyles(islandId) {
+      document.querySelectorAll('.island-tab').forEach(btn => {
+        btn.className = 'island-tab btn-3d px-3.5 py-2 rounded-2xl font-extrabold text-xs sm:text-sm flex items-center gap-1.5 bg-sky-900/90 text-sky-100 border-2 border-sky-500/40 hover:bg-sky-800';
+      });
+      const activeBtn = document.getElementById(`tab-island-${islandId}`);
+      if (activeBtn) {
+        activeBtn.className = 'island-tab btn-3d px-3.5 py-2 rounded-2xl font-extrabold text-xs sm:text-sm flex items-center gap-1.5 bg-amber-400 text-slate-950 shadow border-2 border-white';
+      }
+    }
+
+    function setIslandFilter(islandId) {
+      const isZoomIn = islandId !== 'all';
+      const islands = window.GABRIEL_QUEST_DATA?.islands || {};
+      const isl = islands[islandId];
+      const cfg = ISLAND_CAMERA_CONFIG[islandId] || ISLAND_CAMERA_CONFIG.all;
+
+      // Immediately start camera dive toward the target island as clouds swoop in
+      const camLayer = document.getElementById('map-camera-layer');
+      if (isZoomIn && currentIsland === 'all') {
+        camLayer.style.transition = 'transform 0.38s cubic-bezier(0.4, 0, 0.2, 1)';
+        camLayer.style.transformOrigin = cfg.origin;
+        camLayer.style.transform = 'scale(1.75)';
+      } else if (!isZoomIn && currentIsland !== 'all') {
+        camLayer.style.transition = 'transform 0.35s ease-in';
+        camLayer.style.transformOrigin = '50% 50%';
+        camLayer.style.transform = 'scale(0.88)';
+      }
+
+      const badgeIcon = isZoomIn ? (isl?.icon || '🏝️') : '🗺️';
+      const badgeSub = isZoomIn ? '☁️💨 Terbang & Zoom-In Menuju Pulau...' : '☁️💨 Kembali ke Peta Kepulauan...';
+      const badgeTitle = isZoomIn ? (isl?.name || 'Pulau Misi') : 'Semua Pulau Gabriel';
+
+      updateIslandTabStyles(islandId);
+
+      runCloudTransition(badgeIcon, badgeSub, badgeTitle, isZoomIn, () => {
+        currentIsland = islandId;
+        currentChapter = 0;
+        applyIslandCamera(islandId);
+        jumpToCurrentQuest(false);
+        refreshAll();
+      });
+    }
+
+    function setCategoryFilter(cat) {
+      AudioFX.pop();
+      currentCategoryFilter = cat;
+      currentChapter = 0;
+      ['kid', 'belum_berjalan', 'belum_selesai', 'boss', 'skipped'].forEach(id => {
+        const el = document.getElementById(`filter-${id}`);
+        if (!el) return;
+        if (id === cat) {
+          el.className = 'cat-pill px-3 py-1.5 rounded-xl text-xs font-extrabold bg-emerald-400 text-slate-950 border-2 border-white shadow';
+        } else if (id === 'belum_berjalan') {
+          el.className = 'cat-pill px-3 py-1.5 rounded-xl text-xs font-extrabold bg-sky-900 text-cyan-200 border border-cyan-400/60 hover:bg-sky-800';
+        } else {
+          el.className = 'cat-pill px-3 py-1.5 rounded-xl text-xs font-extrabold bg-sky-900 text-sky-200 border border-sky-600 hover:bg-sky-800';
+        }
+      });
+      jumpToCurrentQuest(false);
+      refreshAll();
+    }
+
+    function onSearchInput(val) {
+      searchQuery = val.trim();
+      currentChapter = 0;
+      refreshAll();
+    }
+
+    function changeChapter(delta) {
+      const filtered = getFilteredQuests();
+      const totalChapters = Math.max(1, Math.ceil(filtered.length / CHAPTER_SIZE));
+      const nextChap = Math.max(0, Math.min(totalChapters - 1, currentChapter + delta));
+      if (nextChap === currentChapter) return;
+
+      const islands = window.GABRIEL_QUEST_DATA?.islands || {};
+      const isl = islands[currentIsland];
+      runCloudTransition(
+        isl?.icon || '🧭',
+        delta > 0 ? '☁️ Lanjut ke Bab Berikutnya...' : '☁️ Kembali ke Bab Sebelumnya...',
+        `Peta Bab ${nextChap + 1} / ${totalChapters}`,
+        delta > 0,
+        () => {
+          currentChapter = nextChap;
+          renderMapStage();
+        }
+      );
+    }
+
+    function jumpToCurrentQuest(withToast = true) {
+      const filtered = getFilteredQuests();
+      const activeQ = getActiveNextQuest(filtered);
+      if (!activeQ) return;
+      if (withToast && currentIsland === 'all') {
+        setIslandFilter(activeQ.islandId);
+        showToast('🧭', `Terbang ke ${activeQ.islandName} — Misi #${activeQ.chronologicalLevel}: ${activeQ.title}`);
+        return;
+      }
+      const idx = filtered.findIndex(q => q.id === activeQ.id);
+      if (idx >= 0) {
+        currentChapter = Math.floor(idx / CHAPTER_SIZE);
+        renderMapStage();
+        if (withToast) {
+          showToast('🧭', `Peta diarahkan ke Misi #${activeQ.chronologicalLevel}: ${activeQ.title}`);
+        }
+      }
+    }
+
+    function findQuestById(qId) {
+      return (window.GABRIEL_QUEST_DATA?.quests || []).find(q => q.id === qId);
+    }
+
+    function openQuestModal(qId) {
+      AudioFX.pop();
+      const q = findQuestById(qId);
+      if (!q) return;
+      activeModalQuestId = q.id;
+      const st = getQuestStatus(q.id);
+
+      document.getElementById('modal-level-pill').textContent = `MISI #${q.chronologicalLevel} · ${q.islandIcon} ${q.islandName} (Lv.${q.islandLevel})`;
+      document.getElementById('modal-type-pill').textContent = q.badge;
+      document.getElementById('modal-date-pill').textContent = `${q.date} · ${q.timelineBadge || ''}`;
+      document.getElementById('modal-program-name').textContent = q.program;
+      document.getElementById('modal-quest-title').textContent = q.rawTitle;
+      document.getElementById('modal-module-name').textContent = `Modul: ${q.module}`;
+      document.getElementById('modal-url-preview').textContent = q.directUrl;
+      document.getElementById('modal-btn-direct').href = q.directUrl;
+      document.getElementById('modal-btn-program').href = q.programUrl;
+      document.getElementById('modal-star-reward').textContent = q.stars || 2;
+
+      const recAlert = document.getElementById('modal-recovery-alert');
+      if (q.isPhysicalCaution) recAlert.classList.remove('hidden');
+      else recAlert.classList.add('hidden');
+
+      const stBadge = document.getElementById('modal-status-badge');
+      if (st === 'done') {
+        stBadge.textContent = '✅ Status: Sudah Selesai!';
+        stBadge.className = 'text-xs font-black px-2.5 py-1 rounded-lg bg-emerald-500 text-slate-950';
+      } else if (st === 'skipped') {
+        stBadge.textContent = '🚩 Status: Ditunda Sementara (Bisa Nanti)';
+        stBadge.className = 'text-xs font-black px-2.5 py-1 rounded-lg bg-amber-400 text-slate-950';
+      } else if (q.timelineStatus === 'belum_berjalan') {
+        stBadge.textContent = `📅 ${q.timelineBadge}`;
+        stBadge.className = 'text-xs font-black px-2.5 py-1 rounded-lg bg-cyan-950 border border-cyan-400 text-cyan-200';
+      } else {
+        stBadge.textContent = '⏳ Status: Belum Selesai (Kejar Materi Jul–Okt)';
+        stBadge.className = 'text-xs font-extrabold px-2.5 py-1 rounded-lg bg-slate-800 text-amber-200';
+      }
+
+      document.getElementById('quest-modal').classList.remove('hidden');
+    }
+
+    function closeQuestModal() {
+      document.getElementById('quest-modal').classList.add('hidden');
+      activeModalQuestId = null;
+    }
+
+    function openCurrentQuestModal() {
+      const activeQ = getActiveNextQuest();
+      if (activeQ) openQuestModal(activeQ.id);
+    }
+
+    function setQuestState(qId, status) {
+      const q = findQuestById(qId);
+      if (!q) return;
+      if (status === 'pending') {
+        delete progressMap[qId];
+        AudioFX.pop();
+        showToast('🔄', `Status Misi #${q.chronologicalLevel} di-reset.`);
+      } else if (status === 'done') {
+        progressMap[qId] = { status: 'done', updatedAt: new Date().toISOString() };
+        AudioFX.win();
+        fireConfetti();
+        showToast('🎉', `Hebat Gabriel! Misi #${q.chronologicalLevel} selesai! +${q.stars || 2} Bintang ⭐`);
+      } else if (status === 'skipped') {
+        progressMap[qId] = { status: 'skipped', updatedAt: new Date().toISOString() };
+        AudioFX.skip();
+        showToast('🚩', `Misi #${q.chronologicalLevel} disimpan untuk nanti. Lanjut ke misi berikutnya!`);
+      }
+      saveProgress();
+      refreshAll();
+      jumpToCurrentQuest(false);
+    }
+
+    function completeModalQuest() {
+      if (!activeModalQuestId) return;
+      const id = activeModalQuestId;
+      closeQuestModal();
+      setQuestState(id, 'done');
+    }
+
+    function skipModalQuest() {
+      if (!activeModalQuestId) return;
+      const id = activeModalQuestId;
+      closeQuestModal();
+      setQuestState(id, 'skipped');
+    }
+
+    function resetModalQuest() {
+      if (!activeModalQuestId) return;
+      const id = activeModalQuestId;
+      closeQuestModal();
+      setQuestState(id, 'pending');
+    }
+
+    function markCurrentQuestDone() {
+      const activeQ = getActiveNextQuest();
+      if (activeQ) setQuestState(activeQ.id, 'done');
+    }
+
+    function skipCurrentQuest() {
+      const activeQ = getActiveNextQuest();
+      if (activeQ) setQuestState(activeQ.id, 'skipped');
+    }
+
+    function copyTitleAndToast(qId) {
+      const q = findQuestById(qId);
+      if (!q) return;
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(q.rawTitle).catch(() => {});
+      }
+      showToast('🚀', `Membuka materi di Sekolah.mu! (Judul "${q.rawTitle}" disalin)`);
+    }
+
+    function onLaunchQuestClick() {
+      const activeQ = getActiveNextQuest();
+      if (activeQ) copyTitleAndToast(activeQ.id);
+    }
+
+    function onModalDirectLaunch() {
+      if (activeModalQuestId) copyTitleAndToast(activeModalQuestId);
+    }
+
+    function speakQuest(q) {
+      if (!q || !('speechSynthesis' in window)) {
+        showToast('🔊', 'Browser ini belum mendukung fitur baca suara.');
+        return;
+      }
+      window.speechSynthesis.cancel();
+      const isEnglish = q.islandId === 'english' || q.islandId === 'living_english';
+      const text = isEnglish
+        ? `Mission level ${q.chronologicalLevel}. ${q.title}. Let's go Captain Gabriel!`
+        : `Misi level ${q.chronologicalLevel}, di ${q.islandName}. ${q.title}. Semangat Kapten Gabriel!`;
+      const utter = new SpeechSynthesisUtterance(text);
+      utter.lang = isEnglish ? 'en-US' : 'id-ID';
+      utter.rate = 0.95;
+      utter.pitch = 1.1;
+      window.speechSynthesis.speak(utter);
+      showToast('🔊', `Membacakan: "${q.title}"`);
+    }
+
+    function speakCurrentQuest() {
+      speakQuest(getActiveNextQuest());
+    }
+
+    function speakModalQuest() {
+      if (activeModalQuestId) speakQuest(findQuestById(activeModalQuestId));
+    }
+
+    function openTreasureModal() {
+      AudioFX.pop();
+      const totalStars = Number(document.getElementById('hud-stars').textContent) || 0;
+      const grid = document.getElementById('treasure-badges-grid');
+      grid.innerHTML = TREASURE_BADGES.map(b => {
+        const unlocked = totalStars >= b.stars;
+        return `
+          <div class="p-3 rounded-2xl border-2 flex flex-col items-center justify-center ${
+            unlocked
+              ? 'bg-amber-400/20 border-amber-300 text-white shadow-lg'
+              : 'bg-slate-900/60 border-slate-700 text-slate-500 opacity-60'
+          }">
+            <span class="text-3xl">${unlocked ? b.icon : '🔒'}</span>
+            <span class="text-xs font-black mt-1 leading-tight">${b.name}</span>
+            <span class="text-[10px] font-bold text-amber-300 mt-0.5">${b.stars} ⭐</span>
+          </div>
+        `;
+      }).join('');
+      document.getElementById('treasure-modal').classList.remove('hidden');
+    }
+
+    function closeTreasureModal() {
+      document.getElementById('treasure-modal').classList.add('hidden');
+    }
+
+    function fireConfetti() {
+      const canvas = document.getElementById('confetti-canvas');
+      const ctx = canvas.getContext('2d');
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      const pieces = Array.from({ length: 85 }, () => ({
+        x: Math.random() * canvas.width,
+        y: -20 - Math.random() * 100,
+        size: 7 + Math.random() * 7,
+        color: ['#facc15', '#34d399', '#38bdf8', '#f472b6', '#a78bfa', '#fb923c'][Math.floor(Math.random() * 6)],
+        vx: -3 + Math.random() * 6,
+        vy: 3 + Math.random() * 5,
+        rot: Math.random() * Math.PI
+      }));
+      let frame = 0;
+      function tick() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        pieces.forEach(p => {
+          p.x += p.vx;
+          p.y += p.vy;
+          p.rot += 0.08;
+          ctx.save();
+          ctx.translate(p.x, p.y);
+          ctx.rotate(p.rot);
+          ctx.fillStyle = p.color;
+          ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size);
+          ctx.restore();
+        });
+        frame++;
+        if (frame < 90) requestAnimationFrame(tick);
+        else ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
+      tick();
+    }
+
+    function exportProgressCSV() {
+      const all = window.GABRIEL_QUEST_DATA?.quests || [];
+      const headers = ['Level Kronologis', 'Status di App', 'Pulau', 'Program', 'Modul', 'Judul Aktivitas', 'Jenis', 'Tanggal Estimasi', 'Link Langsung Aktivitas', 'Link Program'];
+      const rows = all.map(q => [
+        q.chronologicalLevel,
+        getQuestStatus(q.id).toUpperCase(),
+        q.islandName,
+        q.program,
+        q.module,
+        q.rawTitle,
+        q.jenis,
+        q.date,
+        q.directUrl,
+        q.programUrl
+      ]);
+      const csvContent = [headers, ...rows]
+        .map(r => r.map(v => `"${String(v ?? '').replace(/"/g, '""')}"`).join(','))
+        .join('\n');
+      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `progress_petualangan_gabriel_${new Date().toISOString().slice(0, 10)}.csv`;
+      a.click();
+      URL.revokeObjectURL(url);
+      showToast('📥', 'File CSV progress Gabriel berhasil di-download!');
+    }
+
+    let toastTimer = null;
+    function showToast(icon, text) {
+      const el = document.getElementById('toast');
+      document.getElementById('toast-icon').textContent = icon;
+      document.getElementById('toast-text').textContent = text;
+      el.classList.remove('hidden');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => el.classList.add('hidden'), 4200);
+    }
+
+    let deferredInstallPrompt = null;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredInstallPrompt = e;
+      const btn = document.getElementById('btn-install-pwa');
+      if (btn) btn.classList.remove('hidden');
+    });
+
+    async function installPWA() {
+      if (!deferredInstallPrompt) return;
+      deferredInstallPrompt.prompt();
+      const { outcome } = await deferredInstallPrompt.userChoice;
+      if (outcome === 'accepted') {
+        document.getElementById('btn-install-pwa')?.classList.add('hidden');
+        showToast('📲', 'Pulau Gabriel berhasil di-install di Home Screen!');
+      }
+      deferredInstallPrompt = null;
+    }
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').catch(() => {});
+      });
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      loadProgress();
+      applyIslandCamera('all');
+      refreshAll();
+    });
+  </script>
+</body>
+</html>
