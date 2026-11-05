@@ -1,4 +1,4 @@
-const CACHE_NAME = 'pulau-gabriel-v1';
+const CACHE_NAME = 'pulau-gabriel-v2';
 const ASSETS = [
   './',
   './index.html',

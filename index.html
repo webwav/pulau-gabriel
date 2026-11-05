@@ -60,6 +60,74 @@
     .animate-avatar {
       animation: avatarBounce 1.7s ease-in-out infinite;
     }
+    @keyframes walkerIdle {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-5px) rotate(1.5deg); }
+    }
+    @keyframes legSwingLeft {
+      0%, 100% { transform: rotate(-28deg); }
+      50% { transform: rotate(28deg); }
+    }
+    @keyframes legSwingRight {
+      0%, 100% { transform: rotate(28deg); }
+      50% { transform: rotate(-28deg); }
+    }
+    @keyframes armSwingLeft {
+      0%, 100% { transform: rotate(24deg); }
+      50% { transform: rotate(-24deg); }
+    }
+    @keyframes armSwingRight {
+      0%, 100% { transform: rotate(-24deg); }
+      50% { transform: rotate(24deg); }
+    }
+    @keyframes dustPuffAnim {
+      0% { transform: scale(0.4) translateY(0px); opacity: 0.9; }
+      100% { transform: scale(1.35) translateY(-10px); opacity: 0; }
+    }
+    #gabriel-walker {
+      position: absolute;
+      transform: translate(-50%, -92%);
+      z-index: 48;
+      pointer-events: none;
+      will-change: left, top, transform;
+    }
+    #gabriel-walker .walker-rig {
+      animation: walkerIdle 1.8s ease-in-out infinite;
+      transform-origin: center bottom;
+      transition: transform 0.15s ease;
+    }
+    #gabriel-walker.is-walking .walker-rig {
+      animation: none;
+    }
+    #gabriel-walker .leg-l,
+    #gabriel-walker .leg-r {
+      transform-box: fill-box;
+      transform-origin: top center;
+    }
+    #gabriel-walker .arm-l,
+    #gabriel-walker .arm-r {
+      transform-box: fill-box;
+      transform-origin: top center;
+    }
+    #gabriel-walker.is-walking .leg-l {
+      animation: legSwingLeft 0.26s ease-in-out infinite;
+    }
+    #gabriel-walker.is-walking .leg-r {
+      animation: legSwingRight 0.26s ease-in-out infinite;
+    }
+    #gabriel-walker.is-walking .arm-l {
+      animation: armSwingLeft 0.26s ease-in-out infinite;
+    }
+    #gabriel-walker.is-walking .arm-r {
+      animation: armSwingRight 0.26s ease-in-out infinite;
+    }
+    #gabriel-walker .walker-dust {
+      display: none;
+    }
+    #gabriel-walker.is-walking .walker-dust {
+      display: flex;
+      animation: dustPuffAnim 0.32s ease-out infinite;
+    }
     .pulse-ring::before {
       content: '';
       position: absolute;
@@ -392,6 +460,9 @@
           <button onclick="jumpToCurrentQuest()" class="btn-3d bg-amber-400/20 hover:bg-amber-400/30 text-amber-200 border border-amber-400/50 font-bold px-3 py-1.5 rounded-xl inline-flex items-center gap-1">
             📍 Cari Posisi Gabriel
           </button>
+          <button onclick="demoWalkGabriel()" id="btn-demo-walk" class="hidden btn-3d bg-emerald-400/20 hover:bg-emerald-400/30 text-emerald-200 border border-emerald-400/50 font-bold px-3 py-1.5 rounded-xl inline-flex items-center gap-1" title="Lihat animasi Kapten Gabriel berjalan menyusuri batu pijakan!">
+            🚶‍♂️ Tes Jalan Gabriel
+          </button>
         </div>
 
         <div class="flex items-center gap-3 text-xs text-sky-200 font-bold">
@@ -521,6 +592,65 @@
 
       <!-- Stepping Stone Nodes Layer (Spaced widely across the entire screen!) -->
       <div id="map-nodes-layer" class="absolute inset-0 z-25"></div>
+
+      <!-- Animated Walking Kapten Gabriel Layer -->
+      <div id="gabriel-walker" class="hidden" style="left: 12%; top: 82%;">
+        <div class="flex flex-col items-center">
+          <!-- Always-upright Name Pill -->
+          <div id="gabriel-walker-badge" class="bg-amber-400 text-slate-950 text-[10px] font-black px-2.5 py-0.5 rounded-full border-2 border-slate-900 shadow-lg whitespace-nowrap mb-0.5 flex items-center gap-1">
+            <span>🧭</span>
+            <span id="gabriel-walker-label">Kapten Gabriel!</span>
+          </div>
+
+          <!-- Direction-flippable Character Rig -->
+          <div id="gabriel-walker-flip" class="relative flex flex-col items-center">
+            <div id="gabriel-walker-rig" class="walker-rig relative flex flex-col items-center">
+              <!-- Head Avatar -->
+              <div class="relative z-20">
+                <img src="assets/gabriel-avatar.jpg" alt="Kapten Gabriel" class="rounded-full object-cover border-4 border-white shadow-2xl" style="width: 54px; height: 54px;" />
+              </div>
+
+              <!-- Articulated Explorer Body, Backpack, Swinging Arms & Walking Boots SVG -->
+              <svg class="-mt-2.5 z-10 overflow-visible" width="60" height="44" viewBox="0 0 60 44">
+                <!-- Explorer Backpack behind torso -->
+                <rect x="13" y="4" width="10" height="18" rx="4" fill="#92400e" stroke="#451a03" stroke-width="2" />
+                <!-- Back Arm -->
+                <g class="arm-l">
+                  <rect x="14" y="6" width="7" height="16" rx="3.5" fill="#fde68a" stroke="#78350f" stroke-width="1.8" />
+                </g>
+                <!-- Left Leg & Boot -->
+                <g class="leg-l">
+                  <rect x="21" y="21" width="7" height="14" rx="3" fill="#92400e" stroke="#451a03" stroke-width="1.8" />
+                  <path d="M19,32 L29,32 C31,32 32,37 29,37 L19,37 Z" fill="#451a03" />
+                </g>
+                <!-- Right Leg & Boot -->
+                <g class="leg-r">
+                  <rect x="31" y="21" width="7" height="14" rx="3" fill="#b45309" stroke="#451a03" stroke-width="1.8" />
+                  <path d="M30,32 L40,32 C42,32 43,37 40,37 L30,37 Z" fill="#451a03" />
+                </g>
+                <!-- Explorer Khaki Vest Torso -->
+                <rect x="19" y="3" width="21" height="20" rx="6" fill="#d97706" stroke="#451a03" stroke-width="2" />
+                <rect x="22" y="5" width="15" height="16" rx="4" fill="#fef3c7" />
+                <line x1="29.5" y1="5" x2="29.5" y2="21" stroke="#92400e" stroke-width="2" />
+                <!-- Belt & Golden Buckle -->
+                <rect x="19" y="18" width="21" height="4" rx="1.5" fill="#451a03" />
+                <rect x="27" y="17.5" width="5" height="5" rx="1" fill="#facc15" />
+                <!-- Front Arm holding Compass -->
+                <g class="arm-r">
+                  <rect x="38" y="6" width="7" height="16" rx="3.5" fill="#fde68a" stroke="#78350f" stroke-width="1.8" />
+                  <circle cx="41.5" cy="21" r="4" fill="#facc15" stroke="#451a03" stroke-width="1.5" />
+                </g>
+              </svg>
+
+              <!-- Dust Puffs & Sparkles when walking -->
+              <div class="walker-dust absolute -bottom-2 left-1/2 -translate-x-1/2 items-center gap-1 text-xs pointer-events-none">
+                <span>💨</span>
+                <span>✨</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- NEXT MISSION QUICK ACTION CARD -->
@@ -905,6 +1035,10 @@
         this.playTone(520, 0.08, 'triangle', 0);
         this.playTone(680, 0.09, 'sine', 0.05);
       },
+      step(stepNum = 0) {
+        const f = stepNum % 2 === 0 ? 310 : 390;
+        this.playTone(f, 0.055, 'triangle', 0, 0.12);
+      },
       skip() {
         this.playTone(440, 0.1, 'sine', 0);
         this.playTone(392, 0.12, 'sine', 0.08);
@@ -1112,11 +1246,130 @@
       }).join('');
     }
 
-    function renderMapStage() {
+    let walkerAnimFrame = null;
+    let walkerCurrentStoneIdx = 0;
+    let isWalkerMoving = false;
+
+    function positionGabrielInstant(stoneIdx, coordsList) {
+      const walker = document.getElementById('gabriel-walker');
+      if (!walker) return;
+      if (currentIsland === 'all' || !coordsList || coordsList.length === 0) {
+        walker.classList.add('hidden');
+        return;
+      }
+      const c = coordsList[Math.max(0, stoneIdx) % coordsList.length];
+      walker.classList.remove('hidden', 'is-walking');
+      walker.style.left = `${c.x}%`;
+      walker.style.top = `${c.y}%`;
+      const label = document.getElementById('gabriel-walker-label');
+      if (label) label.textContent = 'Kapten Gabriel!';
+      walkerCurrentStoneIdx = stoneIdx;
+      isWalkerMoving = false;
+    }
+
+    function walkGabrielAlongStones(fromIdx, toIdx, coordsList, onComplete) {
+      const walker = document.getElementById('gabriel-walker');
+      const flipEl = document.getElementById('gabriel-walker-flip');
+      const labelEl = document.getElementById('gabriel-walker-label');
+      if (!walker || currentIsland === 'all' || !coordsList || coordsList.length === 0) {
+        if (onComplete) onComplete();
+        return;
+      }
+
+      if (walkerAnimFrame) cancelAnimationFrame(walkerAnimFrame);
+
+      if (fromIdx === toIdx) {
+        positionGabrielInstant(toIdx, coordsList);
+        if (onComplete) onComplete();
+        return;
+      }
+
+      // Build list of waypoints from fromIdx to toIdx along the stepping stones
+      const stepDir = toIdx > fromIdx ? 1 : -1;
+      const indices = [];
+      for (let i = fromIdx; i !== toIdx + stepDir; i += stepDir) {
+        indices.push(i);
+      }
+
+      const numSegments = indices.length - 1;
+      // Fast, lively pace: ~360ms per stone hop (capped at 1300ms total for multi-stone walks)
+      const durationPerSeg = Math.min(380, Math.max(170, Math.floor(1250 / numSegments)));
+      const totalDuration = numSegments * durationPerSeg;
+
+      walker.classList.remove('hidden');
+      walker.classList.add('is-walking');
+      if (labelEl) labelEl.textContent = 'Jalan... 🐾';
+      isWalkerMoving = true;
+
+      const startTime = performance.now();
+      let lastStepSoundIndex = -1;
+
+      function animateStep(now) {
+        const elapsed = now - startTime;
+        const overallProgress = Math.min(1, elapsed / totalDuration);
+        const exactSeg = overallProgress * numSegments;
+        const segIdx = Math.min(numSegments - 1, Math.floor(exactSeg));
+        const segT = exactSeg - segIdx;
+
+        const p0 = coordsList[indices[segIdx] % coordsList.length];
+        const p2 = coordsList[indices[segIdx + 1] % coordsList.length];
+
+        // Control point matches the SVG quadratic curve between stones
+        const cx = (p0.x + p2.x) / 2;
+        const cy = (p0.y + p2.y) / 2 - 3.2;
+
+        // Quadratic Bezier interpolation + lively walking hop
+        const invT = 1 - segT;
+        const bx = invT * invT * p0.x + 2 * invT * segT * cx + segT * segT * p2.x;
+        const by = invT * invT * p0.y + 2 * invT * segT * cy + segT * segT * p2.y;
+        const strideHop = Math.abs(Math.sin(segT * Math.PI * 2)) * 2.2;
+
+        walker.style.left = `${bx}%`;
+        walker.style.top = `${by - strideHop}%`;
+
+        // Face left or right based on horizontal movement
+        const dx = p2.x - p0.x;
+        if (flipEl && Math.abs(dx) > 0.5) {
+          flipEl.style.transform = dx < 0 ? 'scaleX(-1)' : 'scaleX(1)';
+        }
+
+        // Play rhythmic footstep sound twice per stone segment
+        const stepSoundIdx = Math.floor(exactSeg * 2);
+        if (stepSoundIdx !== lastStepSoundIndex && overallProgress < 0.98) {
+          lastStepSoundIndex = stepSoundIdx;
+          AudioFX.step(stepSoundIdx);
+        }
+
+        if (overallProgress < 1) {
+          walkerAnimFrame = requestAnimationFrame(animateStep);
+        } else {
+          positionGabrielInstant(toIdx, coordsList);
+          AudioFX.pop();
+          if (onComplete) onComplete();
+        }
+      }
+
+      walkerAnimFrame = requestAnimationFrame(animateStep);
+    }
+
+    function onStoneClick(qId, stoneIdx) {
+      const coordsList = ZOOMED_ISLAND_WIDE_COORDS[currentIsland] || OVERVIEW_WIDE_COORDS;
+      if (currentIsland !== 'all' && stoneIdx !== walkerCurrentStoneIdx) {
+        walkGabrielAlongStones(walkerCurrentStoneIdx, stoneIdx, coordsList, () => {
+          openQuestModal(qId);
+        });
+      } else {
+        openQuestModal(qId);
+      }
+    }
+
+    function renderMapStage(preserveWalkerAnimation = false) {
       const svg = document.getElementById('map-svg-layer');
       const nodesLayer = document.getElementById('map-nodes-layer');
       const prevBtn = document.getElementById('btn-prev-chapter');
       const nextBtn = document.getElementById('btn-next-chapter');
+      const demoWalkBtn = document.getElementById('btn-demo-walk');
+      const walker = document.getElementById('gabriel-walker');
       const islands = window.GABRIEL_QUEST_DATA?.islands || {};
 
       // On Archipelago Map (Peta Kepulauan), ONLY show the floating island name icons (no stepping stones or dashed path)
@@ -1127,13 +1380,16 @@
         document.getElementById('chapter-indicator').textContent = '🗺️ Peta Kepulauan — Klik Nama Pulau di Peta untuk Membuka Batu Pijakan!';
         prevBtn.classList.add('hidden');
         nextBtn.classList.add('hidden');
+        if (demoWalkBtn) demoWalkBtn.classList.add('hidden');
         svg.innerHTML = '';
         nodesLayer.innerHTML = '';
+        if (walker) walker.classList.add('hidden');
         return;
       }
 
       prevBtn.classList.remove('hidden');
       nextBtn.classList.remove('hidden');
+      if (demoWalkBtn) demoWalkBtn.classList.remove('hidden');
 
       const filtered = getFilteredQuests();
       const totalChapters = Math.max(1, Math.ceil(filtered.length / CHAPTER_SIZE));
@@ -1215,15 +1471,6 @@
           bgClass = 'from-cyan-500 to-blue-700 border-cyan-200 text-white';
         }
 
-        const avatarHTML = isCurrent ? `
-          <div class="absolute left-1/2 top-0 animate-avatar z-40 pointer-events-none flex flex-col items-center">
-            <div class="bg-amber-400 text-slate-950 text-[10px] font-black px-2.5 py-0.5 rounded-full border-2 border-slate-900 shadow whitespace-nowrap mb-0.5">
-              Kapten Gabriel!
-            </div>
-            <img src="assets/gabriel-avatar.jpg" alt="Gabriel" class="w-13 h-13 sm:w-15 sm:h-15 rounded-full object-cover border-4 border-white shadow-2xl" style="width: 56px; height: 56px;" />
-          </div>
-        ` : '';
-
         const topCornerIcon = isBoss
           ? '<span class="absolute -top-2.5 -right-2.5 text-sm bg-amber-400 rounded-full w-7 h-7 flex items-center justify-center border-2 border-slate-900 shadow" title="Tugas & Asesmen (3 Bintang)">🏆</span>'
           : (q.isPhysicalCaution
@@ -1236,11 +1483,10 @@
 
         return `
           <div
-            onclick="openQuestModal('${q.id}')"
+            onclick="onStoneClick('${q.id}', ${idx})"
             class="stone-node group flex flex-col items-center"
             style="left: ${c.x}%; top: ${c.y}%;"
           >
-            ${avatarHTML}
             <div class="relative w-14 h-14 sm:w-16 sm:h-16 rounded-3xl bg-gradient-to-b ${bgClass} border-4 shadow-2xl flex flex-col items-center justify-center">
               ${topCornerIcon}
               <span class="text-xs leading-none">${q.islandIcon}</span>
@@ -1255,6 +1501,12 @@
           </div>
         `;
       }).join('');
+
+      // Position or animate Kapten Gabriel on the active stone of this chapter
+      if (!preserveWalkerAnimation && !isWalkerMoving) {
+        const activeStoneIdx = chapterQuests.findIndex(q => activeQ && q.id === activeQ.id);
+        positionGabrielInstant(activeStoneIdx >= 0 ? activeStoneIdx : 0, coordsList);
+      }
     }
 
     function renderQuestList() {
@@ -1351,6 +1603,19 @@
       if (activeBtn) {
         activeBtn.className = 'island-tab btn-3d px-3.5 py-2 rounded-2xl font-extrabold text-xs sm:text-sm flex items-center gap-1.5 bg-amber-400 text-slate-950 shadow border-2 border-white';
       }
+    }
+
+    function demoWalkGabriel() {
+      if (currentIsland === 'all') return;
+      const filtered = getFilteredQuests();
+      const startIdx = currentChapter * CHAPTER_SIZE;
+      const chapterQuests = filtered.slice(startIdx, startIdx + CHAPTER_SIZE);
+      if (chapterQuests.length < 2) return;
+      const coordsList = ZOOMED_ISLAND_WIDE_COORDS[currentIsland] || OVERVIEW_WIDE_COORDS;
+      const nextIdx = (walkerCurrentStoneIdx + 1) % chapterQuests.length;
+      walkGabrielAlongStones(walkerCurrentStoneIdx, nextIdx, coordsList, () => {
+        showToast('🐾', `Kapten Gabriel berjalan ke Batu #${chapterQuests[nextIdx].islandLevel}!`);
+      });
     }
 
     function setIslandFilter(islandId) {
@@ -1507,6 +1772,13 @@
     function setQuestState(qId, status) {
       const q = findQuestById(qId);
       if (!q) return;
+
+      // Capture previous stone position on current island chapter before state change
+      const prevFiltered = getFilteredQuests();
+      const prevChapStart = currentChapter * CHAPTER_SIZE;
+      const prevChapQuests = prevFiltered.slice(prevChapStart, prevChapStart + CHAPTER_SIZE);
+      const fromStoneIdx = prevChapQuests.findIndex(item => item.id === qId);
+
       if (status === 'pending') {
         delete progressMap[qId];
         AudioFX.pop();
@@ -1522,8 +1794,31 @@
         showToast('🚩', `Misi #${q.chronologicalLevel} disimpan untuk nanti. Lanjut ke misi berikutnya!`);
       }
       saveProgress();
-      refreshAll();
-      jumpToCurrentQuest(false);
+
+      const nextFiltered = getFilteredQuests();
+      const nextActiveQ = getActiveNextQuest(nextFiltered);
+      const nextIdxGlobal = nextActiveQ ? nextFiltered.findIndex(item => item.id === nextActiveQ.id) : -1;
+      const nextChapter = nextIdxGlobal >= 0 ? Math.floor(nextIdxGlobal / CHAPTER_SIZE) : currentChapter;
+      const toStoneIdx = nextIdxGlobal >= 0 ? (nextIdxGlobal % CHAPTER_SIZE) : 0;
+
+      // If zoomed into an island and the next active stone is in the same chapter, walk Kapten Gabriel stone-to-stone!
+      if (
+        currentIsland !== 'all' &&
+        (status === 'done' || status === 'skipped') &&
+        fromStoneIdx >= 0 &&
+        nextChapter === currentChapter &&
+        fromStoneIdx !== toStoneIdx
+      ) {
+        updateHUD();
+        renderIslandLandmarks();
+        renderMapStage(true);
+        renderQuestList();
+        const coordsList = ZOOMED_ISLAND_WIDE_COORDS[currentIsland] || OVERVIEW_WIDE_COORDS;
+        walkGabrielAlongStones(fromStoneIdx, toStoneIdx, coordsList);
+      } else {
+        refreshAll();
+        jumpToCurrentQuest(false);
+      }
     }
 
     function completeModalQuest() {
