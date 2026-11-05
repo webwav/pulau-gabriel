@@ -21,22 +21,10 @@ MONTH_MAP = {
     "des": 12, "desember": 12, "dec": 12, "december": 12,
 }
 
-# Verified working classroom (/c) entry URLs for each of Gabriel's 7 programs.
-# Note: Sekolah.mu appends random 5-char backend IDs to individual activity slugs (e.g. -61y2y, -gih5x, -j3bow),
-# so guessing unverified activity slugs causes a 404 ("Halaman Belum Berhasil Dimuat").
-# Using the verified classroom entry URL opens the program's classroom player & "Daftar Topik & Aktivitas" sidebar reliably!
-VERIFIED_CLASSROOM_URLS = {
-    "https://smm.sekolah.mu/program/year-1-english-semester-1-ta-20262027": "https://smm.sekolah.mu/program/year-1-english-semester-1-ta-20262027/thursday-6-august-2026-listening-to-audiobook-ready-set-brush/c",
-    "https://smm.sekolah.mu/program/year-1-pjok-semester-1-ta-20262027": "https://smm.sekolah.mu/program/year-1-pjok-semester-1-ta-20262027/jumat-24-jul-2026-jangan-lupa-pemanasan-dan-pendinginan-gih5x/c",
-    "https://smm.sekolah.mu/program/year-1-daring-rutin-semester-1-20262027": "https://smm.sekolah.mu/program/year-1-daring-rutin-semester-1-20262027/rabu-22-juli-2026-yuk-simak-bersama/c",
-    "https://smm.sekolah.mu/program/year-1-homeroom-20262027": "https://smm.sekolah.mu/program/year-1-homeroom-20262027/selamat-datang-di-kelas-1/c",
-    "https://smm.sekolah.mu/program/memulai-belajar-di-smm-year-13-ta-20262027": "https://smm.sekolah.mu/program/memulai-belajar-di-smm-year-13-ta-20262027/kontak-sekolah-murid-merdeka-1-4-4-4/c",
-    "https://livingenglish.sekolah.mu/program/waydivers-1-term-1-ay-20262027": "https://livingenglish.sekolah.mu/program/waydivers-1-term-1-ay-20262027/group-session-2-meeting-1-61y2y/c",
-    "https://livingenglish.sekolah.mu/program/waydivers-1-term-2-ay-20262027": "https://livingenglish.sekolah.mu/program/waydivers-1-term-2-ay-20262027/academic-calendar-j3bow/c",
-}
-
-def get_my_learning_url(program_url):
-    if "livingenglish.sekolah.mu" in program_url:
+# Portal entry URLs that ALWAYS work without "Halaman Belum Berhasil Dimuat" SPA errors:
+# Sekolah.mu and Living English require entering via /my-learning so the child learner session (Gabriel) is active.
+def get_my_learning_url(program_url, source_tab=""):
+    if "livingenglish.sekolah.mu" in program_url or "Living English" in source_tab:
         return "https://livingenglish.sekolah.mu/my-learning"
     return "https://smm.sekolah.mu/my-learning"
 
@@ -391,9 +379,8 @@ for source_tab, rows in [("SMM", raw["smmItems"]), ("Living English", raw["leIte
             act_num_str = str(idx)
             title_clean = raw_title
 
-        classroom_url = VERIFIED_CLASSROOM_URLS.get(program_url, program_url)
-        my_learning_url = get_my_learning_url(program_url)
-        direct_url = classroom_url
+        my_learning_url = get_my_learning_url(program_url, source_tab)
+        direct_url = my_learning_url
         exact_verified = True
 
         iso_date = extract_date(module_str, title_clean, program_str, act_num)
@@ -414,8 +401,8 @@ for source_tab, rows in [("SMM", raw["smmItems"]), ("Living English", raw["leIte
             "rawTitle": raw_title,
             "title": title_clean,
             "jenis": jenis,
-            "programUrl": program_url,
-            "classroomUrl": classroom_url,
+            "programUrl": my_learning_url,
+            "referenceProgramUrl": program_url,
             "myLearningUrl": my_learning_url,
             "directUrl": direct_url,
             "exactVerified": exact_verified,
@@ -434,9 +421,8 @@ for u_idx, item in enumerate(UPCOMING_SEM1_ITEMS, start=1):
         act_num = 300 + u_idx
         title_clean = raw_title
 
-    classroom_url = VERIFIED_CLASSROOM_URLS.get(program_url, program_url)
-    my_learning_url = get_my_learning_url(program_url)
-    direct_url = classroom_url
+    my_learning_url = get_my_learning_url(program_url, source_tab)
+    direct_url = my_learning_url
     island_id = get_island_id(program_str)
     meta = classify_quest(program_str, module_str, title_clean, jenis, iso_date, is_upcoming_schedule=True)
 
@@ -454,8 +440,8 @@ for u_idx, item in enumerate(UPCOMING_SEM1_ITEMS, start=1):
         "rawTitle": raw_title,
         "title": title_clean,
         "jenis": jenis,
-        "programUrl": program_url,
-        "classroomUrl": classroom_url,
+        "programUrl": my_learning_url,
+        "referenceProgramUrl": program_url,
         "myLearningUrl": my_learning_url,
         "directUrl": direct_url,
         "exactVerified": True,

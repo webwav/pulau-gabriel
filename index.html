@@ -676,9 +676,9 @@
           <span>🔊</span>
           <span>Baca Suara</span>
         </button>
-        <a id="bar-direct-link" href="#" target="_blank" rel="noopener" onclick="onLaunchQuestClick(event)" class="btn-3d bg-sky-600 hover:bg-sky-500 text-white font-black px-4 py-2.5 rounded-2xl border-2 border-slate-900 shadow-lg flex items-center gap-1.5 text-xs sm:text-sm">
+        <a id="bar-direct-link" href="https://smm.sekolah.mu/my-learning" target="_blank" rel="noopener" onclick="onLaunchQuestClick(event)" class="btn-3d bg-sky-600 hover:bg-sky-500 text-white font-black px-4 py-2.5 rounded-2xl border-2 border-slate-900 shadow-lg flex items-center gap-1.5 text-xs sm:text-sm">
           <span>🚀</span>
-          <span>Buka Materi Langsung</span>
+          <span id="bar-direct-link-label">Buka di My Learning</span>
         </a>
         <button onclick="markCurrentQuestDone()" class="btn-3d bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black px-4 py-2.5 rounded-2xl border-2 border-slate-900 shadow-lg flex items-center gap-1.5 text-xs sm:text-sm">
           <span>✅</span>
@@ -764,23 +764,27 @@
           </button>
           <span id="modal-status-badge" class="text-xs font-extrabold px-2.5 py-1 rounded-lg bg-slate-800 text-sky-200">Status: Belum Selesai</span>
         </div>
-        <div class="text-xs text-amber-200 bg-sky-950/90 px-3 py-2 rounded-xl border border-amber-400/40 leading-relaxed">
-          💡 <b>Cara Buka di Sekolah.mu / Living English:</b> Klik <b>"🚀 Masuk Kelas Program"</b> di bawah, lalu di panel <b>Daftar Topik & Aktivitas</b> pilih modul <b id="modal-guide-module" class="text-white">...</b> → aktivitas <b id="modal-guide-act" class="text-emerald-300">...</b> <i>(judul otomatis disalin!)</i>.
+        <div class="text-xs text-amber-200 bg-sky-950/90 px-3.5 py-2.5 rounded-xl border border-amber-400/40 space-y-1 leading-relaxed">
+          <div class="font-black text-amber-300">🧭 Panduan Buka Materi di Portal (Bebas Error):</div>
+          <div>1️⃣ Klik tombol <b>Buka My Learning</b> di bawah (pastikan profil belajar <b>Gabriel</b> aktif).</div>
+          <div>2️⃣ Pilih Program: <b id="modal-guide-program" class="text-white">...</b></div>
+          <div>3️⃣ Buka Modul: <b id="modal-guide-module" class="text-sky-200">...</b></div>
+          <div>4️⃣ Klik Aktivitas: <b id="modal-guide-act" class="text-emerald-300">...</b> <i>(judul otomatis disalin!)</i></div>
         </div>
         <div class="text-[11px] text-sky-300/90 break-all font-mono bg-slate-900/90 px-2.5 py-1.5 rounded-lg border border-slate-800" id="modal-url-preview">
-          https://smm.sekolah.mu/...
+          https://smm.sekolah.mu/my-learning
         </div>
       </div>
 
       <!-- Primary Launch Buttons -->
       <div class="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-        <a id="modal-btn-direct" href="#" target="_blank" rel="noopener" onclick="onModalDirectLaunch(event)" class="btn-3d bg-gradient-to-b from-sky-400 to-sky-600 hover:from-sky-300 hover:to-sky-500 text-slate-950 font-black py-3 px-4 rounded-2xl shadow-lg border-2 border-white flex items-center justify-center gap-2 text-sm text-center">
+        <a id="modal-btn-direct" href="https://smm.sekolah.mu/my-learning" target="_blank" rel="noopener" onclick="onModalDirectLaunch(event)" class="btn-3d bg-gradient-to-b from-sky-400 to-sky-600 hover:from-sky-300 hover:to-sky-500 text-slate-950 font-black py-3 px-4 rounded-2xl shadow-lg border-2 border-white flex items-center justify-center gap-2 text-sm text-center">
           <span>🚀</span>
-          <span>Masuk Kelas Program (/c)</span>
+          <span id="modal-btn-direct-label">Buka My Learning (SMM)</span>
         </a>
-        <a id="modal-btn-program" href="#" target="_blank" rel="noopener" class="btn-3d bg-sky-800 hover:bg-sky-700 text-sky-100 font-extrabold py-3 px-4 rounded-2xl border-2 border-sky-500/50 flex items-center justify-center gap-2 text-xs sm:text-sm text-center" title="Buka My Learning (Pastikan profil belajar Gabriel sudah dipilih)">
+        <a id="modal-btn-program" href="https://livingenglish.sekolah.mu/my-learning" target="_blank" rel="noopener" class="btn-3d bg-sky-800 hover:bg-sky-700 text-sky-100 font-extrabold py-3 px-4 rounded-2xl border-2 border-sky-500/50 flex items-center justify-center gap-2 text-xs sm:text-sm text-center" title="Buka Portal Sebelah (SMM / Living English)">
           <span>🏠</span>
-          <span>Buka Portal My Learning</span>
+          <span id="modal-btn-program-label">Buka Living English My Learning</span>
         </a>
       </div>
 
@@ -818,10 +822,18 @@
     </div>
   </div>
 
-  <!-- Load Generated Quests Data -->
-  <script src="quests_data.js"></script>
+  <!-- Load Generated Quests Data (Cache-busted) -->
+  <script src="quests_data.js?v=20261105-mylearning"></script>
   <script>
     const STORAGE_KEY = 'gabriel_quest_map_progress_v1';
+
+    function getSafePortalUrl(q) {
+      if (!q) return 'https://smm.sekolah.mu/my-learning';
+      if (q.islandId === 'living_english' || (q.program && q.program.includes('Waydivers'))) {
+        return 'https://livingenglish.sekolah.mu/my-learning';
+      }
+      return 'https://smm.sekolah.mu/my-learning';
+    }
     // 10 wide-spaced stepping stones per map chapter so stones NEVER bunch up or overlap!
     const CHAPTER_SIZE = 10;
 
@@ -1203,13 +1215,19 @@
 
       const activeQ = getActiveNextQuest();
       if (activeQ) {
+        const portalUrl = getSafePortalUrl(activeQ);
+        const isLE = activeQ.islandId === 'living_english';
         document.getElementById('hud-level').textContent = activeQ.chronologicalLevel;
         document.getElementById('bar-level-badge').textContent = `LEVEL KRONOLOGIS #${activeQ.chronologicalLevel}`;
         document.getElementById('bar-island-badge').textContent = `${activeQ.islandIcon} ${activeQ.islandName}`;
         document.getElementById('bar-date-badge').textContent = `📅 ${activeQ.date} · ${activeQ.timelineBadge || activeQ.badge}`;
         document.getElementById('bar-quest-title').textContent = activeQ.rawTitle;
         document.getElementById('bar-quest-module').textContent = `${activeQ.program} — ${activeQ.module}`;
-        document.getElementById('bar-direct-link').href = activeQ.directUrl;
+        document.getElementById('bar-direct-link').href = portalUrl;
+        const barLinkLabel = document.getElementById('bar-direct-link-label');
+        if (barLinkLabel) {
+          barLinkLabel.textContent = isLE ? 'Buka Living English (My Learning)' : 'Buka SMM (My Learning)';
+        }
       }
     }
 
@@ -1561,15 +1579,15 @@
 
             <div class="flex items-center gap-2 self-end sm:self-center flex-shrink-0">
               <a
-                href="${q.directUrl}"
+                href="${getSafePortalUrl(q)}"
                 target="_blank"
                 rel="noopener"
                 onclick="copyTitleAndToast('${q.id}')"
                 class="btn-3d bg-sky-500 hover:bg-sky-400 text-slate-950 font-black px-3 py-2 rounded-xl text-xs flex items-center gap-1 shadow"
-                title="Buka link langsung aktivitas di Sekolah.mu"
+                title="Buka My Learning (${q.islandId === 'living_english' ? 'Living English' : 'SMM Sekolah.mu'})"
               >
                 <span>🚀</span>
-                <span>Buka Link</span>
+                <span>${q.islandId === 'living_english' ? 'Living English' : 'SMM My Learning'}</span>
               </a>
               ${st !== 'done' ? `
                 <button onclick="setQuestState('${q.id}', 'done')" class="btn-3d bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black px-3 py-2 rounded-xl text-xs">
@@ -1735,13 +1753,33 @@
       document.getElementById('modal-program-name').textContent = q.program;
       document.getElementById('modal-quest-title').textContent = q.rawTitle;
       document.getElementById('modal-module-name').textContent = `Modul: ${q.module}`;
+      const guideProg = document.getElementById('modal-guide-program');
       const guideMod = document.getElementById('modal-guide-module');
       const guideAct = document.getElementById('modal-guide-act');
+      if (guideProg) guideProg.textContent = q.program;
       if (guideMod) guideMod.textContent = q.module;
       if (guideAct) guideAct.textContent = q.rawTitle;
-      document.getElementById('modal-url-preview').textContent = q.directUrl;
-      document.getElementById('modal-btn-direct').href = q.directUrl;
-      document.getElementById('modal-btn-program').href = q.myLearningUrl || q.programUrl;
+
+      const primaryPortalUrl = getSafePortalUrl(q);
+      const isLE = q.islandId === 'living_english';
+      const secondaryPortalUrl = isLE ? 'https://smm.sekolah.mu/my-learning' : 'https://livingenglish.sekolah.mu/my-learning';
+
+      document.getElementById('modal-url-preview').textContent = primaryPortalUrl;
+      document.getElementById('modal-btn-direct').href = primaryPortalUrl;
+      const directLabel = document.getElementById('modal-btn-direct-label');
+      if (directLabel) {
+        directLabel.textContent = isLE
+          ? 'Buka Living English (My Learning)'
+          : 'Buka SMM Sekolah.mu (My Learning)';
+      }
+
+      document.getElementById('modal-btn-program').href = secondaryPortalUrl;
+      const secondaryLabel = document.getElementById('modal-btn-program-label');
+      if (secondaryLabel) {
+        secondaryLabel.textContent = isLE
+          ? 'Buka SMM (smm.sekolah.mu/my-learning)'
+          : 'Buka Living English (my-learning)';
+      }
       document.getElementById('modal-star-reward').textContent = q.stars || 2;
 
       const recAlert = document.getElementById('modal-recovery-alert');
@@ -2022,7 +2060,14 @@
 
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js').catch(() => {});
+        if ('caches' in window) {
+          caches.keys().then(keys => {
+            keys.forEach(k => {
+              if (k !== 'pulau-gabriel-v4') caches.delete(k);
+            });
+          });
+        }
+        navigator.serviceWorker.register('./sw.js?v=4').then(reg => reg.update()).catch(() => {});
       });
     }
 
