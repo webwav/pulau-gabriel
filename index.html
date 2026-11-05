@@ -764,6 +764,9 @@
           </button>
           <span id="modal-status-badge" class="text-xs font-extrabold px-2.5 py-1 rounded-lg bg-slate-800 text-sky-200">Status: Belum Selesai</span>
         </div>
+        <div class="text-xs text-amber-200 bg-sky-950/90 px-3 py-2 rounded-xl border border-amber-400/40 leading-relaxed">
+          💡 <b>Cara Buka di Sekolah.mu / Living English:</b> Klik <b>"🚀 Masuk Kelas Program"</b> di bawah, lalu di panel <b>Daftar Topik & Aktivitas</b> pilih modul <b id="modal-guide-module" class="text-white">...</b> → aktivitas <b id="modal-guide-act" class="text-emerald-300">...</b> <i>(judul otomatis disalin!)</i>.
+        </div>
         <div class="text-[11px] text-sky-300/90 break-all font-mono bg-slate-900/90 px-2.5 py-1.5 rounded-lg border border-slate-800" id="modal-url-preview">
           https://smm.sekolah.mu/...
         </div>
@@ -773,11 +776,11 @@
       <div class="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-2.5">
         <a id="modal-btn-direct" href="#" target="_blank" rel="noopener" onclick="onModalDirectLaunch(event)" class="btn-3d bg-gradient-to-b from-sky-400 to-sky-600 hover:from-sky-300 hover:to-sky-500 text-slate-950 font-black py-3 px-4 rounded-2xl shadow-lg border-2 border-white flex items-center justify-center gap-2 text-sm text-center">
           <span>🚀</span>
-          <span>Mulai Misi (Link Aktivitas)</span>
+          <span>Masuk Kelas Program (/c)</span>
         </a>
-        <a id="modal-btn-program" href="#" target="_blank" rel="noopener" class="btn-3d bg-sky-800 hover:bg-sky-700 text-sky-100 font-extrabold py-3 px-4 rounded-2xl border-2 border-sky-500/50 flex items-center justify-center gap-2 text-xs sm:text-sm text-center">
-          <span>📂</span>
-          <span>Buka Daftar Modul Program</span>
+        <a id="modal-btn-program" href="#" target="_blank" rel="noopener" class="btn-3d bg-sky-800 hover:bg-sky-700 text-sky-100 font-extrabold py-3 px-4 rounded-2xl border-2 border-sky-500/50 flex items-center justify-center gap-2 text-xs sm:text-sm text-center" title="Buka My Learning (Pastikan profil belajar Gabriel sudah dipilih)">
+          <span>🏠</span>
+          <span>Buka Portal My Learning</span>
         </a>
       </div>
 
@@ -1732,9 +1735,13 @@
       document.getElementById('modal-program-name').textContent = q.program;
       document.getElementById('modal-quest-title').textContent = q.rawTitle;
       document.getElementById('modal-module-name').textContent = `Modul: ${q.module}`;
+      const guideMod = document.getElementById('modal-guide-module');
+      const guideAct = document.getElementById('modal-guide-act');
+      if (guideMod) guideMod.textContent = q.module;
+      if (guideAct) guideAct.textContent = q.rawTitle;
       document.getElementById('modal-url-preview').textContent = q.directUrl;
       document.getElementById('modal-btn-direct').href = q.directUrl;
-      document.getElementById('modal-btn-program').href = q.programUrl;
+      document.getElementById('modal-btn-program').href = q.myLearningUrl || q.programUrl;
       document.getElementById('modal-star-reward').textContent = q.stars || 2;
 
       const recAlert = document.getElementById('modal-recovery-alert');
