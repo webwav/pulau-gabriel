@@ -21,12 +21,53 @@ MONTH_MAP = {
     "des": 12, "desember": 12, "dec": 12, "december": 12,
 }
 
-# Portal entry URLs that ALWAYS work without "Halaman Belum Berhasil Dimuat" SPA errors:
-# Sekolah.mu and Living English require entering via /my-learning so the child learner session (Gabriel) is active.
+# Official Sekolah.mu & Living English child-account handoff query parameters (for 09-cross-platform-learning-page middleware).
+# Ensures that if the browser is logged into the Parent account (sharonpm1996@gmail.com), Sekolah.mu automatically
+# switches to Gabriel's student session instead of throwing Error 500 ("Halaman Belum Berhasil Dimuat").
+CHILD_HANDOFF_QUERY = (
+    "src_ugp=2d5b9091-678a-42d1-a8a8-256ce2ac5638"
+    "&src_email=sharonpm1996%2BGabrielAltair%2Bv2po7@gmail.com"
+    "&src_is_sys_email=1"
+    "&src_account_type=Anak/Remaja"
+    "&src_parent_email=sharonpm1996@gmail.com"
+)
+
+# Verified working classroom (/c) entry URLs for each of Gabriel's 7 programs.
+# Sekolah.mu appends random 5-char backend IDs to individual activity slugs (e.g. -61y2y, -gih5x, -j3bow),
+# so unverified activity slugs fail POST /cf/program-learning/validate with Error 500.
+# These 7 real classroom URLs + child handoff query open the program's classroom player & sidebar directly without error.
+VERIFIED_CLASSROOM_URLS = {
+    "https://smm.sekolah.mu/program/year-1-daring-rutin-semester-1-20262027": (
+        f"https://smm.sekolah.mu/program/year-1-daring-rutin-semester-1-20262027/rabu-22-juli-2026-yuk-simak-bersama/c?{CHILD_HANDOFF_QUERY}"
+    ),
+    "https://smm.sekolah.mu/program/year-1-english-semester-1-ta-20262027": (
+        f"https://smm.sekolah.mu/program/year-1-english-semester-1-ta-20262027/thursday-6-august-2026-listening-to-audiobook-ready-set-brush/c?{CHILD_HANDOFF_QUERY}"
+    ),
+    "https://smm.sekolah.mu/program/year-1-pjok-semester-1-ta-20262027": (
+        f"https://smm.sekolah.mu/program/year-1-pjok-semester-1-ta-20262027/jumat-24-jul-2026-jangan-lupa-pemanasan-dan-pendinginan-gih5x/c?{CHILD_HANDOFF_QUERY}"
+    ),
+    "https://smm.sekolah.mu/program/year-1-homeroom-20262027": (
+        f"https://smm.sekolah.mu/program/year-1-homeroom-20262027/selamat-datang-di-kelas-1/c?{CHILD_HANDOFF_QUERY}"
+    ),
+    "https://smm.sekolah.mu/program/memulai-belajar-di-smm-year-13-ta-20262027": (
+        f"https://smm.sekolah.mu/program/memulai-belajar-di-smm-year-13-ta-20262027/kontak-sekolah-murid-merdeka-1-4-4-4/c?{CHILD_HANDOFF_QUERY}"
+    ),
+    "https://livingenglish.sekolah.mu/program/waydivers-1-term-1-ay-20262027": (
+        f"https://livingenglish.sekolah.mu/program/waydivers-1-term-1-ay-20262027/group-session-2-meeting-1-61y2y/c?{CHILD_HANDOFF_QUERY}"
+    ),
+    "https://livingenglish.sekolah.mu/program/waydivers-1-term-2-ay-20262027": (
+        f"https://livingenglish.sekolah.mu/program/waydivers-1-term-2-ay-20262027/academic-calendar-j3bow/c?{CHILD_HANDOFF_QUERY}"
+    ),
+}
+
 def get_my_learning_url(program_url, source_tab=""):
     if "livingenglish.sekolah.mu" in program_url or "Living English" in source_tab:
         return "https://livingenglish.sekolah.mu/my-learning"
     return "https://smm.sekolah.mu/my-learning"
+
+def get_direct_classroom_url(program_url):
+    clean_url = program_url.rstrip("/")
+    return VERIFIED_CLASSROOM_URLS.get(clean_url, clean_url)
 
 def extract_date(module_str, title_str, program_str, act_num):
     m_low = module_str.lower()
@@ -230,9 +271,6 @@ def classify_quest(program_str, module_str, title_clean, jenis, iso_date, is_upc
         or "asesmen" in t_low
     )
 
-    # Include ALL unfinished items in smm.sekolah.mu & livingenglish.sekolah.mu PLUS
-    # all upcoming Nov - End of Semester 1 items ("semua materi yang belum di smm.sekolah.mu dan living english
-    # tapi yang memang belum berjalan bulan november sampai akhir semester 1 juga tolong dimasukkan")
     kid_actionable = True
     if is_boss:
         category = "boss_quest"
@@ -281,7 +319,6 @@ def classify_quest(program_str, module_str, title_clean, jenis, iso_date, is_upc
     }
 
 # Upcoming Semester 1 Curriculum items (Weeks 6 - 11: 9 November - 18 December 2026)
-# These are the Semester 1 modules that have not yet unlocked/started in smm.sekolah.mu & livingenglish.sekolah.mu
 UPCOMING_SEM1_ITEMS = [
     # ================= DARING RUTIN (Minggu 6 - Minggu 11: 9 Nov - 17 Des 2026) =================
     ("SMM", "Year 1 | Daring Rutin | Semester 1 | 2026/2027", "Tema 2 Minggu 6 (9-13 Nov 2026) | Eksplorasi & Checkpoint 2 Sumatif", "201. Senin, 9 November 2026 | Pertemuan Belajar Live 1 & Materi: Menjelajah Dunia & Lingkungan", "Materi", "https://smm.sekolah.mu/program/year-1-daring-rutin-semester-1-20262027", "2026-11-09"),
@@ -367,7 +404,7 @@ for source_tab, rows in [("SMM", raw["smmItems"]), ("Living English", raw["leIte
         module_str = r[1].strip()
         raw_title = r[2].strip()
         jenis = r[3].strip()
-        program_url = r[4].strip()
+        program_url = r[4].strip().rstrip("/")
 
         m_num = re.match(r"^(\d+)\.\s*(.*)$", raw_title)
         if m_num:
@@ -380,7 +417,7 @@ for source_tab, rows in [("SMM", raw["smmItems"]), ("Living English", raw["leIte
             title_clean = raw_title
 
         my_learning_url = get_my_learning_url(program_url, source_tab)
-        direct_url = my_learning_url
+        direct_url = get_direct_classroom_url(program_url)
         exact_verified = True
 
         iso_date = extract_date(module_str, title_clean, program_str, act_num)
@@ -401,8 +438,7 @@ for source_tab, rows in [("SMM", raw["smmItems"]), ("Living English", raw["leIte
             "rawTitle": raw_title,
             "title": title_clean,
             "jenis": jenis,
-            "programUrl": my_learning_url,
-            "referenceProgramUrl": program_url,
+            "programUrl": program_url,
             "myLearningUrl": my_learning_url,
             "directUrl": direct_url,
             "exactVerified": exact_verified,
@@ -413,6 +449,7 @@ for source_tab, rows in [("SMM", raw["smmItems"]), ("Living English", raw["leIte
 # Append Upcoming Semester 1 Curriculum items (Weeks 6 - 11: Nov - Akhir Semester 1)
 for u_idx, item in enumerate(UPCOMING_SEM1_ITEMS, start=1):
     source_tab, program_str, module_str, raw_title, jenis, program_url, iso_date = item
+    program_url = program_url.strip().rstrip("/")
     m_num = re.match(r"^(\d+)\.\s*(.*)$", raw_title)
     if m_num:
         act_num = int(m_num.group(1))
@@ -422,7 +459,7 @@ for u_idx, item in enumerate(UPCOMING_SEM1_ITEMS, start=1):
         title_clean = raw_title
 
     my_learning_url = get_my_learning_url(program_url, source_tab)
-    direct_url = my_learning_url
+    direct_url = get_direct_classroom_url(program_url)
     island_id = get_island_id(program_str)
     meta = classify_quest(program_str, module_str, title_clean, jenis, iso_date, is_upcoming_schedule=True)
 
@@ -440,8 +477,7 @@ for u_idx, item in enumerate(UPCOMING_SEM1_ITEMS, start=1):
         "rawTitle": raw_title,
         "title": title_clean,
         "jenis": jenis,
-        "programUrl": my_learning_url,
-        "referenceProgramUrl": program_url,
+        "programUrl": program_url,
         "myLearningUrl": my_learning_url,
         "directUrl": direct_url,
         "exactVerified": True,
@@ -494,7 +530,7 @@ with open("/Users/sharonxu/gabriel-quest-map/gabriel_quests_with_deeplinks.csv",
     writer.writerow([
         "Level Kronologis", "Pulau", "Status Periode", "Tab Sumber", "Program / Mapel", "Bagian / Modul",
         "No Aktivitas", "Judul Aktivitas", "Jenis", "Kategori Quest", "Tanggal Estimasi",
-        "Link Langsung Aktivitas (/c)", "Link Program Utama"
+        "Link Ruang Kelas Materi (/c)", "Link Halaman Program (/program/slug)"
     ])
     for q in kid_quests:
         writer.writerow([

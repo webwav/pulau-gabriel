@@ -1,8 +1,7 @@
-const CACHE_NAME = 'pulau-gabriel-v4';
+const CACHE_NAME = 'pulau-gabriel-v5';
 const ASSETS = [
   './',
   './index.html',
-  './quests_data.js',
   './manifest.json',
   './assets/icon-192.png',
   './assets/icon-512.png',
