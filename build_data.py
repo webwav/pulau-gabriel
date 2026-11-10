@@ -87,7 +87,7 @@ LATEST_NOV_CLASSROOM_URLS = {
         f"https://smm.sekolah.mu/program/year-1-homeroom-20262027/jumat-13-november-2026-belajar-live-homeroom-bagaimana-perasaanku/c?{CHILD_HANDOFF_QUERY}"
     ),
     "https://livingenglish.sekolah.mu/program/waydivers-1-term-2-ay-20262027": (
-        f"https://livingenglish.sekolah.mu/program/waydivers-1-term-2-ay-20262027/academic-calendar-j3bow/c?{CHILD_HANDOFF_QUERY}"
+        f"https://livingenglish.sekolah.mu/program/waydivers-1-term-2-ay-20262027/individualized-session-e48dp/c?{CHILD_HANDOFF_QUERY}"
     ),
 }
 
@@ -96,22 +96,32 @@ def get_my_learning_url(program_url, source_tab=""):
         return "https://livingenglish.sekolah.mu/my-learning"
     return "https://smm.sekolah.mu/my-learning"
 
-def resolve_activity_classroom_url(program_url, module_str, title_clean, is_upcoming_schedule=False):
+def _norm_ws(s):
+    return re.sub(r"\s+", " ", (s or "").strip()).lower()
+
+def resolve_activity_classroom_url(program_url, module_str, title_clean, act_num=None, is_upcoming_schedule=False):
     clean_url = program_url.rstrip("/")
     pslug = clean_url.split("/")[-1]
     acts = [a for a in catalog_verified.get(pslug, {}).get("activities", []) if not a.get("is_addon")]
     mod_norm = module_str.strip()
     t_norm = title_clean.strip()
+    mod_key = _norm_ws(mod_norm)
+    t_key = _norm_ws(t_norm)
 
-    # 1. Exact activity match (by chapter + activity title, or activity title)
+    # 1. Exact activity match (by chapter + activity title, or activity_order + title, or unique title)
     matched_act = None
     for a in acts:
-        if a["activity_name"].strip() == t_norm and a["chapter_name"].strip() == mod_norm:
+        if _norm_ws(a["activity_name"]) == t_key and _norm_ws(a["chapter_name"]) == mod_key:
             matched_act = a
             break
+    if not matched_act and not is_upcoming_schedule and act_num is not None:
+        for a in acts:
+            if a.get("activity_order") == act_num and _norm_ws(a["activity_name"]) == t_key:
+                matched_act = a
+                break
     if not matched_act:
         for a in acts:
-            if a["activity_name"].strip() == t_norm:
+            if _norm_ws(a["activity_name"]) == t_key:
                 matched_act = a
                 break
     if matched_act and matched_act.get("verified_slug"):
@@ -120,7 +130,7 @@ def resolve_activity_classroom_url(program_url, module_str, title_clean, is_upco
 
     # 2. Same chapter + same date prefix (e.g. "Selasa, 10 November 2026")
     date_prefix = t_norm.split("|")[0].strip().lower() if "|" in t_norm else ""
-    chap_verified = [a for a in acts if a["chapter_name"].strip() == mod_norm and a.get("verified_slug")]
+    chap_verified = [a for a in acts if _norm_ws(a["chapter_name"]) == mod_key and a.get("verified_slug")]
     if date_prefix and chap_verified:
         for a in chap_verified:
             if a["activity_name"].strip().lower().startswith(date_prefix):
@@ -129,7 +139,7 @@ def resolve_activity_classroom_url(program_url, module_str, title_clean, is_upco
 
     # 3. Nearest verified activity in the SAME chapter/week (so the classroom sidebar opens at that exact week)
     if chap_verified:
-        target_order = matched_act.get("activity_order", 1) if matched_act else 1
+        target_order = matched_act.get("activity_order", act_num or 1) if matched_act else (act_num or 1)
         nearest = min(chap_verified, key=lambda a: abs(a.get("activity_order", 1) - target_order))
         slug = nearest["verified_slug"]
         return (f"{clean_url}/{slug}/c?{CHILD_HANDOFF_QUERY}", "same_week", nearest["activity_id"])
@@ -507,7 +517,7 @@ for source_tab, rows in [("SMM", raw["smmItems"]), ("Living English", raw["leIte
 
         my_learning_url = get_my_learning_url(program_url, source_tab)
         direct_url, link_match_type, matched_aid = resolve_activity_classroom_url(
-            program_url, module_str, title_clean, is_upcoming_schedule=False
+            program_url, module_str, title_clean, act_num=act_num, is_upcoming_schedule=False
         )
         exact_verified = (link_match_type == "exact_activity")
 
@@ -553,7 +563,7 @@ for u_idx, item in enumerate(UPCOMING_SEM1_ITEMS, start=1):
 
     my_learning_url = get_my_learning_url(program_url, source_tab)
     direct_url, link_match_type, matched_aid = resolve_activity_classroom_url(
-        program_url, module_str, title_clean, is_upcoming_schedule=True
+        program_url, module_str, title_clean, act_num=act_num, is_upcoming_schedule=True
     )
     already_in_portal = link_match_type in ("exact_activity", "same_date", "same_week")
     island_id = get_island_id(program_str)

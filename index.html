@@ -821,7 +821,7 @@
   </div>
 
   <!-- Load Generated Quests Data (Cache-busted) -->
-  <script src="quests_data.js?v=20261105-per-materi-v6"></script>
+  <script src="quests_data.js?v=20261110-per-materi-v7"></script>
   <script>
     const STORAGE_KEY = 'gabriel_quest_map_progress_v1';
 
@@ -2057,11 +2057,11 @@
         if ('caches' in window) {
           caches.keys().then(keys => {
             keys.forEach(k => {
-              if (k !== 'pulau-gabriel-v6') caches.delete(k);
+              if (k !== 'pulau-gabriel-v7') caches.delete(k);
             });
           });
         }
-        navigator.serviceWorker.register('./sw.js?v=6').then(reg => reg.update()).catch(() => {});
+        navigator.serviceWorker.register('./sw.js?v=7').then(reg => reg.update()).catch(() => {});
       });
     }
 

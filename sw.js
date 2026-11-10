@@ -1,4 +1,4 @@
-const CACHE_NAME = 'pulau-gabriel-v6';
+const CACHE_NAME = 'pulau-gabriel-v7';
 const ASSETS = [
   './',
   './index.html',
@@ -29,11 +29,16 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// Network-first for HTML and quests_data.js so curriculum updates always show up immediately
+// Network-first (no-store for HTML & quests_data.js) so curriculum updates always show up immediately on Android & Mac
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
+  const url = event.request.url || '';
+  const isDataOrHtml = url.includes('quests_data.js') || url.endsWith('/') || url.includes('index.html');
+  const fetchPromise = isDataOrHtml
+    ? fetch(event.request, { cache: 'no-store' })
+    : fetch(event.request);
   event.respondWith(
-    fetch(event.request)
+    fetchPromise
       .then((response) => {
         const clone = response.clone();
         caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
